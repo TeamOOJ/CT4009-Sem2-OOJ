@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr"> <!-- Hint to browsers that this page is in the "en" language region with left-to-right text direction. -->
+    <head>
+        <title>Report a theft - Gloucestershire Constabulary</title>
+        <meta charset="UTF-8"> <!-- Tell browsers that this code is written in the UTF-8 character set -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
+		
+        <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
+        <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
+        
+		<link href="../../Global/GlobalPublic.css" rel="stylesheet">
+		<link href="../RegisterBike/RegisterBike.css" rel="stylesheet">
+		<link href="../YourProfile/YourProfile.css" rel="stylesheet">
+        <link href="ReportStolen.css" rel="stylesheet">
+		
+		<script src="../../Global/indexeddb.js"></script>
+
+        <meta name="description" content="Homepage of the website for Gloucestershire Constabulary to reduce bicycle theft.">
+        <meta name="keywords" content="Gloucestershire Constabulary, Constabulary">
+        <meta name="author" content="Oscar Nardone">
+    </head>
+    <body>
+        <!-- Accessibility requirement -->
+        <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+
+        <!-- Universal header -->
+        <header class="c-universal-header theme-dark theme-transparent" role="banner">
+            <div data-grid="container stack-2" style="margin-top: 16px;">
+                <div data-grid="col-12">
+                    <div data-grid="col-6">
+                            <a href="../Home/Home.html" class="c-logo" aria-label="Logo">
+                                <img class="c-image" src="../../Global/Images/extra-small-long-logo4-dark.png" alt="Gloucestershire Constabulary logo" itemscope itemtype="http://schema.org/ImageObject">
+                                <span>Company</span>
+                            </a>
+                    </div>
+                    <div data-grid="col-6" style="display: flex; flex-direction: column; align-items: right;">							
+						<div aria-describedby="profileDropdown" id="menuBarProfile" class="m-persona-3">
+							<div>
+								<picture role="img" aria-label="Microsoft profile picture">
+									<img class="c-image f-round personaProfilePic" src="" height="48" width="48" alt="Profile picture" id="personaSize3">
+								</picture>
+							</div>
+							<div>
+								<h5 class="c-heading personaFullName"><a>Oscar Nardone</a></h5>
+								<p class="c-subheading theme-transparent-subtext brighter personaEmail">oscarnardone@glos.ac.uk</p>
+							</div>
+						</div>
+						<div class="c-flyout" id="profileDropdown" role="tooltip" data-js-flyout-placement="bottom" data-js-flyout-dismissible="false" aria-hidden="true">
+							<ul id="profileDropdownMenu" role="menu" class="c-menu" aria-hidden="false">
+								<li class="c-menu-item" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html">Your profile</a>
+								</li>
+								<li class="c-menu-item submenu" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#contactDetails">Contact details</a>
+								</li>
+								<li class="c-menu-item submenu" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accountDetails">Account actions</a>
+								</li>
+								<li class="c-menu-item submenu" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accessibilitySettings">Accessibility</a>
+								</li>
+								<li class="c-menu-item" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../Login/Login.html">Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+                </div>
+            </div>
+		</header>
+
+        <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
+        <main id="mainContent" class="transparentPositioning">
+            <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
+            
+            <section class="m-typographic-intro f-background-accent f-transparent f-brief">
+                <div>
+                    <div>
+                        <h1 class="c-heading">Report a theft</h1>
+                        <p class="c-subheading">If you believe your registered bicycle has been lost or stolen, report a theft and get status updates on the investigation.</p>
+                    </div>
+                </div>
+			</section>
+
+            <section data-grid="container">
+                <h2 class="c-heading-2">Step one: Pick a bike</h2>
+                <p class="c-subheading-2">Please click the bike you would like to report as stolen.</p>
+                <div class="m-product-placement f-software" data-grid="col-12">
+                    <div class="c-carousel f-single-slide" role="region" aria-label="">
+                        <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+                        <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+                        <div itemscope itemtype="http://schema.org/ItemList">
+                            <ul id="ownersBikeList" class="c-group">
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a href="../RegisterBike/RegisterBike.html">
+                                            <picture>
+                                                <source srcset="http://via.placeholder.com/272x223?text=%2B" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://via.placeholder.com/272x223?text=%2B" src="http://via.placeholder.com/272x223?text=%2B" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+												<h3 class="c-heading" itemprop="device name">Add a bike</h3>
+												<p class="c-paragraph">Click here to register a new bike.</p>
+												<strong class="c-badge f-small f-highlight reportStatusBadge" style="visibility: hidden;"></strong>
+												<br>
+												<br>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+			</section>
+			
+			<section data-grid="container stack-3">
+				<h2 class="c-heading-2">Step two: Incident details</h2>
+				<p class="c-subheading-2">Help us with the investigation by providing us with a few details of the incident.</p>
+
+				<aside data-grid="col-3">
+					<div data-js-in-page-navigation-wrapper="true">
+						<nav class="c-in-page-navigation f-hide f-vertical">
+							<ul>
+								<li>
+									<h4 class="c-heading-4">What's on this step</h4>
+								</li>
+								<li>
+									<a href="#step2DateAndTime" class="">Date and time</a>
+								</li>
+								<li>
+									<a href="#step2Location" class="">Location</a>
+								</li>
+								<li>
+									<a href="#step2Suspects" class="">Suspects</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="c-in-page-navigation f-dropdown f-hide f-vertical">
+							<div class="f-dropdown-menu">
+								<a href="#personalInfo" role="button" aria-haspopup="true" aria-expanded="false" class="f-dropdown-link">What's on this step</a>
+								<ul id="uniqueIdForList" role="menu" class="c-menu" aria-hidden="true">
+									<li class="c-menu-item" role="presentation">
+										<a aria-checked="false" role="menuitem" href="#step2DateAndTime">Date and time</a>
+									</li>
+									<li class="c-menu-item" role="presentation">
+										<a aria-checked="false" role="menuitem" href="#step2Location">Location</a>
+									</li>
+									<li class="c-menu-item" role="presentation">
+										<a aria-checked="false" role="menuitem" href="#step2Suspects">Suspects</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</aside>		
+
+				<div data-grid="col-9">
+					<section id="dateAndTime" data-js-in-page-navigation-anchor="step2DateAndTime">				
+						<h4 class="c-heading-4" style="padding-top: 38px;">Date and time</h4>
+						<p class="c-paragraph">Please check the boxes that apply regarding the date and time of the incident, then provide the relevant information.</p>
+						<fieldset class="c-checkbox">
+							<div>
+								<div>
+									<label class="c-label">
+										<input aria-label="I know what date the bike was stolen on." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+										<span aria-hidden="true">I know what date the bike was stolen on.</span>
+									</label>
+									<label class="c-label">
+										<input aria-label="I know roughly what time the bike was stolen on." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+										<span aria-hidden="true">I know roughly what time the bike was stolen on.</span>
+									</label>			
+								</div>
+							</div>
+						</fieldset>
+
+						<br>
+						<fieldset>
+							<legend id="dtPickerDate" style="margin-bottom: 10px;">When did you notice the bike was stolen?</legend>
+							<div class="c-date-time-picker" data-date-time-picker="date">
+								<button data-date-time-picker="day" data-formatter-aria-label="Day: {0}" aria-label="Day: 12" data-active-value="12">12</button>
+								<button data-date-time-picker="month" data-formatter-aria-label="Month: {0}" aria-label="Month: January" data-active-value="January">January</button>                                        
+								<button data-date-time-picker="year" data-formatter-aria-label="Year: {0}" aria-label="Year: 2018" data-active-value="2018">2018</button>
+								<div data-date-time-picker="date-selector" aria-hidden="true">
+									<div data-date-time-picker="day">
+										<button aria-label="Scroll Up" tabindex="-1"></button>
+										<ul aria-label="Day" role="listbox"></ul>
+										<button aria-label="Scroll Down" tabindex="-1"></button>
+									</div>
+									<div data-date-time-picker="month">
+										<button aria-label="Scroll Up" tabindex="-1"></button>
+										<ul role="listbox" aria-label="Months" data-months="January,February,March,April,May,June,July,August,September,October,November,December">
+											<li role="option" aria-selected="false">October</li>
+											<li role="option" aria-selected="false">November</li>
+											<li role="option" class="f-js-last" aria-selected="false">December</li>
+											<li role="option" aria-selected="false" tabindex="0">January</li>
+											<li role="option" aria-selected="false">February</li>
+											<li role="option" aria-selected="true">March</li>
+											<li role="option" aria-selected="false">April</li>
+											<li role="option" aria-selected="false">May</li>
+											<li role="option" aria-selected="false">June</li>
+											<li role="option" aria-selected="false">July</li>
+											<li role="option" aria-selected="false">August</li>
+										</ul>
+										<button aria-label="Scroll Down" tabindex="-1"></button>
+									</div>    
+									<div data-date-time-picker="year">
+										<button aria-label="Scroll Up" tabindex="-1"></button>
+										<ul aria-label="Year" role="listbox"></ul>
+										<button aria-label="Scroll Down" tabindex="-1"></button>
+									</div>
+									<span></span>
+									<button data-date-time-picker="apply" class="c-glyph glyph-accept" aria-label="Apply" title="Apply"></button>
+									<button data-date-time-picker="cancel" class="c-glyph glyph-cancel" aria-label="Cancel" title="Cancel"></button>
+								</div>
+							</div>
+						</fieldset>
+
+						<br>
+						<fieldset>
+							<legend id="dtPickerTime24" style="margin-bottom: 10px;">If you know the approximate time of theft, enter it below in 24H format.</legend>
+							<div class="c-date-time-picker" data-date-time-picker="time24">
+								<button data-date-time-picker="hour24" data-formatter-aria-label="Hour: {0}" aria-label="Hour: 12" data-active-value="12">12</button>
+								<button data-date-time-picker="minute24" data-formatter-aria-label="Minutes: {0}" aria-label="Minutes: 50" data-active-value="50">50</button>
+								<div data-date-time-picker="time-selector24" aria-hidden="true">
+									<div data-date-time-picker="hour24">
+										<button aria-label="Scroll Up" tabindex="-1"></button>
+										<ul></ul>
+										<button aria-label="Scroll Down" tabindex="-1"></button>
+									</div>
+									<div data-date-time-picker="minute24">
+										<button aria-label="Scroll Up" tabindex="-1"></button>
+										<ul></ul>
+										<button aria-label="Scroll Down" tabindex="-1"></button>
+									</div>
+									<span></span>
+									<button data-date-time-picker="apply" class="c-glyph glyph-accept" aria-label="Apply" title="Apply"></button>
+									<button data-date-time-picker="cancel" class="c-glyph glyph-cancel" aria-label="Cancel" title="Cancel"></button>
+								</div>
+							</div>
+						</fieldset>
+					</section>
+
+					<section id="location" data-js-in-page-navigation-anchor="step2Location">							
+						<h4 class="c-heading-4" style="padding-top: 38px;">Location</h4>
+						<p class="c-paragraph">Please check the boxes that apply regarding the location of your bicycle, then provide the relevant information.</p>
+						<div class="c-checkbox">
+							<label class="c-label">
+								<input aria-label="I know where I last left my bike before it was stolen." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+								<span aria-hidden="true">I know where I last left my bike before it was stolen.</span>
+							</label>
+						</div>
+						<div class="c-checkbox">
+							<label class="c-label">
+								<input aria-label="I know where the suspect has left my bike." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+								<span aria-hidden="true">I know where the suspect has left my bike.</span>
+							</label>
+						</div>
+					</section>
+
+					<section id="suspects" data-js-in-page-navigation-anchor="step2Suspects">
+						<h4 class="c-heading-4" style="padding-top: 38px;">Suspects</h4>
+						<p class="c-paragraph">Please check the boxes that apply regarding the suspect(s), then provide the relevant information.</p>
+						<fieldset class="c-checkbox">
+							<div>
+								<div>
+									<label class="c-label">
+										<input aria-label="I know the suspect(s) and wish to provide details." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+										<span aria-hidden="true">I know the suspect(s) and wish to provide details.</span>
+									</label>
+									<label class="c-label">
+										<input aria-label="I can describe the appearance of one or more of the suspects in question." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+										<span aria-hidden="true">I can describe the appearance of one or more of the suspects in question.</span>
+									</label>
+									<label class="c-label">
+										<input aria-label="I can provide identity details of one or more of the suspects, such as a name or telephone number." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+										<span aria-hidden="true">I can provide identity details of one or more of the suspects, such as a name or telephone number.</span>
+									</label>
+								</div>
+							</div>
+						</fieldset>
+
+						<br>
+						<div class="c-textarea">
+							<label class="c-label" for="default-textarea-6">Please describe the appearnce of the suspects in question. Use a new paragraph for each suspect.</label>
+							<textarea id="default-textarea-6" class="f-scroll f-flex" name="textarea-default" rows="4">This is some sample text with a very long string of text that wraps and has a total of four lines as well as a scroll bar</textarea>
+						</div>
+					</section>					
+				</div>
+			</section>
+
+			<br><br><br><br><br>			
+			
+			<!-- Universal footer -->
+			<footer>
+				<p class="c-paragraph">© <a href="https://oscarnardone.me">Oscar Nardone</a> 2017</p>
+			</footer>
+        </main>
+
+		<script src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+		<script src="../../Global/Global.js"></script>
+		<script src="../RegisterBike/RegisterBike.js"></script>
+		<script>getUserProfile()</script>
+		<script>listBikesInDB();</script>
+    </body>
+</html>

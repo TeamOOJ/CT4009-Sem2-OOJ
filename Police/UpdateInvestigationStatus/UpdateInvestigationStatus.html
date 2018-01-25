@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr"> <!-- Hint to browsers that this page is in the "en" language region with left-to-right text direction. -->
+    <head>
+        <title>Update investigation status - Gloucestershire Constabulary</title>
+        <meta charset="UTF-8"> <!-- Tell browsers that this code is written in the UTF-8 character set -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
+		
+        <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
+        <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
+        
+		<link href="../../Global/GlobalPublic.css" rel="stylesheet">
+		<link href="../../Global/GlobalPolice.css" rel="stylesheet">
+		<link href="UpdateInvestigationStatus.css" rel="stylesheet">
+		
+		<script src="../../Global/indexeddb.js"></script>
+        
+        <meta name="description" content="Homepage of the website for Gloucestershire Constabulary to reduce bicycle theft.">
+        <meta name="keywords" content="Gloucestershire Constabulary, Constabulary">
+        <meta name="author" content="Oscar Nardone">
+    </head>
+    <body>
+        <!-- Accessibility requirement -->
+        <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+		
+        <!-- Universal header -->
+        <header class="c-universal-header theme-dark theme-transparent" role="banner">
+            <div data-grid="container stack-2" style="margin-top: 16px;">
+                <div data-grid="col-12">
+                    <div data-grid="col-6">
+                            <a href="../Home/Home.html" class="c-logo" aria-label="Logo">
+                                <img class="c-image" src="../../Global/Images/extra-small-long-logo4-dark.png" alt="Gloucestershire Constabulary logo" itemscope itemtype="http://schema.org/ImageObject">
+                                <span>Gloucestershire Constabulary</span>
+							</a>
+							<span class="c-subheading theme-transparent-subtext">Logged in as a police officer</span>							
+                    </div>
+                    <div data-grid="col-6" style="display: flex; flex-direction: column; align-items: right;">							
+						<div aria-describedby="profileDropdown" id="menuBarProfile" class="m-persona-3">
+							<div>
+								<picture role="img" aria-label="Microsoft profile picture">
+									<img class="c-image f-round personaProfilePic" src="" height="48" width="48" alt="Profile picture" id="personaSize3">
+								</picture>
+							</div>
+							<div>
+								<h5 class="c-heading personaFullName"><a>Oscar Nardone</a></h5>
+								<p class="c-subheading theme-transparent-subtext brighter personaEmail">oscarnardone@glos.ac.uk</p>
+							</div>
+						</div>
+						<div class="c-flyout" id="profileDropdown" role="tooltip" data-js-flyout-placement="bottom" data-js-flyout-dismissible="false" aria-hidden="true">
+							<ul id="profileDropdownMenu" role="menu" class="c-menu" aria-hidden="false">
+								<li class="c-menu-item" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html">Your profile</a>
+								</li>
+								<li class="c-menu-item submenu" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#contactDetails">Contact details</a>
+								</li>
+								<li class="c-menu-item submenu" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accountDetails">Account actions</a>
+								</li>
+								<li class="c-menu-item submenu" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accessibilitySettings">Accessibility</a>
+								</li>
+								<li class="c-menu-item" role="presentation">
+									<a aria-checked="false" role="menuitem" href="../Login/Login.html">Logout</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+                </div>
+            </div>
+		</header>
+
+        <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
+        <main id="mainContent" class="transparentPositioning">
+            <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
+            
+            <section class="m-typographic-intro f-background-accent f-transparent f-brief">
+                <div>
+                    <div>
+                        <h1 class="c-heading">Update investigation status</h1>
+                        <p class="c-subheading">A paragraph description about what you can do on this page would be written here. Remember to click "Save changes" at the bottom of the page when done.</p>
+                    </div>
+                </div>
+			</section>
+
+			<section data-grid="container stack-3">
+
+				<div data-grid="col-12">
+					<h2 class="c-heading-2" style="padding-top: 38px;">Actions</h2>
+
+					<fieldset class="c-radio f-inline">
+						<div>
+							<div>
+								<label class="c-label">
+									<input id="inline1" type="radio" aria-label="Reported" name="inline" value="inline1" checked="checked">
+									<span>Reported</span>
+								</label>
+								<label class="c-label">
+									<input id="inline2" type="radio" aria-label="Under investigation" name="inline" value="inline2">
+									<span>Under investigation</span>
+								</label>
+								<label class="c-label">
+									<input id="inline3" type="radio" aria-label="Found" name="inline" value="inline3">
+									<span>Found</span>
+								</label>
+							</div>
+						</div>
+					</fieldset>
+
+					<div class="c-textarea">
+						<label class="c-label" for="default-textarea-6">Internal notes</label>
+						<textarea id="default-textarea-6" class="f-scroll f-flex" name="textarea-default" rows="6">Internal notes are only visible to police officers and can be used to help with the investigation.</textarea>
+					</div>
+					<div class="c-textarea">
+						<label class="c-label" for="default-textarea-6">Public notes</label>
+						<textarea id="default-textarea-6" class="f-scroll f-flex" name="textarea-default" rows="6">Public notes are visible to both police officers and the victim. You can use this to keep the victim updated on the status of the investigation.</textarea>
+					</div>
+				</div>
+				<br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+				<aside data-grid="col-3">
+					<div data-js-in-page-navigation-wrapper="true">
+						<nav class="c-in-page-navigation f-hide f-vertical">
+							<ul style="width: 80%;">
+								<li>
+									<h4 class="c-heading-4">Images</h4>
+								</li>
+								<li>
+									<img class="c-image f-pad-vertical-3x" srcset="http://via.placeholder.com/272x223" src="http://via.placeholder.com/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+								</li>
+								<li>
+									<img class="c-image f-pad-vertical-3x" srcset="http://via.placeholder.com/272x223" src="http://via.placeholder.com/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+								</li>
+								<li>
+									<img class="c-image f-pad-vertical-3x" srcset="http://via.placeholder.com/272x223" src="http://via.placeholder.com/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+								</li>
+								<li style="visibility: hidden;">
+									<a href="#enrolledOfficersList" class="">Enrolled officers list</a>
+								</li>
+							</ul>
+						</nav>
+						<nav class="c-in-page-navigation f-dropdown f-hide f-vertical">
+							<div class="f-dropdown-menu">
+								<a href="#actions" role="button" aria-haspopup="true" aria-expanded="false" class="f-dropdown-link">Actions</a>
+								<ul id="uniqueIdForList" role="menu" class="c-menu" aria-hidden="true">
+									<li class="c-menu-item" role="presentation">
+										<a aria-checked="false" role="menuitem" href="#anchor-1">Enrolled officers list</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</aside>
+
+				<div data-grid="col-9">
+					<section id="actions" data-js-in-page-navigation-anchor="actions">
+						<h2 class="c-heading-2" style="padding-top: 38px;">Bike nickname header</h2>
+						<p class="c-subheading-3" style="padding: 4px 0;">Bike owner</p>
+
+						<div class="c-drawer" data-js-collapse="vp3">
+							<button class="c-glyph" aria-expanded="false" aria-controls="responsiveDrawer"><h4 class="c-heading-4">Victim details</h4></button>
+							<div id="responsiveDrawer">
+								<!--<p class="c-paragraph-3">Autem voluptatem occaecati reiciendis labore blanditiis laboriosam quis. Minima distinctio quo doloremque reprehenderit enim veritatis quae consequatur. Est illum earum sequi repellendus quidem quia. Nemo nemo quia veniam quibusdam est accusantium
+									unde libero laborum.</p>-->
+								<div class="m-persona-1">
+									<div>
+										<picture role="img" aria-label="Microsoft profile picture">
+											<img class="c-image f-round" src="http://placehold.it/128x128" alt="Microsoft profile picture" id="personaSize1">
+										</picture>
+									</div>
+									<div>
+										<h5 class="c-heading" style="font-size: 36px; line-height: inherit;">Title fName lName</h5>
+										<p class="c-subheading">DoB - Gender</p>
+									</div>
+								</div>
+								<ul class="c-list f-lean">
+									<li>Telephone: <span id="victimTelNum"></span> <span id="victimTelPref">(preferred)</span></li>
+									<li>Email: <span id="victimEmail"></span> <span id="victimEmailPref">(preferred)</span></li>		
+								</ul>
+							</div>
+						</div>
+
+						<div class="c-drawer" data-js-collapse="vp3">
+							<button class="c-glyph" aria-expanded="false" aria-controls="responsiveDrawer"><h4 class="c-heading-4">Bike details</h4></button>
+							<div id="responsiveDrawer">
+								<br>
+								<p class="c-subheading-3">General details</p>
+								<div data-grid="stack-4" class="data-grid-row">
+								<div data-grid="col-3 stack-4">
+									<label for="comboFieldDiv">Manufacturer</label>
+									<div class="c-combo" role="combobox" aria-expanded="false">
+										<input maxlength="512" autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="comboFieldDiv" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup2">
+										<button class="c-glyph" name="selectDiv">
+											<span class="x-screen-reader">Select</span>
+										</button>
+										<div role="group">
+											<ul id="exampleComboPopup2" tabindex="0" role="listbox">
+												<li role="option">
+													<span tabindex="0">13</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Ace of Play</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Activ</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Aest</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Apollo</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Barracuda</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Batribike</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Berg</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Bickerton</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Boardman</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Boss</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">British Eagle</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Bumper</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Byocycle</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Carrera</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Chillafish</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Claud Butler</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Concept</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Corratec</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Coyote</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Cuda</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Dahon</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Descendants</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Diamondback</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Disney</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">EBCO</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Elswick</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Falcon</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Feral</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Fireman Sam</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Ford</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Forme</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Freego</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Frozen</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Greenedge</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Harlem</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Hello Kitty</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Indi</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Indigo</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Integra</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Ironman</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Kiddimoto</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Kidzmotion</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Laura Trott</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Lindsey West</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Minions</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Mizani</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Mongoose</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">MotoBike</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Ninja Turtles</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Orbita</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Orla Kiely</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Oxygen</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Pashley</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Paw Patrol</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Pendleton</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Peppa Pig</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Powacycle</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Puls</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Quella</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Rad</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Raleigh</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Real</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Ridge</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Roodog</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Rooster</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Spiderman</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Suntour</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Toddlebike</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Townsend</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Viking</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">VooDoo</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Wiggins</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Whistle</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Wisper</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">X Rated</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Xootz</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Yvolution</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Zombie</span>
+												</li>
+												<li role="separator" disabled>
+													<span>---</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Unknown</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Other (please type it in the textbox)</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeModel">Model</label>
+									<input type="text" maxlength="512" class="c-text-field" name="bikeModel"></input>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeType">Type*</label>
+									<div class="c-combo" role="combobox" aria-expanded="false">
+										<input required autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="bikeColour" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup3">
+										<button class="c-glyph" name="selectDiv">
+											<span class="x-screen-reader">Select</span>
+										</button>
+										<div role="group">
+											<ul id="exampleComboPopup3" tabindex="0" role="listbox">
+												<li role="option">
+													<span tabindex="0">Electric bike</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Mountain bike</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">BMX</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Road bike</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Folding bike</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Other (please type it in the textbox)</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeMPN">Manufacturer part number (MPN)</label>
+									<input type="text" class="c-text-field" name="bikeMPN"></input>
+								</div>
+								</div>
+								
+								<br>
+								<p class="c-subheading-3">Appearance</p>
+								<div data-grid="stack-4" class="data-grid-row">
+								<div data-grid="col-3 stack-4">
+									<label for="bikeColour">Colour*</label>					
+									<div class="c-combo" role="combobox" aria-expanded="false">
+										<input required maxlength="256" autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="bikeColour" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup3">
+										<button class="c-glyph" name="selectDiv">
+											<span class="x-screen-reader">Select</span>
+										</button>
+										<div role="group">
+											<ul id="exampleComboPopup3" tabindex="0" role="listbox">
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Red"></div>Red</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Orange"></div>Orange</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Yellow"></div>Yellow</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Green"></div>Green</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Cyan"></div>Cyan</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Blue"></div>Blue</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Purple"></div>Purple</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Pink"></div>Pink</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Brown"></div>Brown</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-White"></div>White</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Black"></div>Black</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Grey"></div>Grey</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Bronze"></div>Bronze</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Silver"></div>Silver</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Gold"></div>Gold</span>
+												</li>
+												<li role="option">
+													<span tabindex="0"><div class="colourIndicator-Unknown"></div>Unknown</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Other (please type it in the textbox)</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeWheelSize">Wheel size</label>
+									<input type="text" class="c-text-field" name="bikeWheelSize"></input>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeGearCount">Number of gears <i class="c-metatext">(If unknown, put -1)</i></label>
+									<input type="number" min="-1" class="c-text-field" name="bikeGearCount"></input>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeBrakeType">Type of breaks</label>
+									<input type="text" class="c-text-field" name="bikeBrakeType"></input>
+								</div>
+								</div>
+								
+								<br>
+								<div data-grid="stack-4" class="data-grid-row">
+								<div data-grid="col-3 stack-4">
+									<label for="bikeSuspension">Suspension</label>
+									<input type="text" class="c-text-field" name="bikeSuspension"></input>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeGender">Gender</label>
+									<input type="text" class="c-text-field" name="bikeGender"></input>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeAgeGroup">Age group</label>
+									<input type="text" class="c-text-field" name="bikeAgeGroup"></input>
+								</div>
+								</div>
+								
+								<br>
+								<p class="c-subheading-3">Location and uses</p>
+								<div data-grid="stack-4" class="data-grid-row">
+								<div data-grid="col-3 stack-4">
+									<label for="bikeCommonHome">Where do you usually park your bike overnight?</label>
+									<input type="text" class="c-text-field" name="bikeCommonHome"></input>
+								</div>
+								<div data-grid="col-3 stack-4">
+									<label for="bikeUseCase">What do you usually use your bike for?</label>
+									<div class="c-combo" role="combobox" aria-expanded="false">
+										<input required autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="bikeCommonHome" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup3">
+										<button class="c-glyph" name="selectDiv">
+											<span class="x-screen-reader">Select</span>
+										</button>
+										<div role="group">
+											<ul id="exampleComboPopup3" tabindex="0" role="listbox">
+												<li role="option">
+													<span tabindex="0">Commuting</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Leisure</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Competitions</span>
+												</li>
+												<li role="option">
+													<span tabindex="0">Other (please type it in the textbox)</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								</div>
+								
+								<br>
+								<p class="c-subheading-3">Additional details</p>
+								<div data-grid="stack-4" class="data-grid-row">
+									<div class="c-textarea">
+										<label for="textarea-default">Is there anything else you would like to tell us about your bike to help us identify it?</label><br>
+										<textarea id="default-textarea-1" class="f-scroll f-flex" name="textarea-default" rows="4"></textarea>
+									</div>
+								</div>				
+							</div>
+						</div>
+
+						<div class="c-drawer" data-js-collapse="vp3">
+							<button class="c-glyph" aria-expanded="false" aria-controls="responsiveDrawer"><h4 class="c-heading-4">Time and location</h4></button>
+							<div id="responsiveDrawer">
+								<section id="dateAndTime" data-js-in-page-navigation-anchor="step2DateAndTime">				
+									<h5 class="c-heading-5" style="padding-top: 8px;">Date and time</h5>
+									<p class="c-paragraph">Please check the boxes that apply regarding the date and time of the incident, then provide the relevant information.</p>
+									<fieldset class="c-checkbox">
+										<div>
+											<div>
+												<label class="c-label">
+													<input aria-label="I know what date the bike was stolen on." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+													<span aria-hidden="true">I know what date the bike was stolen on.</span>
+												</label>
+												<label class="c-label">
+													<input aria-label="I know roughly what time the bike was stolen on." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+													<span aria-hidden="true">I know roughly what time the bike was stolen on.</span>
+												</label>			
+											</div>
+										</div>
+									</fieldset>
+			
+									<br>
+									<fieldset>
+										<legend id="dtPickerDate" style="margin-bottom: 10px;">When did you notice the bike was stolen?</legend>
+										<div class="c-date-time-picker" data-date-time-picker="date">
+											<button data-date-time-picker="day" data-formatter-aria-label="Day: {0}" aria-label="Day: 12" data-active-value="12">12</button>
+											<button data-date-time-picker="month" data-formatter-aria-label="Month: {0}" aria-label="Month: January" data-active-value="January">January</button>                                        
+											<button data-date-time-picker="year" data-formatter-aria-label="Year: {0}" aria-label="Year: 2018" data-active-value="2018">2018</button>
+											<div data-date-time-picker="date-selector" aria-hidden="true">
+												<div data-date-time-picker="day">
+													<button aria-label="Scroll Up" tabindex="-1"></button>
+													<ul aria-label="Day" role="listbox"></ul>
+													<button aria-label="Scroll Down" tabindex="-1"></button>
+												</div>
+												<div data-date-time-picker="month">
+													<button aria-label="Scroll Up" tabindex="-1"></button>
+													<ul role="listbox" aria-label="Months" data-months="January,February,March,April,May,June,July,August,September,October,November,December">
+														<li role="option" aria-selected="false">October</li>
+														<li role="option" aria-selected="false">November</li>
+														<li role="option" class="f-js-last" aria-selected="false">December</li>
+														<li role="option" aria-selected="false" tabindex="0">January</li>
+														<li role="option" aria-selected="false">February</li>
+														<li role="option" aria-selected="true">March</li>
+														<li role="option" aria-selected="false">April</li>
+														<li role="option" aria-selected="false">May</li>
+														<li role="option" aria-selected="false">June</li>
+														<li role="option" aria-selected="false">July</li>
+														<li role="option" aria-selected="false">August</li>
+													</ul>
+													<button aria-label="Scroll Down" tabindex="-1"></button>
+												</div>    
+												<div data-date-time-picker="year">
+													<button aria-label="Scroll Up" tabindex="-1"></button>
+													<ul aria-label="Year" role="listbox"></ul>
+													<button aria-label="Scroll Down" tabindex="-1"></button>
+												</div>
+												<span></span>
+												<button data-date-time-picker="apply" class="c-glyph glyph-accept" aria-label="Apply" title="Apply"></button>
+												<button data-date-time-picker="cancel" class="c-glyph glyph-cancel" aria-label="Cancel" title="Cancel"></button>
+											</div>
+										</div>
+									</fieldset>
+			
+									<br>
+									<fieldset>
+										<legend id="dtPickerTime24" style="margin-bottom: 10px;">If you know the approximate time of theft, enter it below in 24H format.</legend>
+										<div class="c-date-time-picker" data-date-time-picker="time24">
+											<button data-date-time-picker="hour24" data-formatter-aria-label="Hour: {0}" aria-label="Hour: 12" data-active-value="12">12</button>
+											<button data-date-time-picker="minute24" data-formatter-aria-label="Minutes: {0}" aria-label="Minutes: 50" data-active-value="50">50</button>
+											<div data-date-time-picker="time-selector24" aria-hidden="true">
+												<div data-date-time-picker="hour24">
+													<button aria-label="Scroll Up" tabindex="-1"></button>
+													<ul></ul>
+													<button aria-label="Scroll Down" tabindex="-1"></button>
+												</div>
+												<div data-date-time-picker="minute24">
+													<button aria-label="Scroll Up" tabindex="-1"></button>
+													<ul></ul>
+													<button aria-label="Scroll Down" tabindex="-1"></button>
+												</div>
+												<span></span>
+												<button data-date-time-picker="apply" class="c-glyph glyph-accept" aria-label="Apply" title="Apply"></button>
+												<button data-date-time-picker="cancel" class="c-glyph glyph-cancel" aria-label="Cancel" title="Cancel"></button>
+											</div>
+										</div>
+									</fieldset>
+								</section>
+			
+								<section id="location" data-js-in-page-navigation-anchor="step2Location">							
+									<h5 class="c-heading-5" style="padding-top: 38px;">Location</h5>
+									<p class="c-paragraph">Please check the boxes that apply regarding the location of your bicycle, then provide the relevant information.</p>
+									<div class="c-checkbox">
+										<label class="c-label">
+											<input aria-label="I know where I last left my bike before it was stolen." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+											<span aria-hidden="true">I know where I last left my bike before it was stolen.</span>
+										</label>
+									</div>
+									<div class="c-checkbox">
+										<label class="c-label">
+											<input aria-label="I know where the suspect has left my bike." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+											<span aria-hidden="true">I know where the suspect has left my bike.</span>
+										</label>
+									</div>
+								</section>			
+							</div>
+						</div>
+
+						<div class="c-drawer" data-js-collapse="vp3">
+							<button class="c-glyph" aria-expanded="false" aria-controls="responsiveDrawer"><h4 class="c-heading-4">Suspects</h4></button>
+							<div id="responsiveDrawer">
+								<p class="c-paragraph">The victim has checked the boxes that apply regarding the suspect(s), and provided any relevant information.</p>
+								<fieldset class="c-checkbox">
+									<div>
+										<div>
+											<label class="c-label">
+												<input aria-label="The victim knows the suspect(s) and wish to provide details." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+												<span aria-hidden="true">The victim knows the suspect(s) and wish to provide details.</span>
+											</label>
+											<label class="c-label">
+												<input aria-label="The victim can describe the appearance of one or more of the suspects in question." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+												<span aria-hidden="true">The victim can describe the appearance of one or more of the suspects in question.</span>
+											</label>
+											<label class="c-label">
+												<input aria-label="The victim can provide identity details of one or more of the suspects, such as a name or telephone number." type="checkbox" id="checkboxId1" name="checkboxId1" value="value1" aria-checked="false">
+												<span aria-hidden="true">The victim can provide identity details of one or more of the suspects, such as a name or telephone number.</span>
+											</label>
+										</div>
+									</div>
+								</fieldset>
+		
+								<br>
+								<div class="c-textarea">
+									<label class="c-label" for="default-textarea-6">The victim has described the appearnce of the suspects in question, using a new paragraph for each suspect.</label>
+									<textarea id="default-textarea-6" class="f-scroll f-flex" name="textarea-default" rows="4">This is some sample text with a very long string of text that wraps and has a total of four lines as well as a scroll bar</textarea>
+								</div>		
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+			<!-- start of temp whitespace until more content is added to this page -->
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<!-- end of temp whitespace -->
+
+            <!--<div data-grid="container stack-4" id="bikeList">
+                <h2 class="c-heading-2">Personal details</h2>
+				<p class="c-subheading-2">Add and change your personal details here so we can keep you updated on any open reported thefts.</p>
+				
+				<div data-grid="col-3">
+					<br>
+					<label for="firstName">First name</label>
+					<input type="text" maxlength="512" class="c-text-field" name="firstName"></input>
+				</div>
+
+				<div data-grid="col-3">
+					<br>
+					<label for="lastName">Last name</label>
+					<input type="text" maxlength="512" class="c-text-field" name="lastName"></input>
+				</div>
+			</div>-->
+			<br><br><br><br><br>
+
+        </main>
+
+        <!-- Universal footer -->
+
+		<script async="async" src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+		<script src="../../Global/Global.js"></script>
+		<script>getUserProfile();</script>
+    </body>
+</html>

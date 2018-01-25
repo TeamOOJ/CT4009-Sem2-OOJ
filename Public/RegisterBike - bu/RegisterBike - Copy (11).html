@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr"> <!-- Hint to browsers that this page is in the "en" language region with left-to-right text direction. -->
+    <head>
+        <title>Register bike - Gloucestershire Constabulary</title>
+        <meta charset="UTF-8"> <!-- Tell browsers that this code is written in the UTF-8 character set -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
+		
+        <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
+        <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
+		        
+        <link href="../Global/GlobalPublic.css" rel="stylesheet">
+        <link href="RegisterBike.css" rel="stylesheet">
+        
+        <meta name="description" content="Homepage of the website for Gloucestershire Constabulary to reduce bicycle theft.">
+        <meta name="keywords" content="Gloucestershire Constabulary, Constabulary">
+        <meta name="author" content="Oscar Nardone">
+    </head>
+    <body onLoad="window.setTimeout(function(){document.getElementById('triggerer').click(); setInterval(function(){if(window.dialogOpen != true){document.getElementById('triggerer').click();}}, 100)}, 50);">
+        <!-- Accessibility requirement -->
+        <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+
+        <!-- Universal header -->
+        <header class="c-universal-header theme-dark theme-transparent" role="banner">
+            <div data-grid="container" style="margin-top: 16px;">
+                <div data-grid="col-12">
+                    <div data-grid="col-6">
+                            <a href="../Home/Home.html" class="c-logo" aria-label="Logo">
+                                <img class="c-image" src="http://placehold.it/150x50" alt="Placeholder with grey background and dimension watermark without any imagery" itemscope itemtype="http://schema.org/ImageObject">
+                                <span>Company</span>
+                            </a>
+                    </div>
+                    <div data-grid="col-6" style="display: flex; flex-direction: column; align-items: right;">
+                        <!--<nav id="uhf-c-nav" role="navigation" aria-labelledby="uhfCatLogo">
+                            <a class="c-uhf-nav-link" id="winapps_windowsapps" style="margin-left: 0px;" href="#">UWP apps</a>
+                            <a class="c-uhf-nav-link" id="winapps_getstarted" href="#">Get started</a>
+                        </nav>-->
+                        <div class="m-persona-3">
+                                <div>
+                                    <picture role="img" aria-label="Microsoft profile picture">
+                                        <img class="c-image f-round" src="oscar-nardone-48px.jpg" height="48" width="48" alt="Microsoft profile picture" id="personaSize3">
+                                    </picture>
+                                </div>
+                                <div>
+                                    <h5 class="c-heading"><a href="#">Oscar Nardone</a></h5>
+                                    <p class="c-subheading theme-transparent-subtext">oscarnardone@glos.ac.uk</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+
+                <!--<a class="c-uhf-nav-link" id="dashboard">Dashboard</a>-->                 
+            </div>
+        </header>
+
+        <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
+        <main id="mainContent" class="transparentPositioning">
+            <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
+            
+            <section class="m-typographic-intro f-background-accent f-transparent f-brief">
+                <div>
+                    <div>
+                        <h1 class="c-heading">Register a bike</h1>
+                        <p class="c-subheading">A paragraph description outlining the benefits of registering a bike would be written here.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div data-grid="container" id="bikeList">
+                <h2 class="c-heading-2">Your bikes</h2>
+                <p class="c-subheading-2">Click a bike to change details, or click the "+" symbol to register a new bike.</p>
+                <div class="m-product-placement f-software" data-grid="col-12">
+                    <div class="c-carousel f-single-slide" role="region" aria-label="">
+                        <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+                        <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+                        <div itemscope itemtype="http://schema.org/ItemList">
+                            <ul class="c-group">
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showAddBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://via.placeholder.com/272x223?text=%2B" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://via.placeholder.com/272x223?text=%2B" src="http://via.placeholder.com/272x223?text=%2B" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+                                                <h3 class="c-heading" itemprop="device name">Add a bike</h3>
+                                                <p class="c-paragraph">Click here to register a new bike.</p>
+												<br>
+												<br>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showViewBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <strong class="c-badge f-small f-highlight">REPORTED</strong>
+                                                <h3 class="c-heading" itemprop="device name">Bike nickname</h3>
+                                                <ul class="c-list f-bare f-lean">
+                                                    <li><em>Manufacturer: </em>Unknown</li><br>
+                                                    <li><em>Model: </em>Unknown</li><br>
+                                                    <li><em>Colour: </em>Unknown</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showViewBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+                                                <h3 class="c-heading" itemprop="device name">Bike nickname</h3>
+                                                <ul class="c-list f-bare f-lean">
+                                                    <li><em>Manufacturer: </em>Unknown</li><br>
+                                                    <li><em>Model: </em>Unknown</li><br>
+                                                    <li><em>Colour: </em>Unknown</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showViewBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+                                                <h3 class="c-heading" itemprop="device name">Bike nickname</h3>
+                                                <ul class="c-list f-bare f-lean">
+                                                    <li><em>Manufacturer: </em>Unknown</li><br>
+                                                    <li><em>Model: </em>Unknown</li><br>
+                                                    <li><em>Colour: </em>Unknown</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showViewBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+                                                <h3 class="c-heading" itemprop="device name">Bike nickname</h3>
+                                                <ul class="c-list f-bare f-lean">
+                                                    <li><em>Manufacturer: </em>Unknown</li><br>
+                                                    <li><em>Model: </em>Unknown</li><br>
+                                                    <li><em>Colour: </em>Unknown</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showViewBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+                                                <h3 class="c-heading" itemprop="device name">Bike nickname</h3>
+                                                <ul class="c-list f-bare f-lean">
+                                                    <li><em>Manufacturer: </em>Unknown</li><br>
+                                                    <li><em>Model: </em>Unknown</li><br>
+                                                    <li><em>Colour: </em>Unknown</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>    
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showViewBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+                                                <h3 class="c-heading" itemprop="device name">Bike nickname</h3>
+                                                <ul class="c-list f-bare f-lean">
+                                                    <li><em>Manufacturer: </em>Unknown</li><br>
+                                                    <li><em>Model: </em>Unknown</li><br>
+                                                    <li><em>Colour: </em>Unknown</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>    
+                                <li>
+                                    <section class="m-product-placement-item context-device f-size-large" itemscope itemtype="http://schema.org/Product">
+                                        <a onClick="showViewBikePage(this);">
+                                            <picture>
+                                                <source srcset="http://placehold.it/272x223" media="(min-width:0)">
+                                                <img class="c-image" srcset="http://placehold.it/272x223" src="http://placehold.it/272x223" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                            </picture>
+                                            <div>
+                                                <!--<strong class="c-badge f-small f-highlight">REPORTED</strong>-->
+                                                <h3 class="c-heading" itemprop="device name">Bike nickname</h3>
+                                                <ul class="c-list f-bare f-lean">
+                                                    <li><em>Manufacturer: </em>Unknown</li><br>
+                                                    <li><em>Model: </em>Unknown</li><br>
+                                                    <li><em>Colour: </em>Unknown</li>
+                                                </ul>
+                                            </div>
+                                        </a>
+                                    </section>
+                                </li>    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-grid="container stack-4" id="addBikePage">
+                <h2 class="c-heading-2">Register a new bike</h2>
+                <p class="c-subheading-2">Please try to fill out as much detail as possible about your bicycle. Fields marked with an asterisk (*) are required.</p>
+				
+				<br>
+				<p class="c-subheading-3">General details</p>
+				<div data-grid="stack-4" class="data-grid-row">
+				<div data-grid="col-3 stack-4">
+					<label for="comboFieldDiv">Manufacturer</label>
+					<div class="c-combo" role="combobox" aria-expanded="false">
+						<input maxlength="512" autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="comboFieldDiv" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup2">
+						<button class="c-glyph" name="selectDiv">
+							<span class="x-screen-reader">Select</span>
+						</button>
+						<div role="group">
+							<ul id="exampleComboPopup2" tabindex="0" role="listbox">
+								<li role="option">
+									<span tabindex="0">13</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Ace of Play</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Activ</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Aest</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Apollo</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Barracuda</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Batribike</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Berg</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Bickerton</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Boardman</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Boss</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">British Eagle</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Bumper</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Byocycle</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Carrera</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Chillafish</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Claud Butler</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Concept</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Corratec</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Coyote</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Cuda</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Dahon</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Descendants</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Diamondback</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Disney</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">EBCO</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Elswick</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Falcon</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Feral</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Fireman Sam</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Ford</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Forme</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Freego</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Frozen</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Greenedge</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Harlem</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Hello Kitty</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Indi</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Indigo</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Integra</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Ironman</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Kiddimoto</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Kidzmotion</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Laura Trott</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Lindsey West</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Minions</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Mizani</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Mongoose</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">MotoBike</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Ninja Turtles</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Orbita</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Orla Kiely</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Oxygen</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Pashley</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Paw Patrol</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Pendleton</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Peppa Pig</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Powacycle</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Puls</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Quella</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Rad</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Raleigh</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Real</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Ridge</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Roodog</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Rooster</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Spiderman</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Suntour</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Toddlebike</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Townsend</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Viking</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">VooDoo</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Wiggins</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Whistle</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Wisper</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">X Rated</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Xootz</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Yvolution</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Zombie</span>
+								</li>
+								<li role="separator" disabled>
+									<span>---</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Unknown</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Other (please type it in the textbox)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeModel">Model</label>
+					<input type="text" maxlength="512" class="c-text-field" name="bikeModel"></input>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeType">Type*</label>
+					<div class="c-combo" role="combobox" aria-expanded="false">
+						<input required autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="bikeColour" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup3">
+						<button class="c-glyph" name="selectDiv">
+							<span class="x-screen-reader">Select</span>
+						</button>
+						<div role="group">
+							<ul id="exampleComboPopup3" tabindex="0" role="listbox">
+								<li role="option">
+									<span tabindex="0">Electric bike</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Mountain bike</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">BMX</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Road bike</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Folding bike</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Other (please type it in the textbox)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeMPN">Manufacturer part number (MPN)</label>
+					<input type="text" class="c-text-field" name="bikeMPN"></input>
+				</div>
+				</div>
+				
+				<br>
+				<p class="c-subheading-3">Appearance</p>
+				<div data-grid="stack-4" class="data-grid-row">
+				<div data-grid="col-3 stack-4">
+					<label for="bikeColour">Colour*</label>					
+					<div class="c-combo" role="combobox" aria-expanded="false">
+						<input required maxlength="256" autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="bikeColour" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup3">
+						<button class="c-glyph" name="selectDiv">
+							<span class="x-screen-reader">Select</span>
+						</button>
+						<div role="group">
+							<ul id="exampleComboPopup3" tabindex="0" role="listbox">
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Red"></div>Red</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Orange"></div>Orange</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Yellow"></div>Yellow</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Green"></div>Green</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Cyan"></div>Cyan</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Blue"></div>Blue</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Purple"></div>Purple</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Pink"></div>Pink</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Brown"></div>Brown</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-White"></div>White</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Black"></div>Black</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Grey"></div>Grey</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Bronze"></div>Bronze</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Silver"></div>Silver</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Gold"></div>Gold</span>
+								</li>
+								<li role="option">
+									<span tabindex="0"><div class="colourIndicator-Unknown"></div>Unknown</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Other (please type it in the textbox)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeWheelSize">Wheel size</label>
+					<input type="text" class="c-text-field" name="bikeWheelSize"></input>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeGearCount">Number of gears <i class="c-metatext">(If unknown, put -1)</i></label>
+					<input type="number" min="-1" class="c-text-field" name="bikeGearCount"></input>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeBrakeType">Type of breaks</label>
+					<input type="text" class="c-text-field" name="bikeBrakeType"></input>
+				</div>
+				</div>
+				
+				<br>
+				<div data-grid="stack-4" class="data-grid-row">
+				<div data-grid="col-3 stack-4">
+					<label for="bikeSuspension">Suspension</label>
+					<input type="text" class="c-text-field" name="bikeSuspension"></input>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeGender">Gender</label>
+					<input type="text" class="c-text-field" name="bikeGender"></input>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeAgeGroup">Age group</label>
+					<input type="text" class="c-text-field" name="bikeAgeGroup"></input>
+				</div>
+				</div>
+				
+				<br>
+				<p class="c-subheading-3">Location and uses</p>
+				<div data-grid="stack-4" class="data-grid-row">
+				<div data-grid="col-3 stack-4">
+					<label for="bikeCommonHome">Where do you usually park your bike overnight?</label>
+					<input type="text" class="c-text-field" name="bikeCommonHome"></input>
+				</div>
+				<div data-grid="col-3 stack-4">
+					<label for="bikeUseCase">What do you usually use your bike for?</label>
+					<div class="c-combo" role="combobox" aria-expanded="false">
+						<input required autocomplete="off" aria-label="Type text or use the down arrow to select an option" type="text" name="bikeCommonHome" role="textbox" aria-autocomplete="list" aria-controls="exampleComboPopup3">
+						<button class="c-glyph" name="selectDiv">
+							<span class="x-screen-reader">Select</span>
+						</button>
+						<div role="group">
+							<ul id="exampleComboPopup3" tabindex="0" role="listbox">
+								<li role="option">
+									<span tabindex="0">Commuting</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Leisure</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Competitions</span>
+								</li>
+								<li role="option">
+									<span tabindex="0">Other (please type it in the textbox)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<br>
+				<p class="c-subheading-3">Additional details</p>
+				<div data-grid="stack-4" class="data-grid-row">
+					<div class="c-textarea">
+						<label for="textarea-default">Is there anything else you would like to tell us about your bike to help us identify it?</label><br>
+						<textarea id="default-textarea-1" class="f-scroll f-flex" name="textarea-default" rows="4"></textarea>
+					</div>
+				</div>
+				<div class="c-group" style="float: right;">
+					<button name="button" class="c-button f-lightweight">Save draft</button>
+					<button name="button" class="c-button" type="submit">Submit</button>
+				</div>
+			    <br><br><br><br>
+			</div>
+
+			<div data-grid="container stack-4" id="viewBikePage">
+                <h2 class="c-heading-2">Your bike</h2>
+                <p class="c-subheading-2">Check your bike status, change details, report a theft of this bike and more here.</p>
+				
+				<div class="c-table f-divided" data-f-loc-ascending="Sorted by {0} - ascending" data-f-loc-descending="Sorted by {0} - descending">
+					<table data-f-sort="true">
+						<caption>Details</caption>
+						<thead>
+							<tr>
+								<th scope="col" class="f-sortable" colspan="1" aria-sort="none">
+									<button aria-label="Sort by Item">Item</button>
+								</th>
+								<th scope="col" class="f-sortable" colspan="1" aria-sort="none">
+									<button aria-label="Sort by Value">Value</button>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Manufacturer</td>
+								<td>Unknown</td>
+							</tr>
+							<tr>
+								<td>Model</td>
+								<td>Unknown</td>
+							</tr>
+							<tr>
+								<td>Type</td>
+								<td>Unknown</td>
+							</tr>
+							<tr>
+								<td>Manufacturer part number (MPN)</td>
+								<td>Unknown</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<br><br><br><br><br>
+
+        </main>
+
+        <!-- Universal footer -->
+
+		<script async="async" src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+		<script src="RegisterBike.js"></script>		
+    </body>
+</html>

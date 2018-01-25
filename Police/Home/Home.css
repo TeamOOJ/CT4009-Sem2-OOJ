@@ -1,0 +1,19 @@
+.c-hero .c-subheading, .c-hero > div picture, .c-hero[class*="f-x"][class*="f-y"] > picture::after, .m-hero-item .c-subheading, .m-hero-item > div picture, .m-hero-item[class*="f-x"][class*="f-y"] > picture::after {
+    display: inline;
+}
+main#mainContent.theme-light {
+    background-image: radial-gradient(circle at bottom left,#fff,rgba(255,255,255,0) 80%), url('../../Global/Images/bicycle-bright2.jpg');    
+}
+main#mainContent.theme-dark {
+    background-image: radial-gradient(circle at bottom left,#000,rgba(255,255,255,0) 80%), url('../../Global/Images/bicycle-wide.jpg');
+}
+main#mainContent {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+.c-hero, .m-hero-item {
+    animation: slideInAnimation 1s cubic-bezier(0.16, 1, 0.29, 0.99);
+}

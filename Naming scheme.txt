@@ -1,0 +1,2 @@
+For folders: Capitalise every word, no spaces.
+For functions, class names and code: camelCase.

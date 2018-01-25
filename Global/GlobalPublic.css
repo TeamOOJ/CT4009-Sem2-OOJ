@@ -1,0 +1,194 @@
+/*
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*h1, h2 {
+    font-weight: 200;
+}
+.dialog {
+    padding: 1rem;
+    margin: 0.5rem;
+}
+.centredDialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    margin: 0.5rem;
+}
+*/
+
+header.c-universal-header {
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    margin: 0;
+
+    height: 4rem;
+
+    line-height: 48px;
+    display: inline-block;
+
+    z-index: 20;
+}
+
+.theme-dark {
+    background-color: #333;
+    color: #fff;
+}
+.theme-transparent {
+    background-color: transparent;
+}
+.c-subheading.theme-transparent-subtext.brighter {
+    color: #ccc;
+}
+
+#mainContent.transparentPositioning {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+.f-background-accent-purple {
+    background: #5C2E91;
+}
+
+
+#menuBarProfile {
+    cursor: pointer;
+    align-self: flex-end;
+}
+#profileDropdown {
+    background: #262626;
+    padding: 0;
+}
+#profileDropdownMenu {
+    background: transparent;
+}
+#profileDropdownMenu li {
+    line-height: initial;
+}
+
+.c-menu-item.submenu {
+    padding-left: 18px;
+}
+
+@keyframes LinearGradientAnimation {
+    0% {
+     background-position: 0 50%;
+    }
+    50% {
+     background-position: 100% 50%;
+    }
+    to {
+     background-position: 0 50%;
+    }
+}
+
+@keyframes slideInAnimation {
+    from {
+        padding-left: 0%;
+    }
+    to {
+        padding-left: 5%;
+    }
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.m-typographic-intro.f-background-accent {
+    /*background-image: linear-gradient(165deg, #0095ff, #6041ff 85%);*/
+    background-image: linear-gradient(165deg, #0095ff, darkviolet);    
+    background-size: 175% 175%;
+    background-position: 0 0;
+    
+    animation: LinearGradientAnimation 50s linear infinite;
+
+    box-shadow: #222 0px 0px 12px 1px;
+}
+.m-typographic-intro.f-background-accent > div {
+    animation: slideInAnimation .6s cubic-bezier(0.16, 1, 0.29, 0.99);
+}
+
+/*
+footer.c-universal-footer section ul {
+    width: 100vw;
+    background-color: #eee;
+    color: #000;
+    margin: 0;
+}
+footer.c-universal-footer section ul li {
+    float: right;
+    padding: 1%;
+}
+*/
+
+footer {
+    background: #eee;
+    padding: 1% 2%;
+    bottom: 0;
+}
+footer p {
+    text-align: right;
+}
+footer.transparentFooter {
+    background: transparent;
+}
+
+
+@keyframes fadeInOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*
+.c-dialog > [role="presentation"] {
+    animation: fadeInOpacity 2s ease-out;
+    animation-delay: 3s;
+    transition: opacity 1s ease-out;
+}*/
+
+.c-product-placement, .m-product-placement-item {
+    transition: margin-left 0.6s cubic-bezier(0.16, 1, 0.29, 0.99);
+}
+.m-product-placement .c-carousel div ul.f-active li:first-child section {
+    /*animation: slideInFromRight 0.6s cubic-bezier(0.16, 1, 0.29, 0.99);*/
+}
+/* not sure about this
+.m-product-placement .c-carousel div ul.f-active li section {
+    animation: slideSubItemInFromRight 1s cubic-bezier(0.16, 1, 0.29, 0.99);
+}
+
+@keyframes slideInFromRight {
+    from {
+        margin-left: 10vw;
+    }
+    to {
+        margin-left: 0vw;
+    }
+}
+@keyframes slideSubItemInFromRight {
+    from {
+        margin-left: 15vw;
+    }
+    to {
+        margin-left: 0vw;
+    }
+}
+*/

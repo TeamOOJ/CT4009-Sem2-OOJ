@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr"> <!-- Hint to browsers that this page is in the "en" language region with left-to-right text direction. -->
+    <head>
+        <title>RegisterPersonalDetails - Gloucestershire Constabulary</title>
+        <meta charset="UTF-8"> <!-- Tell browsers that this code is written in the UTF-8 character set -->
+		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
+		
+        <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
+    	<link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
+        <!--<link href="../Global/GlobalPublic.css" rel="stylesheet">-->
+        <link href="RegisterPersonalDetails.css" rel="stylesheet">
+        
+        <meta name="description" content="Homepage of the website for Gloucestershire Constabulary to reduce bicycle theft.">
+        <meta name="keywords" content="Gloucestershire Constabulary, Constabulary">
+        <meta name="author" content="Oscar Nardone">
+    </head>
+    <body onLoad="window.setTimeout(function(){document.getElementById('triggerer').click(); setInterval(function(){if(window.dialogOpen != true){document.getElementById('triggerer').click();}}, 100)}, 50);">
+        <!-- Accessibility requirement -->
+        <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+            
+        <!-- Universal header -->
+
+        <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
+        <main id="mainContent" data-grid="container">
+            <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
+            
+            
+            <!--<div class="centredDialog"> Attempt 1
+                <div class="loginContainer">
+                    <h1 class="c-heading-1">Login</h1>
+                    <input type="text" name="username"><br>
+                    <input type="password" name="password"><br>
+                    <button title="Login"></button>
+                </div>
+            </div>-->
+
+            <!--<header> Attempt 2
+                <h1 data-grid="col-12" class="c-heading-2">Login</h1>
+                <p data-grid="col-8" class="c-paragraph-3"><i>Heading</i> components are available in 6 sizes and are used to define content sections. The heading component is an enhancement of the HTML heading elements.</p>
+            </header>
+
+            <section data-grid="col-12 pad-12x">
+                <label class="c-label" for="usernameField">Username</label>
+                <input id="usernameInputbox" class="c-text-field" type="text" name="usernameField" required>
+
+                <label class="c-label" for="passwordField">Password</label>
+                <input id="passwordInputbox" class="c-password" type="password" name="passwordField" required>        
+
+                <button name="button" class="c-button f-primary">Login</button>
+                <button name="button" class="c-button">Forgot username/password</button>
+            </section>-->
+
+            <a style="display: hidden; color: transparent;" id="triggerer" data-js-dialog-show="flow-dialog-scroll">Trigger</a>
+            <div class="c-dialog f-flow" id="flow-dialog-scroll" aria-hidden="true" onMouseOver="window.dialogOpen=true;">
+                <div role="presentation" tabindex="-1"></div>
+                    <div role="dialog" aria-label="Flow scroll" tabindex="-1">
+                        <button class="c-glyph glyph-cancel" aria-label="Close dialog" tabindex="0" onClick="window.location.href = '../Login/Login.html';"></button>
+                        <div role="document">
+                            <h2 class="c-heading-2" style="padding-top: 0;">Register</h2>
+                            <div class="f-dialog-scroll">
+                                <p class="c-paragraph">First off, we need some of your personal details. Then, we'll take you to the bike registration page.</p>
+                                <p class="c-paragraph">Already have an account? Login <a class="c-hyperlink" href="../Login/Login.html">here</a>.</p>        
+                                <label class="c-label" for="firstNameField">First name*</label>
+                                <input id="firstNameInputbox" class="c-text-field" type="text" name="firstNameField" required onFocus="window.dialogOpen=true;">          
+                                <label class="c-label" for="secondNameField">Second name*</label>
+                                <input id="secondNameInputbox" class="c-text-field" type="text" name="secondNameField" required onFocus="window.dialogOpen=true;">
+                                <fieldset>
+                                    <legend class="c-label" id="dtPickerDate">Date of birth*</legend>
+                                    <div class="c-date-time-picker" data-date-time-picker="date">
+                                        <button data-date-time-picker="day" data-formatter-aria-label="Day: {0}" aria-label="Day: 12" data-active-value="12">12</button>
+                                        <button data-date-time-picker="month" data-formatter-aria-label="Month: {0}" aria-label="Month: January" data-active-value="January">January</button>                                        
+                                        <button data-date-time-picker="year" data-formatter-aria-label="Year: {0}" aria-label="Year: 2018" data-active-value="2018">2018</button>
+                                        <div data-date-time-picker="date-selector" aria-hidden="true">
+                                            <div data-date-time-picker="day">
+                                                <button aria-label="Scroll Up" tabindex="-1"></button>
+                                                <ul aria-label="Day" role="listbox"></ul>
+                                                <button aria-label="Scroll Down" tabindex="-1"></button>
+                                            </div>
+                                            <div data-date-time-picker="month">
+                                                <button aria-label="Scroll Up" tabindex="-1"></button>
+                                                <ul role="listbox" aria-label="Months" data-months="January,February,March,April,May,June,July,August,September,October,November,December">
+                                                    <li role="option" aria-selected="false">October</li>
+                                                    <li role="option" aria-selected="false">November</li>
+                                                    <li role="option" class="f-js-last" aria-selected="false">December</li>
+                                                    <li role="option" aria-selected="false" tabindex="0">January</li>
+                                                    <li role="option" aria-selected="false">February</li>
+                                                    <li role="option" aria-selected="true">March</li>
+                                                    <li role="option" aria-selected="false">April</li>
+                                                    <li role="option" aria-selected="false">May</li>
+                                                    <li role="option" aria-selected="false">June</li>
+                                                    <li role="option" aria-selected="false">July</li>
+                                                    <li role="option" aria-selected="false">August</li>
+                                                </ul>
+                                                <button aria-label="Scroll Down" tabindex="-1"></button>
+                                            </div>    
+                                            <div data-date-time-picker="year">
+                                                <button aria-label="Scroll Up" tabindex="-1"></button>
+                                                <ul aria-label="Year" role="listbox"></ul>
+                                                <button aria-label="Scroll Down" tabindex="-1"></button>
+                                            </div>
+                                            <span></span>
+                                            <button data-date-time-picker="apply" class="c-glyph glyph-accept" aria-label="Apply" title="Apply"></button>
+                                            <button data-date-time-picker="cancel" class="c-glyph glyph-cancel" aria-label="Cancel" title="Cancel"></button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <label class="c-label" for="telephoneField">Telephone number (optional)</label>
+                                <input id="telephoneInputbox" class="c-text-field" type="tel" name="telephoneField" onFocus="window.dialogOpen=true;"> 
+                                <label class="c-label" for="emailField">Email address*</label>
+                                <input id="emailInputbox" class="c-text-field" type="email" name="emailField" required onFocus="window.dialogOpen=true;">
+                                <label class="c-label" for="passwordField">Password*</label>
+                                <input id="passwordInputbox" class="c-password" type="password" name="passwordField" required pattern=".{6,}" title="Your password must be at least 6 characters long." onFocus="window.dialogOpen=true;">
+                                <fieldset class="c-radio">
+                                    <legend class="c-label">Are you a police officer?*</legend>
+                                    <div>
+                                        <div>
+                                            <label class="c-label">
+                                                <input id="policeOfficerRadioYes" type="radio" aria-label="Yes" name="isPoliceOfficer" value="y">
+                                                <span>Yes</span>
+                                            </label>
+                                            <label class="c-label">
+                                                <input id="policeOfficerRadioNo" type="radio" aria-label="No" name="isPoliceOfficer" value="n" checked="checked">
+                                                <span>No</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="c-group">
+                                    <button name="NextButton" class="c-button f-primary">Next</button>
+                                    <button name="cancelButton" class="c-button" onClick="window.location.href = '../Login/Login.html';">Cancel</button>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Universal footer -->
+
+		<script async="async" src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+    </body>
+</html>
