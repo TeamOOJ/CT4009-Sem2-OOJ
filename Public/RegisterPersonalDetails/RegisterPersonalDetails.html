@@ -5,7 +5,7 @@
         <meta charset="UTF-8"> <!-- Tell browsers that this code is written in the UTF-8 character set -->
 		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
-		
+
         <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
         <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
 
@@ -13,7 +13,7 @@
         <link href="RegisterPersonalDetails.css" rel="stylesheet">
 
         <script src="../../Global/indexeddb.js"></script>
-        
+
         <meta name="description" content="Homepage of the website for Gloucestershire Constabulary to reduce bicycle theft.">
         <meta name="keywords" content="Gloucestershire Constabulary, Constabulary">
         <meta name="author" content="Oscar Nardone">
@@ -21,13 +21,13 @@
     <body onLoad="window.setTimeout(function(){document.getElementById('triggerer').click(); setInterval(function(){if(window.dialogOpen != true){document.getElementById('triggerer').click();}}, 100)}, 50);">
         <!-- Accessibility requirement -->
         <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
-            
+
         <!-- Universal header -->
 
         <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
         <main id="mainContent" data-grid="container">
             <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
-            
+
             <a style="display: hidden; color: transparent;" id="triggerer" data-js-dialog-show="flow-dialog-scroll">Trigger</a>
             <div class="c-dialog f-flow" id="flow-dialog-scroll" aria-hidden="true" onMouseOver="window.dialogOpen=true;">
                 <div role="presentation" tabindex="-1"></div>
@@ -37,16 +37,16 @@
                             <h2 class="c-heading-2" style="padding-top: 0;">Register</h2>
                             <div class="f-dialog-scroll">
                                 <p class="c-paragraph">First off, we need some of your personal details. Then, we'll take you to the bike registration page.</p>
-                                <p class="c-paragraph">Already have an account? Login <a class="c-hyperlink" href="../Login/Login.html">here</a>.</p>        
+                                <p class="c-paragraph">Already have an account? Login <a class="c-hyperlink" href="../Login/Login.html">here</a>.</p>
                                 <label class="c-label" for="firstNameField">First name*</label>
-                                <input id="firstNameInputbox" class="c-text-field" type="text" name="firstNameField" required onFocus="window.dialogOpen=true;">          
+                                <input id="firstNameInputbox" class="c-text-field" type="text" name="firstNameField" required onFocus="window.dialogOpen=true;">
                                 <label class="c-label" for="lastNameField">Last name*</label>
                                 <input id="lastNameInputbox" class="c-text-field" type="text" name="lastNameField" required onFocus="window.dialogOpen=true;">
                                 <fieldset>
                                     <legend class="c-label" id="dtPickerDate">Date of birth*</legend>
                                     <div class="c-date-time-picker" data-date-time-picker="date">
                                         <button data-date-time-picker="day" data-formatter-aria-label="Day: {0}" aria-label="Day: 12" data-active-value="12">12</button>
-                                        <button data-date-time-picker="month" data-formatter-aria-label="Month: {0}" aria-label="Month: January" data-active-value="January">January</button>                                        
+                                        <button data-date-time-picker="month" data-formatter-aria-label="Month: {0}" aria-label="Month: January" data-active-value="January">January</button>
                                         <button data-date-time-picker="year" data-formatter-aria-label="Year: {0}" aria-label="Year: 2018" data-active-value="2018">2018</button>
                                         <div data-date-time-picker="date-selector" aria-hidden="true">
                                             <div data-date-time-picker="day">
@@ -70,7 +70,7 @@
                                                     <li role="option" aria-selected="false">August</li>
                                                 </ul>
                                                 <button aria-label="Scroll Down" tabindex="-1"></button>
-                                            </div>    
+                                            </div>
                                             <div data-date-time-picker="year">
                                                 <button aria-label="Scroll Up" tabindex="-1"></button>
                                                 <ul aria-label="Year" role="listbox"></ul>
@@ -83,7 +83,7 @@
                                     </div>
                                 </fieldset>
                                 <label class="c-label" for="telephoneField">Telephone number (optional)</label>
-                                <input id="telephoneInputbox" class="c-text-field" type="tel" name="telephoneField" onFocus="window.dialogOpen=true;"> 
+                                <input id="telephoneInputbox" class="c-text-field" type="tel" name="telephoneField" onFocus="window.dialogOpen=true;">
                                 <label class="c-label" for="emailField">Email address*</label>
                                 <input id="emailInputbox" class="c-text-field" type="email" name="emailField" required onFocus="window.dialogOpen=true;">
                                 <label class="c-label" for="passwordField">Password*</label>
@@ -94,7 +94,7 @@
                                 <div class="coinhive-captcha" data-hashes="1024" data-key="SITE_KEY" data-disable-elements="#theNextButton">
                                     <em>Loading Captcha...<br>
                                     If it doesn't load, please disable Adblock!</em>
-                                </div>                            
+                                </div>
                                 <!--<fieldset class="c-radio">
                                     <legend class="c-label">Are you a police officer?*</legend>
                                     <div>
@@ -122,9 +122,21 @@
 
         </main>
 
+        <form style="display: none;" class="userRegistrationForm" action="RegisterPersonalDetails.php" method="POST" id="invisibleUserRegistrationForm">
+          <input type="text" name="fName">
+          <input type="text" name="lName">
+          <!-- Decide whether or not the following is text or date -->
+          <input type="text" name="DOB">
+          <input type="text" name="telephoneNum">
+          <input type="email" name="email">
+          <input type="password" name="password">
+          <input type="password" name="passwordConfirm">
+          <input type="text" name="captcha">
+        </form>
+
         <!-- Universal footer -->
 
         <script async="async" src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
-        <script src="RegisterPersonalDetails.js"></script>        
+        <script src="RegisterPersonalDetails.js"></script>
     </body>
 </html>
