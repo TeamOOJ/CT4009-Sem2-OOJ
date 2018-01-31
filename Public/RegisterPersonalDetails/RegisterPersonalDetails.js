@@ -1,10 +1,10 @@
 function registerPublicUser() {
-    setDatabaseName('gloucestershireConstabulary', ['UsersObjectStore', 'BikesObjectStore']);
-    setCurrObjectStoreName('UsersObjectStore');
-    startDB(function() {
+    //setDatabaseName('gloucestershireConstabulary', ['UsersObjectStore', 'BikesObjectStore']);
+    //setCurrObjectStoreName('UsersObjectStore');
+    //startDB(function() {
         saveRegistrationData("public");
         window.location.href = "../Login/Login.html";
-    })
+    //})
 }
 
 /* The following function saves data in an indexedDB database, learnt during S1WK5 e-learning */
@@ -16,13 +16,14 @@ var lastNameField = document.getElementsByName("lastNameField")[0];
 var telephoneField = document.getElementsByName("telephoneField")[0];
 var emailField = document.getElementsByName("emailField")[0];
 var passwordField = document.getElementsByName("passwordField")[0];
+var confirmPasswordField = document.getElementsByName("confirmPasswordField")[0];
 
 function saveRegistrationData(userType) {
     var dateOfBirthDay = document.getElementsByClassName("c-date-time-picker")[0].children[0].attributes[3].value;
     var dateOfBirthMonthRaw = document.getElementsByClassName("c-date-time-picker")[0].children[1].attributes[3].value;
     var dateOfBirthMonth;
     var dateOfBirthYear = document.getElementsByClassName("c-date-time-picker")[0].children[2].attributes[3].value;
-    
+
     if (dateOfBirthMonthRaw == "January") {
         dateOfBirthMonth = 91;
     } else if (dateOfBirthMonthRaw == "February") {
@@ -50,7 +51,7 @@ function saveRegistrationData(userType) {
     } else {
         dateOfBirthMonth = 00;
     }
-    
+
     var dateOfBirth = dateOfBirthDay + "/" + dateOfBirthMonth + "/" + dateOfBirthYear;
 
     var title = "";
@@ -65,7 +66,27 @@ function saveRegistrationData(userType) {
     var increaseContrast = "false";
     var profilePic;
 
-    var data = {
+    var invisibleUserRegistrationForm = document.getElementById("invisibleUserRegistrationForm");
+
+    var fNameForm = invisibleUserRegistrationForm.getElementsByName("fName")[0];
+    var lNameForm = invisibleUserRegistrationForm.getElementsByName("lName")[0];
+    var dobForm = invisibleUserRegistrationForm.getElementsByName("DOB")[0];
+    var telephoneNumForm = invisibleUserRegistrationForm.getElementsByName("telephoneNum")[0];
+    var emailForm = invisibleUserRegistrationForm.getElementsByName("email")[0];
+    var passwordForm = invisibleUserRegistrationForm.getElementsByName("password")[0];
+    var confirmPasswordForm = invisibleUserRegistrationForm.getElementsByName("confirmPassword")[0];
+    var captchaForm = invisibleUserRegistrationForm.getElementsByName("captcha")[0];
+
+    fNameForm = firstName;
+    lNameForm = lastName;
+    dobForm = dateOfBirth;
+    telephoneNumForm = telephoneNum;
+    emailForm = email;
+    passwordForm = password;
+    confirmPasswordForm = confirmPassword;
+
+
+  /*  var data = {
         'title': title,
         'firstName': firstName,
         'lastName': lastName,
@@ -82,5 +103,5 @@ function saveRegistrationData(userType) {
     insertOne(data, function(lastID) {
         event.preventDefault();
         return false;
-    });
+    });*/
 }
