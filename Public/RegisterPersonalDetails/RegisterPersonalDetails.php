@@ -8,13 +8,17 @@
 # Trello card: https://trello.com/c/eYyy0w5P
 
 $firstName = $_POST("fName");
-$lastName = 
-$dateOfBirth = 
-$telephoneNum = 
-$email = 
-$pass = 
-$passConfirm = 
-
+$lastName = $_POST("lName");
+$dateOfBirth = $_POST("DOB");
+$telephoneNum = $_POST("telephoneNum");
+$email = $_POST("email");
+$pass = $_POST("password");
+$passConfirm = $_POST("passwordConfirm");
+$title = "";
+$contactPreference = "";
+$increaseContract = "";
+$permissions = "";
+$profilePic = "";
 
 
 
