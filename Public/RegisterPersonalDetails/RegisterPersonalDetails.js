@@ -3,7 +3,7 @@ function registerPublicUser() {
     //setCurrObjectStoreName('UsersObjectStore');
     //startDB(function() {
         saveRegistrationData("public");
-        window.location.href = "../Login/Login.html";
+        //window.location.href = "../Login/Login.html";
     //})
 }
 
@@ -62,20 +62,21 @@ function saveRegistrationData(userType) {
     var email = emailField.value;
     var contactPreference = "";
     var password = passwordField.value;
+    var confirmPassword = confirmPasswordField.value;
     var permissions = userType.toString();
     var increaseContrast = "false";
     var profilePic;
 
     var invisibleUserRegistrationForm = document.getElementById("invisibleUserRegistrationForm");
-
-    var fNameForm = invisibleUserRegistrationForm.getElementsByName("fName")[0];
-    var lNameForm = invisibleUserRegistrationForm.getElementsByName("lName")[0];
-    var dobForm = invisibleUserRegistrationForm.getElementsByName("DOB")[0];
-    var telephoneNumForm = invisibleUserRegistrationForm.getElementsByName("telephoneNum")[0];
-    var emailForm = invisibleUserRegistrationForm.getElementsByName("email")[0];
-    var passwordForm = invisibleUserRegistrationForm.getElementsByName("password")[0];
-    var confirmPasswordForm = invisibleUserRegistrationForm.getElementsByName("confirmPassword")[0];
-    var captchaForm = invisibleUserRegistrationForm.getElementsByName("captcha")[0];
+    
+    var fNameForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-fName")[0];
+    var lNameForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-lName")[0];
+    var dobForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-dateOfBirth")[0];
+    var telephoneNumForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-telephoneNum")[0];
+    var emailForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-email")[0];
+    var passwordForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-password")[0];
+    var confirmPasswordForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-confirmPassword")[0];
+    var captchaForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-captcha")[0];
 
     fNameForm = firstName;
     lNameForm = lastName;
@@ -84,6 +85,8 @@ function saveRegistrationData(userType) {
     emailForm = email;
     passwordForm = password;
     confirmPasswordForm = confirmPassword;
+
+    document.getElementById("InvisiSubmit").click();
 
 
   /*  var data = {
