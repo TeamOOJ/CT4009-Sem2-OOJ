@@ -1,11 +1,11 @@
 <?php
 
 ########
-# TODO #
+# DONE #
 ########
 # What: Grab form data and store in variables using PHP
 # Who: Olivia Arnell, Josh Jackson
-# Trello card: https://trello.com/c/eYyy0w5P
+# GitHub issue: https://github.com/TeamOOJ/CT4009-Sem2-OOJ/issues/20
 
 $firstName = $_POST("fName");
 $lastName = $_POST("lName");
@@ -16,26 +16,26 @@ $pass = $_POST("password");
 $passConfirm = $_POST("passwordConfirm");
 $title = "";
 $contactPreference = "";
-$increaseContract = "";
+$increaseContrast = 0;
 $permissions = "";
-$profilePic = "";
+$profilePic;
 
 
 
 
 ########
-# TODO #
+# DONE #
 ########
 # What: Store grabbed form data into the users table in the MySQL database
 # Who: Oscar Nardone
-# Trello card: https://trello.com/c/eYyy0w5P
+# GitHub issue: https://github.com/TeamOOJ/CT4009-Sem2-OOJ/issues/20
 
 # http://php.net/manual/en/mysqli.quickstart.statements.php
 
 $dbAddress = "localhost";
-$dbUsername = "username";
-$dbPassword = "password";
-$dbName = "glosContabulary";
+$dbUsername = "s1712027_oscar";
+$dbPassword = "thechosenone";
+$dbName = "s1712027_glosConstabulary";
 
 $mysqli = new mysqli($dbAddress, $dbUsername, $dbPassword, $dbName); # Create a new MySQLi object that connects to localhost with the login details and database name
 if ($mysqli->connect_errno) {
@@ -44,7 +44,7 @@ if ($mysqli->connect_errno) {
     echo "Successfully connected to MySQL."; # if it succeeds, say that it's connected fine
 }
 
-if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`) VALUES (NULL, '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$pass', '$passConfirm')")) {
+if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`, `contactPreference`, `increaseContrast`, `permissions`) VALUES (NULL, '$title', '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$pass', '$passConfirm', '$contactPreference', '$increaseContrast', '$permissions')")) {
     echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
 } else {
     echo "Successfully added new row to table usersTable.";
