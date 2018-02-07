@@ -7,17 +7,17 @@
 # Who: Olivia Arnell, Josh Jackson
 # GitHub issue: https://github.com/TeamOOJ/CT4009-Sem2-OOJ/issues/20
 
-$firstName = $_POST("fName");
-$lastName = $_POST("lName");
-$dateOfBirth = $_POST("DOB");
-$telephoneNum = $_POST("telephoneNum");
-$email = $_POST("email");
-$pass = $_POST("password");
-$passConfirm = $_POST("passwordConfirm");
-$title = "";
-$contactPreference = "";
+$firstName = $_POST('fName');
+$lastName = $_POST('lName');
+$dateOfBirth = $_POST('DOB');
+$telephoneNum = $_POST('telephoneNum');
+$email = $_POST('email');
+$pass = $_POST('password');
+$passConfirm = $_POST('passwordConfirm');
+$title = '';
+$contactPreference = '';
 $increaseContrast = 0;
-$permissions = "";
+$permissions = '';
 $profilePic;
 
 
