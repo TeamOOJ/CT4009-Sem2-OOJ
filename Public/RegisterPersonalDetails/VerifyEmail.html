@@ -19,8 +19,6 @@
         <!-- Accessibility requirement -->
         <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
 
-        <!-- Universal header -->
-
         <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
         <main id="mainContent" data-grid="container">
             <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
@@ -32,16 +30,16 @@
                         <button class="c-glyph glyph-cancel" aria-label="Close dialog" tabindex="0" onClick="window.location.href = '../Home/Home.html';"></button>
                         <div role="document">
                             <h2 class="c-heading-2" style="padding-top: 0;">Verify your account</h2>
-                            <p class="c-paragraph">Need an account? Register <a class="c-hyperlink" href="../RegisterPersonalDetails/RegisterPersonalDetails.html">here</a>.</p>
+                            <p class="c-paragraph">Please enter your email address and the verification code below to verify your account.</p>
                             <div>
                               <form class="publicLoginForm" action="Login.php" method="post">
                                 <label class="c-label" for="usernameField">Email</label>
                                 <input id="emailInputbox" class="c-text-field" type="email" name="emailField" required onFocus="window.dialogOpen=true;">
                                 <label class="c-label" for="passwordField">Verification code</label>
-                                <input id="codeInputbox" class="c-password" type="password" name="codeField" required onFocus="window.dialogOpen=true;">
+                                <input id="codeInputbox" class="c-text-field" type="text" name="codeField" required onFocus="window.dialogOpen=true;">
                                 <div class="c-group">
-                                    <button name="loginButton" class="c-button f-primary" type="submit">Verify</button>
-                                    <button name="forgotDetailsButton" class="c-button">Cancel</button>
+                                    <button name="verifyButton" class="c-button f-primary" type="submit">Verify</button>
+                                    <button name="cancelButton" class="c-button">Cancel</button>
                                 </div>
                               </form>
                             </div>
@@ -49,12 +47,8 @@
                     </div>
                 </div>
             </div>
-
         </main>
 
-        <!-- Universal footer -->
-
         <script async="async" src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
-        <script src="Login.js"></script>
     </body>
 </html>
