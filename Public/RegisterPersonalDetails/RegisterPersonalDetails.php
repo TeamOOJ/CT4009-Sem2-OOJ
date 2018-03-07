@@ -86,13 +86,21 @@ if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName
 # GitHub issue: https://github.com/TeamOOJ/CT4009-Sem2-OOJ/issues/20
 
 function verifyUser() {
-    $emailVerification = htmlspecialchars($_GET["emailAddr"]);
-    $verificationCode = htmlspecialchars($_GET["verificationCode"]);
+    $emailVerification = htmlspecialchars($_GET["emailAddr"]); // the email address to verify
+    $verificationCode = htmlspecialchars($_GET["verificationCode"]); // the verificationCode to verify
     
-    if (!$mysqli->query("UPDATE `usersTable` SET `isVerified` = '1' WHERE `usersTable`.`email` = "$emailVerification"")) {
+    if (!$mysqli->query("SELECT `verificationCode` FROM `usersTable` WHERE `email` = "$emailVerification"")) {
         echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
     } else {
-        echo "Successfully added new row to table usersTable.";
+        $databaseVerificationCode = $mysqli->query("SELECT `verificationCode` FROM `usersTable` WHERE `email` = "$emailVerification"")->fetch_object()->verificationCode; // store the verificationCode from the database into a variable called "$databaseVerificationCode"
+        
+        if ($verificationCode == $databaseVerificationCode) { // if the code in the email and in the database match
+            if (!$mysqli->query("UPDATE `usersTable` SET `isVerified` = '1' WHERE `usersTable`.`email` = "$emailVerification"")) { // set isVerified to 1
+                echo "Error: (" . $mysqli->errno . ") " . $mysqli->error; // on fail, show an error and leave isVerified as 0
+            } else {
+                echo "Successfully added new row to table usersTable.";
+            }
+        }
     }
 } 
 
