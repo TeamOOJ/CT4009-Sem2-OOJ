@@ -1,106 +1,98 @@
 <?php
+
+// If a session is already active, the variables are unset, and the session destroyed
+if ($_SESSION) {
+    session_unset();
+    session_destroy();
+}
+
+// A new session is started and the variables are unset
 session_start();
+session_unset();
 
-// check if the user is attempting to login to another account rather than resume an existing session. If so, destroy the existing session to allow that.
-//if (!isset($_POST['email'])) {
-    // Start of third-party code from http://php.net/manual/en/function.session-destroy.php
-    // If it's desired to kill the session, also delete the session cookie.
-    // Note: This will destroy the session, and not just the session data!
-/*    if (ini_get("session.use_cookies")) {
-        $params = session_get_cookie_params();
-        setcookie(session_name(), '', time() - 42000,
-            $params["path"], $params["domain"],
-            $params["secure"], $params["httponly"]
-        );
-    }
-    // end of third-party code
+// The values are grabbed from the username and password fields
+$email = $_POST['usernameField'];
+$password = $_POST['passwordField'];
+
+// Change the following as applicable to suit the server it is on
+// The values here are used in every mysqli connection in the file
+$serverName = 'localhost';
+$dbUsername = 's1712027_oscar';
+$dbPassword = 'thechosenone';
+$dbName = 's1712027_glosConstabulary';
+
+// Creates a SQL db connection with the above credentials
+$mysqli = new mysqli($serverName, $dbUsername, $dbPassword, $dbName);
+
+// Checks for errors in the SQL connection
+if ($mysqli->connect_errno) {
+    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     session_destroy();
-}*/
-
-if (empty($_SESSION['currentUser'])) {
-    if (isset($_POST['email'])) { $email = $_POST['email']; }
-    if (isset($_POST['password'])) { $password = $_POST['password']; }
-
-    $mysqli = new mysqli("localhost", "s1712027_oscar", "thechosenone", "s1712027_glosConstabulary");
-    if ($mysqli->connect_errno) {
-        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-        exit;
-    } else {
-        # echo "Successfully connected to MySQL.";
-    }
-
-    if (!$res = $mysqli->query("SELECT * FROM `usersTable` WHERE `email` = '$email' LIMIT 1")) { # read the database entry for the given email
-        echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
-        exit;
-    } else {
-        $row = $res->fetch_assoc();
-
-        if (!$email == $row['email']) { # check if the email exists in the database, if not, throw an error.
-            destroySession();
-            echo "Error: Email not found.\n";
-            exit;
-        }
-
-        # http://php.net/manual/en/function.password-verify.php
-        if (password_verify($password, $row['password'])) { # check that the entered password matches the encrypted one on file
-            $_SESSION['currentUser'] = $email; # it matches
-            loggedIn();
-        } else {
-            # it doesn't match
-
-            destroySession();
-            echo "Invalid password.";
-            echo "your pass: " . $password;
-            echo "<br>";
-            echo "actual pass: " . $row['password'];
-            exit;
-        }   
-    }
-} else {
-    # Check that the email in the session matches one on file
-    $mysqli = new mysqli("localhost", "oscarnardone@glos.ac.uk", "1HacoD&M%uni", "s1712027_glosConstabulary");
-    if ($mysqli->connect_errno) {
-        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-    } else {
-        echo "Successfully connected to MySQL.";
-    }
-
-    if ($res = $mysqli->query("SELECT * FROM `usersTable` WHERE `email` = '" . $_SESSION['currentUser'] . "' LIMIT 1")) {
-        $row = $res->fetch_assoc();
-        echo "Session: " . $_SESSION['currentUser'] . "\n";
-        echo "email: " . $row['email'];
-        if (!$_SESSION['currentUser'] == $row['email']) {
-            destroySession();
-            echo "Error: Invalid session ID.\n";
-            exit;
-        }
-    } else {
-        echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
-        exit;
-    }
-    loggedIn();
-}
-
-function loggedIn() {
-    session_regenerate_id(); # generate a new session straight after logging in for increased security (as the session cookie will change every login which reduces risk to session stealing)
-    echo "Welcome back, " . $_SESSION['currentUser'] . "!";
     exit;
+} else {
+    // echo "Successfully connected to MySQL.<br>";
 }
 
-function destroySession() {
-    // Start of third-party code from http://php.net/manual/en/function.session-destroy.php
-    // If it's desired to kill the session, also delete the session cookie.
-    // Note: This will destroy the session, and not just the session data!
-    if (ini_get("session.use_cookies")) {
-        $params = session_get_cookie_params();
-        setcookie(session_name(), '', time() - 42000,
-            $params["path"], $params["domain"],
-            $params["secure"], $params["httponly"]
-        );
-    }
-    // end of third-party code
+// Variables relating to the main query that will be carried out on the database
+$res = $mysqli->query("SELECT * FROM `usersTable` WHERE `email` = '$email' LIMIT 1");
+$row = $res->fetch_assoc();
+$dbEmail = $row['email'];
 
+// Checks if there are errors in getting a result from the database
+if (!$res) {
+    echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
     session_destroy();
+    exit;
+// Checks if the email matched the one in the database
+} else {
+    if (!$GLOBALS['email'] == $GLOBALS['dbEmail']) {
+        echo "Error: Email not found.";
+        session_destroy();
+        echo "<script>window.location.href = \"./Login.html\";</script>";
+        exit;
+    }
+
+    // http://php.net/manual/en/function.password-verify.php
+    // password_verify() takes the user input, hashes it with the bcrypt algorithm, then checks it against the db value
+    if (password_verify($GLOBALS['password'], $row['pass'])) {
+        // If it matches, the email is checked again
+        // (This can probably be taken out)
+        $GLOBALS['dbEmail'] = $GLOBALS['email'];
+
+        // Puts the email from the database into the session storage if email
+        // and password match those on file
+        $_SESSION['currentUser'] = $GLOBALS['dbEmail'];
+
+        // Check permissions and decide where to put user
+        // Stores user permissions in session storage, then uses js to put the
+        // user on the correct homepage
+        if ($row['permissions'] == 'public') {
+            $_SESSION['permissions'] = 'public';
+            echo "<script>window.location.href = \"../Home/Home.html\";</script>";
+            exit;
+        } elseif ($row['permissions'] == 'police') {
+            $_SESSION['permissions'] = 'police';
+            echo "<script>window.location.href = \"../../Police/Home/Home.html\";</script>";
+            exit;
+        } elseif ($row['permissions'] == 'admin') {
+            // Currently doesn't relocate user to any page
+            // Adapt code to relocate admin user to an admin control panel once implemented
+            $_SESSION['permissions'] = 'admin';
+            exit;
+        } else {
+            echo "Error: User has no permissions.";
+            session_destroy();
+            exit;
+        }
+
+    } else {
+        // If the passwords don't match the one on file, the following code is executed
+        // Adapt this to return you to the login screen with an error message
+        echo "Username or Password is incorrect.";
+        session_destroy();
+        echo "<script>window.location.href = \"./Login.html\";</script>";
+        exit;
+    }
 }
 
 ?>
