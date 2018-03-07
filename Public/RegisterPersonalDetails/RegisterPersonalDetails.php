@@ -44,11 +44,53 @@ if ($mysqli->connect_errno) {
     echo "Successfully connected to MySQL."; # if it succeeds, say that it's connected fine
 }
 
-if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`, `contactPreference`, `increaseContrast`, `permissions`) VALUES (NULL, '$title', '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$pass', '$passConfirm', '$contactPreference', '$increaseContrast', '$permissions')")) {
+if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`, `contactPreference`, `increaseContrast`, `permissions`, `isVerified`) VALUES (NULL, '$title', '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$pass', '$passConfirm', '$contactPreference', '$increaseContrast', '$permissions', '0')")) {
     echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
 } else {
     echo "Successfully added new row to table usersTable.";
+    sendEmail($email, "sorry");
 }
 
+
+function verifyUser() {
+    $emailVerification = htmlspecialchars($_GET["email"]);
+    if (!$mysqli->query("UPDATE `usersTable` SET `isVerified` = '1' WHERE `usersTable`.`email` = "$emailVerification"")) {
+        echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
+    } else {
+        echo "Successfully added new row to table usersTable.";
+    }
+} 
+
+function sendEmail($emailTo, $verificationcode) {
+    $from="username@glos.ac.uk";
+    $headers = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+    //Create email headers
+
+    $headers .= 'From: '.$from. "\r\n".
+        'Reply-To: '.$from."\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    // Compose the message of the email
+    $body = 'Thank you for registering! <br>';
+    $body = $body.'Please click the link below to activate your account. <br>';
+    $link = 'http://ct4009-17am.studentsites.glos.ac.uk/TeamOOJ-Sem2/Public/RegisterPersonalDetails/RegisterPersonalDetails.php?'.
+            'phpfunction=verifyUser&email='.$emailTo.
+            '&VerificationCode='.$verificationcode;
+    $link = '<a href="'.$link.'">Click here</a>';
+    $body = $body.$link;
+    $message = '<html><body>';
+    $message .= $body;
+    $message .= '</body></html>';
+
+    if (mail($emailTo, $subject, $message, $headers)){
+        echo "Check your email for your code!";
+        //Do Something
+    } else {
+        echo "An error has occured.";
+        //Do Something
+    }
+}
 
 ?>
