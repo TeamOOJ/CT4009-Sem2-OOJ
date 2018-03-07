@@ -1,5 +1,19 @@
 <?php
 
+// check if the user is attempting to login to another account rather than resume an existing session. If so, destroy the existing session to allow that.
+
+// Start of third-party code from http://php.net/manual/en/function.session-destroy.php
+// If it's desired to kill the session, also delete the session cookie.
+// Note: This will destroy the session, and not just the session data!
+if (ini_get("session.use_cookies")) {
+    $params = session_get_cookie_params();
+    setcookie(session_name(), '', time() - 42000,
+        $params["path"], $params["domain"],
+        $params["secure"], $params["httponly"]
+    );
+}
+// end of third-party code
+    
 // If a session is already active, the variables are unset, and the session destroyed
 if ($_SESSION) {
     session_unset();
@@ -90,6 +104,7 @@ if (!$res) {
         // Adapt this to return you to the login screen with an error message
         echo "Username or Password is incorrect.";
         session_destroy();
+        sleep(2); // sleep for a couple of seconds so that the user has a chance of seeing the error message before being redirected
         echo "<script>window.location.href = \"./Login.html\";</script>";
         exit;
     }

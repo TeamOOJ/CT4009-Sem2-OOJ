@@ -51,9 +51,15 @@ if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName
     sendEmail($email, "sorry");
 }
 
+#######
+# WIP #
+#######
+# What: Send an email if successfully registered and verify their account
+# Who: Olivia Arnell
+# GitHub issue: https://github.com/TeamOOJ/CT4009-Sem2-OOJ/issues/20
 
 function verifyUser() {
-    $emailVerification = htmlspecialchars($_GET["email"]);
+    $emailVerification = htmlspecialchars($_GET["emailAddr"]);
     if (!$mysqli->query("UPDATE `usersTable` SET `isVerified` = '1' WHERE `usersTable`.`email` = "$emailVerification"")) {
         echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
     } else {
@@ -76,7 +82,7 @@ function sendEmail($emailTo, $verificationcode) {
     $body = 'Thank you for registering! <br>';
     $body = $body.'Please click the link below to activate your account. <br>';
     $link = 'http://ct4009-17am.studentsites.glos.ac.uk/TeamOOJ-Sem2/Public/RegisterPersonalDetails/RegisterPersonalDetails.php?'.
-            'phpfunction=verifyUser&email='.$emailTo.
+            'phpfunction=verifyUser&emailAddr='.$emailTo.
             '&VerificationCode='.$verificationcode;
     $link = '<a href="'.$link.'">Click here</a>';
     $body = $body.$link;
