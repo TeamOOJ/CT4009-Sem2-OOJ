@@ -32,6 +32,30 @@ $profilePic;
 
 # http://php.net/manual/en/mysqli.quickstart.statements.php
 
+
+
+// Start third-party code
+// http://www.developphp.com/video/PHP/Random-String-Generator-PHP-Function-Programming-Tutorial
+function randStrGen($len){
+    $result = "";
+    $chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+    $charArray = str_split($chars);
+    for($i = 0; $i < $len; $i++){
+	    $randItem = array_rand($charArray);
+	    $result .= "".$charArray[$randItem];
+    }
+    return $result;
+}
+
+// Usage example
+//$randstr = randStrGen(200);
+//echo $randstr;
+// End of third-party code
+
+$generatedVerificationCode = randStrGen(16);
+
+
+
 $dbAddress = "localhost";
 $dbUsername = "s1712027_oscar";
 $dbPassword = "thechosenone";
@@ -44,11 +68,14 @@ if ($mysqli->connect_errno) {
     echo "Successfully connected to MySQL."; # if it succeeds, say that it's connected fine
 }
 
-if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`, `contactPreference`, `increaseContrast`, `permissions`, `isVerified`) VALUES (NULL, '$title', '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$pass', '$passConfirm', '$contactPreference', '$increaseContrast', '$permissions', '0')")) {
+if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`, `contactPreference`, `increaseContrast`, `permissions`, `isVerified`, `verificationCode`) VALUES (NULL, '$title', '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$pass', '$passConfirm', '$contactPreference', '$increaseContrast', '$permissions', '0', '$generatedVerificationCode')")) {
     echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
 } else {
     echo "Successfully added new row to table usersTable.";
-    sendEmail($email, "sorry");
+    
+    
+    
+    sendEmail($email, $generatedVerificationCode);
 }
 
 #######
@@ -60,6 +87,8 @@ if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName
 
 function verifyUser() {
     $emailVerification = htmlspecialchars($_GET["emailAddr"]);
+    $verificationCode = htmlspecialchars($_GET["verificationCode"]);
+    
     if (!$mysqli->query("UPDATE `usersTable` SET `isVerified` = '1' WHERE `usersTable`.`email` = "$emailVerification"")) {
         echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
     } else {
@@ -67,7 +96,7 @@ function verifyUser() {
     }
 } 
 
-function sendEmail($emailTo, $verificationcode) {
+function sendEmail($emailTo, $generatedVerificationCode) {
     $from="username@glos.ac.uk";
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -83,7 +112,7 @@ function sendEmail($emailTo, $verificationcode) {
     $body = $body.'Please click the link below to activate your account. <br>';
     $link = 'http://ct4009-17am.studentsites.glos.ac.uk/TeamOOJ-Sem2/Public/RegisterPersonalDetails/RegisterPersonalDetails.php?'.
             'phpfunction=verifyUser&emailAddr='.$emailTo.
-            '&VerificationCode='.$verificationcode;
+            '&verificationCode='.$generatedVerificationCode;
     $link = '<a href="'.$link.'">Click here</a>';
     $body = $body.$link;
     $message = '<html><body>';
