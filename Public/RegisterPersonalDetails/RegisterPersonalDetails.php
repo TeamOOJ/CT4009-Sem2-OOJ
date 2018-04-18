@@ -59,7 +59,7 @@ $generatedVerificationCode = randStrGen(16);
 $dbAddress = "localhost";
 $dbUsername = "s1712027_oscar";
 $dbPassword = "thechosenone";
-$dbName = "s1712027_glosConstabulary";
+$dbName = "s1712027_glosContabulary";
 
 $mysqli = new mysqli($dbAddress, $dbUsername, $dbPassword, $dbName); # Create a new MySQLi object that connects to localhost with the login details and database name
 if ($mysqli->connect_errno) {
