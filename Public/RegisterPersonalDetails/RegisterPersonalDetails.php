@@ -21,6 +21,10 @@ $permissions = '';
 $profilePic;
 
 
+$phpFunctionToRun = $_POST['phpfunction'];
+if ($phpFunctionToRun == "verifyUser") {
+    verifyUser();
+}
 
 
 ########
@@ -46,15 +50,15 @@ function randStrGen($len){
     }
     return $result;
 }
-
 // Usage example
 //$randstr = randStrGen(200);
 //echo $randstr;
+
 // End of third-party code
 
 $generatedVerificationCode = randStrGen(16);
-
-
+$securePass = password_hash($password, PASSWORD_DEFAULT);
+$securePassConfirm = password_hash($passConfirm, PASSWORD_DEFAULT);
 
 $dbAddress = "localhost";
 $dbUsername = "s1712027_oscar";
@@ -66,16 +70,13 @@ if ($mysqli->connect_errno) {
     echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error; # if it fails to connect, show an error and give details
 } else {
     echo "Successfully connected to MySQL."; # if it succeeds, say that it's connected fine
-}
 
-if (!$mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`, `contactPreference`, `increaseContrast`, `permissions`, `isVerified`, `verificationCode`) VALUES (NULL, '$title', '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$pass', '$passConfirm', '$contactPreference', '$increaseContrast', '$permissions', '0', '$generatedVerificationCode')")) {
-    echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
-} else {
-    echo "Successfully added new row to table usersTable.";
-    
-    
-    
-    sendEmail($email, $generatedVerificationCode);
+    if ($mysqli->query("INSERT INTO `usersTable` (`PrimaryKey`, `title`, `firstName`, `lastName`, `dateOfBirth`, `telephoneNum`, `email`, `pass`, `passConfirm`, `contactPreference`, `increaseContrast`, `permissions`, `isVerified`, `verificationCode`) VALUES (NULL, '$title', '$firstName', '$lastName', '$dateOfBirth', '$telephoneNum', '$email', '$securePass', '$securePassConfirm', '$contactPreference', '$increaseContrast', '$permissions', '0', '$generatedVerificationCode')")) {
+        echo "Successfully added new row to table usersTable.";
+        sendEmail($email, $generatedVerificationCode);
+    } else {
+        echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
+    }
 }
 
 #######
@@ -89,13 +90,13 @@ function verifyUser() {
     $emailVerification = htmlspecialchars($_GET["emailAddr"]); // the email address to verify
     $verificationCode = htmlspecialchars($_GET["verificationCode"]); // the verificationCode to verify
     
-    if (!$mysqli->query("SELECT `verificationCode` FROM `usersTable` WHERE `email` = "$emailVerification"")) {
+    if (!$mysqli->query("SELECT `verificationCode` FROM `usersTable` WHERE `email` = '$emailVerification'")) {
         echo "Error: (" . $mysqli->errno . ") " . $mysqli->error;
     } else {
-        $databaseVerificationCode = $mysqli->query("SELECT `verificationCode` FROM `usersTable` WHERE `email` = "$emailVerification"")->fetch_object()->verificationCode; // store the verificationCode from the database into a variable called "$databaseVerificationCode"
+        $databaseVerificationCode = $mysqli->query("SELECT `verificationCode` FROM `usersTable` WHERE `email` = '$emailVerification'")->fetch_object()->verificationCode; // store the verificationCode from the database into a variable called "$databaseVerificationCode"
         
         if ($verificationCode == $databaseVerificationCode) { // if the code in the email and in the database match
-            if (!$mysqli->query("UPDATE `usersTable` SET `isVerified` = '1' WHERE `usersTable`.`email` = "$emailVerification"")) { // set isVerified to 1
+            if (!$mysqli->query("UPDATE `usersTable` SET `isVerified` = '1' WHERE `usersTable`.`email` = '$emailVerification'")) { // set isVerified to 1
                 echo "Error: (" . $mysqli->errno . ") " . $mysqli->error; // on fail, show an error and leave isVerified as 0
             } else {
                 echo "Successfully added new row to table usersTable.";
@@ -105,7 +106,7 @@ function verifyUser() {
 } 
 
 function sendEmail($emailTo, $generatedVerificationCode) {
-    $from="username@glos.ac.uk";
+    $from="s1712027@connect.glos.ac.uk";
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
