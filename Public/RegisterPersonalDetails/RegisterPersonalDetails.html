@@ -37,9 +37,9 @@
                                 <p class="c-paragraph">First off, we need some of your personal details. Then, we'll take you to the bike registration page.</p>
                                 <p class="c-paragraph">Already have an account? Login <a class="c-hyperlink" href="../Login/Login.html">here</a>.</p>
                                 <label class="c-label" for="firstNameField">First name*</label>
-                                <input id="firstNameInputbox" class="c-text-field" type="text" name="firstNameField" required onFocus="window.dialogOpen=true;">
+                                <input id="firstNameInputbox" class="c-text-field" type="text" name="firstNameField" required onFocus="window.dialogOpen=true;" value="oscar">
                                 <label class="c-label" for="lastNameField">Last name*</label>
-                                <input id="lastNameInputbox" class="c-text-field" type="text" name="lastNameField" required onFocus="window.dialogOpen=true;">
+                                <input id="lastNameInputbox" class="c-text-field" type="text" name="lastNameField" required onFocus="window.dialogOpen=true;" value ="nardone">
                                 <fieldset>
                                     <legend class="c-label" id="dtPickerDate">Date of birth*</legend>
                                     <div class="c-date-time-picker" data-date-time-picker="date">
@@ -83,7 +83,7 @@
                                 <label class="c-label" for="telephoneField">Telephone number (optional)</label>
                                 <input id="telephoneInputbox" class="c-text-field" type="tel" name="telephoneField" onFocus="window.dialogOpen=true;">
                                 <label class="c-label" for="emailField">Email address*</label>
-                                <input id="emailInputbox" class="c-text-field" type="email" name="emailField" required onFocus="window.dialogOpen=true;">
+                                <input id="emailInputbox" class="c-text-field" type="email" name="emailField" required onFocus="window.dialogOpen=true;" value="oscarnardone@outlook.com">
                                 <label class="c-label" for="passwordField">Password*</label>
                                 <input id="passwordInputbox" class="c-password" type="password" name="passwordField" required pattern=".{6,}" title="Your password must be at least 6 characters long." onFocus="window.dialogOpen=true;">
                                 <label class="c-label" for="confirmPasswordField">Confirm password*</label>
@@ -127,9 +127,11 @@
             <input type="text" name="DOB" class="Invisi-dateOfBirth">
             <input type="text" name="telephoneNum" class="Invisi-telephoneNum">
             <input type="email" name="email" class="Invisi-email">
-            <input type="password" name="password" class="Invisi-password">
-            <input type="password" name="passwordConfirm" class="Invisi-passwordConfirm">
-            <input type="text" name="captcha" class="Invisi-captcha">
+            <input type="text" name="password" class="Invisi-password">
+
+            <input type="text" name="pass" class="Invisi-pass">
+            <input type="text" name="passConfirm" class="Invisi-confirmPass">
+            <!--<input type="text" name="captcha" class="Invisi-captcha">-->
             <input type="submit" id="InvisiSubmit">
         </form>
 

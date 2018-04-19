@@ -74,17 +74,23 @@ function saveRegistrationData(userType) {
     var dobForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-dateOfBirth")[0];
     var telephoneNumForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-telephoneNum")[0];
     var emailForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-email")[0];
-    var passwordForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-password")[0];
-    var confirmPasswordForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-confirmPassword")[0];
+    //var passwordForm = document.getElementsByClassName("Invisi-password")[0];
+    var passwordForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-pass")[0];
+    var confirmPasswordForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-confirmPass")[0];
     var captchaForm = invisibleUserRegistrationForm.getElementsByClassName("Invisi-captcha")[0];
 
-    fNameForm = firstName;
-    lNameForm = lastName;
-    dobForm = dateOfBirth;
-    telephoneNumForm = telephoneNum;
-    emailForm = email;
-    passwordForm = password;
-    confirmPasswordForm = confirmPassword;
+   
+
+    fNameForm.value = firstName;
+    //alert(fNameForm.value);
+    lNameForm.value = lastName;
+    dobForm.value = dateOfBirth;
+    telephoneNumForm.value = telephoneNum;
+    emailForm.value = email;
+    passwordForm.value = password;
+    alert(passwordForm.value);
+    confirmPasswordForm.value = confirmPassword;
+    alert(confirmPasswordForm.value);
 
     document.getElementById("InvisiSubmit").click();
 
