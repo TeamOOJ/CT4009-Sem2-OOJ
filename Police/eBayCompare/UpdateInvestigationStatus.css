@@ -1,0 +1,6 @@
+#step2Container.hide {
+    display: none;
+}
+#step2Container .show {
+    display: inline;
+}

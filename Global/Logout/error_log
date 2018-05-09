@@ -1,0 +1,12 @@
+[27-Apr-2018 10:40:11 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[27-Apr-2018 11:03:57 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[27-Apr-2018 12:11:40 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[27-Apr-2018 12:12:47 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[27-Apr-2018 12:46:14 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[27-Apr-2018 12:46:58 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[27-Apr-2018 12:58:58 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[27-Apr-2018 13:13:37 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[29-Apr-2018 18:58:12 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[01-May-2018 15:54:00 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[02-May-2018 13:24:02 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[02-May-2018 13:25:18 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21

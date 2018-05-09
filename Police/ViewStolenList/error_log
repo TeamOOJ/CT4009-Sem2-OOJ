@@ -1,0 +1,14 @@
+[27-Apr-2018 11:50:18 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 79
+[27-Apr-2018 11:50:18 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 80
+[27-Apr-2018 11:50:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 79
+[27-Apr-2018 11:50:54 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 80
+[27-Apr-2018 11:50:55 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 79
+[27-Apr-2018 11:50:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 80
+[27-Apr-2018 11:50:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 79
+[27-Apr-2018 11:50:56 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 80
+[27-Apr-2018 11:53:23 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 79
+[27-Apr-2018 11:53:23 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 80
+[27-Apr-2018 11:53:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 84
+[27-Apr-2018 11:53:33 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 85
+[27-Apr-2018 11:54:00 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 85
+[27-Apr-2018 11:54:00 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/s1712027/public_html/TeamOOO-Sem2/Police/ViewStolenList/ViewStolenList.php on line 86

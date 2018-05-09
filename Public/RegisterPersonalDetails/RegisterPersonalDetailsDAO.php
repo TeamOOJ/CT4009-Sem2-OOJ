@@ -27,7 +27,8 @@
 		// using mt_rand() instead of rand() yields much better performance
 		// using SHA1 instead of MD5 reduces load on the server, improves performance and reduces collisons
 
-		$securePass = password_hash($pass, PASSWORD_DEFAULT); // store an encrypted version of the $pass variable in the $securePass variable
+		//$securePass = password_hash($pass, PASSWORD_DEFAULT); // store an encrypted version of the $pass variable in the $securePass variable
+		$securePass = SHA1($pass);
 		
 		include "../../Global/config.php";
 		

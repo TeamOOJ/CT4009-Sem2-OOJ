@@ -98,7 +98,7 @@
 
 				echo '<div id="step2Container" class="hide">'; // hide the other questions about the bike until the user picks a bike
 			} else {
-				echo '<form method="POST" action="ReportStolenDAO.php">';
+				echo '<form method="POST" id="reportTheftForm" action="ReportStolenDAO.php">';
 				if ($debugMode) {
 					echo '<label>DEBUG: bikeID</label>';
 					echo '<input type="number" name="bikeID" value="' . $data["bikeID"] . '" readonly>';
@@ -156,6 +156,11 @@
 					<label>It was stolen at...</label>
 					<input type="text" class="theftLocation" name="theftLocation">
 				</div>
+
+				<br>
+				<h3>Further details</h3>
+				<p>If you have any further details that could potentially aid the investigation, please include them below.</p>
+				<textarea readonly style="width: 90%;" rows="8" form="reportTheftForm" name="theftVictimNotes"></textarea><br><br>
 
 				<br><br>
 				<input type="submit" value="Report theft">

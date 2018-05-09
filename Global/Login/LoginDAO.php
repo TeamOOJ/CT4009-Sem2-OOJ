@@ -40,7 +40,8 @@ function login() {
 	}
 	
 	if ($num_row == 1) {
-		if (password_verify($pass, $row['password'])) {
+		//if (password_verify($pass, $row['password'])) {
+		if (SHA1($pass) == $row['password']) {
 			//echo json_encode($row);
 			if ($debugMode) {
 				echo "DEBUG: " . $row["userID"]; // the contents of userID from the database query selection
