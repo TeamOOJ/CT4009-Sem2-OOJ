@@ -1,0 +1,37 @@
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td {
+	border-top: 1px solid #000;
+	padding-left: 0.33rem;
+	padding-right: 0.33rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+
+	text-align: center;
+}
+th {
+	border-top: 0;
+}
+tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.1);
+}
+
+article#deleteBikePage {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	width: 100%;
+	min-height: 99%;
+	height: 100%;
+
+	display: none;
+}
+header.typographic p {
+	max-width: 960px;
+}

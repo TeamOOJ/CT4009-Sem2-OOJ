@@ -1,0 +1,515 @@
+* {
+    font-family: 'Segoe UI', SegoeUI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Accent colours
+    - Blue: #0067b8 (the default)
+    - Purple: #6700b8
+    - Orange: #b86700
+    - Green: #007667
+    - Hot pink: #b80067
+    */
+
+    /* Hover accent colours
+    - Blue: #005CA5
+    - Purple: #5C00A5
+    - Orange: #A55C00
+    - Green: #006A5C
+    - Hot pink: #A5005C
+    */
+
+    /* Active accent colours
+    - Blue: #005293
+    - Purple: #520093
+    - Orange: #935200
+    - Green: #005E52
+    - Hot pink: #930052
+    */
+
+
+    --accent-color: #0067B8;
+    --accent-color-hover: #005CA5;
+    --accent-color-active: #005293;
+
+	transition: background-color 1s, color 1s;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, ol, p, ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Links */
+a {
+    color: #0067b8;
+}
+a:hover {
+    color: #005da6;
+}
+a:active {
+    color: #005293;
+}
+
+/* Headings */
+h1, h1.heading-1 {
+	font-size: 64px;
+	line-height: 72px;
+	
+	font-weight: 100;
+
+	margin-bottom: 8px;
+}
+h2, h2.heading-2 {
+	font-size: 48px;
+	line-height: 56px;
+	
+	font-weight: 100;
+}
+h3, h3.heading-3, .subheading-1 {
+	font-size: 32px;
+	line-height: 42px;
+	margin-bottom: -2px;
+	
+	font-weight: normal;
+}
+h4, h4.heading-4 {
+	font-size: 24px;
+	line-height: 32px;
+	margin-bottom: -4px;
+
+	font-weight: normal;
+}
+h1.bold, h2.bold, h3.bold, h4.bold {
+    font-weight: bold;
+}
+
+/* Paragraphs */
+p.paragraph-1 {
+	font-size: 20px;
+	line-height: 24px;
+
+	font-weight: 200;
+}
+p.paragraph-2 {
+	font-size: 18px;
+	line-height: 20px;
+
+	font-weight: 200;
+}
+p, p.paragraph, p.paragraph-3 {
+	font-weight: normal;
+}
+
+/* Blockquotes */
+blockquote {
+	background: #eee;
+	border-left: 2px solid #888;
+	margin: 24px 0;
+	padding: 12px 24px;
+}
+blockquote.f-lightweight {
+	background: transparent;
+	
+	color: #444;
+}
+
+/* Lists */
+.list {
+	padding-left: 16px;
+	padding-right: 0;
+	margin: 8px 0;
+}
+ul.list {
+	list-style-type: disc;
+}
+ol.list {
+	list-style-type: decimal;
+}
+.list li {
+	padding: 8px 0;
+}
+.list.f-bare {
+	padding-left: 0;
+	list-style: none;
+}
+
+/* Groups */
+.group *, .group button {
+	margin: 0;
+}
+
+/* Personas */
+.persona img {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 8px;
+}
+.persona h1, .persona p {
+	display: inline;
+}
+.persona .group {
+	display: inline-grid;
+}
+.persona p {
+	color: #555;
+	font-weight: normal;
+	font-style: italic;
+}
+.persona {
+	margin-bottom: 16px;
+	display: block;
+}
+.persona h3 {
+	font-weight: normal;
+}
+.persona p.paragraph-3 {
+	color: #444;
+}
+.persona p.persona {
+	color: #000;
+	font-style: normal;
+}
+
+/* Images */
+img.round {
+	border-radius: 100%;
+}
+
+/* Buttons */
+/* Default button and default link as button */
+button, button.button, a.button[role="button"], input[type="submit"] {
+    background: #ccc;
+
+    margin: 4px;
+    padding: 10px 12px;
+    border: 1px transparent;
+    line-height: 1;
+    text-align: center;
+
+    font-size: 15px;
+
+    cursor: pointer;
+    
+    transition: transform 0.05s cubic-bezier(.23,1,.32,1), background 0.75s cubic-bezier(.23,1,.32,1); /* Quintic ease-out */  
+}
+button:hover, button.button:hover, a.button[role="button"]:hover {
+    background: #bbb;
+}
+button:active, button.button:active, a.button[role="button"]:active {
+    background: #a5a5a5;
+    transform: scale(0.98);
+}
+button:disabled, button.button:disabled, a.button[role="button"]:disabled {
+    filter: contrast(50%) brightness(120%);
+    cursor: not-allowed;
+}
+button:disabled:hover, button:disabled:active, button.button:disabled:hover, button.button:disabled:active, a.button[role="button"]:disabled:hover, a.button[role="button"]:disabled:active {
+    background: #ccc;
+}
+
+/* Large default button and large default link as button */
+button.large, button.button.large, a.button[role="button"].large {
+    padding: 16px 20px;
+    
+    font-size: 18px;
+}
+
+/* Primary button and primary link as button */
+button.f-primary, button.button.f-primary, a.button[role="button"].f-primary, input[type="submit"] {
+    background: var(--accent-color);
+    color: #fff;
+}
+button.f-primary:hover, button.button.f-primary:hover, a.button[role="button"].f-primary:hover, input[type="submit"]:hover {
+    background: var(--accent-color-hover);
+}
+button.f-primary:active, button.button.f-primary:active, a.button[role="button"].f-primary:active, input[type="submit"]:active {
+    background: var(--accent-color-active);
+}
+button:disabled.f-primary, button.button:disabled.f-primary, a.button[role="button"]:disabled.f-primary, input[type="submit"]:disabled {
+    color: #000;
+}
+button:disabled.f-primary:hover, button:disabled.f-primary:active, button.button:disabled.f-primary:hover, button.button:disabled.f-primary:active, a.button[role="button"]:disabled.f-primary:hover, a.button[role="button"]:disabled.f-primary:active {
+    background: var(--accent-color);
+}
+
+/* Lightweight button and lightweight link as button */
+button.f-lightweight, button.button.f-lightweight, a.button[role="button"].f-lightweight {
+    background: transparent;
+    color: #0067b8;
+}
+button.f-lightweight:hover, button.button.f-lightweight:hover, a.button[role="button"].f-lightweight:hover {
+    background: transparent;
+    color: #005da6;
+    
+    text-decoration: underline;
+}
+button.f-lightweight:active, button.button.f-lightweight:active, a.button[role="button"].f-lightweight:active {
+    background: transparent;
+    color: #005293;
+    
+    transform: none;
+    text-decoration: none;
+}
+button:disabled.f-lightweight, button.f-lightweight:disabled.f-lightweight:hover, button.button:disabled.f-lightweight, button.button:disabled.f-lightweight:hover, button.button:disabled.f-lightweight:active, a.button[role="button"]:disabled.f-lightweight, a.button[role="button"]:disabled.f-lightweight:hover, a.button[role="button"]:disabled.f-lightweight:active {
+    color: #0067b8;
+    filter: saturate(40%) contrast(60%);
+    text-decoration: none;
+}
+button.f-lightweight:disabled.f-lightweight:active, button.button:disabled.f-lightweight:active, a.button[role="button"]:disabled.f-lightweight:active {
+    text-decoration: underline;
+}
+
+/* Flex button and flex link as button */
+button.f-flex, button.button.f-flex, a.button[role="button"].f-flex, input[type="submit"].f-flex {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Badges */
+strong.badge {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    letter-spacing: 0.075em;
+	padding: 1px 8px;
+}
+
+strong.badge.f-highlight, strong.badge.f-lowlight, strong.badge.f-accent {
+    font-weight: normal;
+}
+strong.badge.f-highlight {
+    background-color: #ffd800;
+    color: #000;
+}
+strong.badge.f-lowlight {
+    background-color: #333;
+    color: #fff;
+}
+strong.badge.f-large {
+	padding: 4px 16px;
+}
+strong.badge.f-accent {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* Labels */
+label {
+    display: inline-block;
+
+    margin-top: 16px;
+    padding-bottom: 4px;
+}
+
+/* Textfields */
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input[type="number"], input[type="date"] {
+    display: block;
+
+    width: 240px;
+    height: 24px;
+    padding: 2px 4px;
+
+    border: 1px solid rgba(0,0,0,0.6);
+
+    transition: border-color 0.2s cubic-bezier(.23,1,.32,1) border-color 2s; /* Quintic ease-out */
+}
+input[type="text"]:hover, input[type="password"]:hover, input[type="tel"]:hover, input[type="email"]:hover, input[type="number"]:hover, input[type="date"]:hover {
+    border-color: #000;
+}
+input[type="text"]:active, input[type="password"]:active, input[type="tel"]:active, input[type="email"]:active, input[type="number"]:active, input[type="date"]:active
+input[type="text"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="date"]:focus {
+    border-color: var(--accent-color);
+}
+
+/* Checkboxes */
+input[type="checkbox"], input[type="radio"] {
+    margin-top: 16px;
+    margin-left: 0;
+
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    appearance: button;
+
+    width: 24px;
+    height: 24px;
+    vertical-align: -6px;
+
+    background: transparent url('checkmark-white.svg') no-repeat;
+    background-size: 80%;
+    background-position: center;
+
+    border: 1px solid rgba(0,0,0,0.6);
+    cursor: pointer;
+
+    transition: background-color 0.2s cubic-bezier(.23,1,.32,1), border-color 0.2s cubic-bezier(.23,1,.32,1); /* Quintic ease-out */
+}
+input[type="checkbox"]:hover, input[type="radio"]:hover {
+    border-color: #000;
+}
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    background: #000 url('checkmark-white.svg') no-repeat;
+    background: var(--accent-color) url('checkmark-white.svg') no-repeat;
+    background-size: 80%;
+    background-position: center;
+
+    border-color: #000;
+    border-color: var(--accent-color);
+}
+input[type="checkbox"]+label, input[type="radio"]+label {
+    margin-top: 16px;
+    width: calc(100% - 32px);
+}
+
+/* Radios */
+input[type="radio"] {
+    background: transparent no-repeat;
+    border-radius: 100%;
+}
+input[type="radio"]:checked {
+    background: radial-gradient(#000 40%, #fff 20%, #fff 50%) no-repeat;
+}
+input[type="radio"]+label+span.desc {
+    display: block;
+    margin-left: 31px;
+    margin-top: -4px;
+
+    font-style: italic;
+    color: #444;
+}
+label.radio, label.switch {
+    display: block;
+}
+
+/* Switches */
+input[type="checkbox"].switch {
+    background: #fff radial-gradient(#000 40%, #fff 20%, #fff 50%) no-repeat left;
+    background-size: 24px;
+
+    border-radius: 16px;
+    width: 56px;
+
+    transition: background-position 0.2s cubic-bezier(.23,1,.32,1); /* Quintic ease-out */
+}
+input[type="checkbox"].switch:checked {
+    background: var(--accent-color) radial-gradient(#fff 40%, var(--accent-color) 20%, var(--accent-color) 50%) no-repeat right;
+    background-size: 24px;
+
+    transition: background-position 0.2s cubic-bezier(.23,1,.32,1); /* Quintic ease-out */
+}
+
+input[type="checkbox"].switch+span::before {
+    display: inline;
+}
+input[type="checkbox"].switch+span::before {
+    content: "Off";
+}
+input[type="checkbox"].switch:checked+span::before {
+    content: "On";
+}
+
+label.switch span:first-of-type {
+    display: block;
+    margin-bottom: -8px;
+}
+label input[type="checkbox"].switch~span.off::before, label input[type="checkbox"].switch~span.on::before {
+    content: "";
+    display: inline;
+}
+label input[type="checkbox"].switch~span.off {
+    display: inline;
+}
+label input[type="checkbox"].switch:checked~span.off {
+    display: none;
+}
+label input[type="checkbox"].switch~span.on {
+    display: none;
+}
+label input[type="checkbox"].switch:checked~span.on {
+    display: inline;
+}
+
+
+
+/* Headers and intros */
+header.typographic, header.intro {
+    display: block;
+
+    height: 240px;
+    margin-bottom: 16px;
+
+    box-shadow: 0px 0px 12px 1px #666;
+
+    /*background: var(--accent-color) linear-gradient(to bottom right, var(--accent-color), rgba(255,255,255,0.1))*/
+    background: #000;
+    background: var(--accent-color);
+
+    color: #fff;
+    
+    overflow: hidden;
+}
+header.typographic h1 {
+    /*padding-top: 48px;*/
+    padding-top: 96px;
+}
+header.typographic p {
+    max-width: 480px;
+    width: 33%;
+
+    /* Todo: Media queries for scaling this to different viewports */
+}
+header.typographic.small {
+    height: 160px;
+}
+header.typographic.small h2 {
+    padding-top: 56px;
+}
+
+header.typographic.lightweight {
+    margin-top: 16px;
+    background: transparent;
+    color: var(--accent-color);
+    box-shadow: none;
+    /*border-bottom: solid 1px var(--accent-color);*/
+}
+
+header.intro {
+    height: 280px;
+    transition: height 0.4s;
+
+    overflow: hidden;
+}
+header.intro h1 {
+    padding-top: 0px;
+}
+header.intro nav {
+    padding: 16px 0;
+    height: 96px;
+}
+
+header.intro.nav {
+    height: 96px;
+    transition: height 0.4s;
+}
+
+header.intro div nav div .persona div.group p {
+    color: #bbb;
+}
+header.intro div nav div.group[data-grid~="col-6"]:last-of-type,
+header.intro div nav div.group[data-grid~="col-4"]:last-of-type {
+    float: right;
+    margin-right: 0;
+    margin-left: auto;
+    vertical-align: middle;
+}
+header.intro div nav div.group[data-grid~="col-4"]:nth-of-type(2) {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Navbars */
+div.navbar {
+    background-color: var(--accent-color);
+}

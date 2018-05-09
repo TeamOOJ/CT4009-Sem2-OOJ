@@ -1,306 +1,120 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en" dir="ltr"> <!-- Hint to browsers that this page is in the "en" language region with left-to-right text direction. -->
-    <head>
-        <title>Stolen list - Gloucestershire Constabulary</title>
-        <meta charset="UTF-8"> <!-- Tell browsers that this code is written in the UTF-8 character set -->
-		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ViewStolenList - Glos Constabulary</title>
 		
-        <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
-        <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
-        
-		<link href="../../Global/GlobalPublic.css" rel="stylesheet">
-		<link href="../../Global/GlobalPolice.css" rel="stylesheet">
+		<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+		<link href="https://ozli.ga/Ozli-v1.4/general.css" rel="stylesheet">
+		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
+		<link href="../../Global/glosPolice-theme.css" rel="stylesheet">
+		
 		<link href="ViewStolenList.css" rel="stylesheet">
-		
-		<script src="../../Global/indexeddb.js"></script>
-        
-        <meta name="description" content="Homepage of the website for Gloucestershire Constabulary to reduce bicycle theft.">
-        <meta name="keywords" content="Gloucestershire Constabulary, Constabulary">
-        <meta name="author" content="Oscar Nardone">
-    </head>
-    <body>
-        <!-- Accessibility requirement -->
-        <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
-		
-        <!-- Universal header -->
-        <header class="c-universal-header theme-dark theme-transparent" role="banner">
-            <div data-grid="container stack-2" style="margin-top: 16px;">
-                <div data-grid="col-12">
-                    <div data-grid="col-6">
-                            <a href="../Home/Home.html" class="c-logo" aria-label="Logo">
-                                <img class="c-image" src="../../Global/Images/extra-small-long-logo4-dark.png" alt="Gloucestershire Constabulary logo" itemscope itemtype="http://schema.org/ImageObject">
-                                <span>Gloucestershire Constabulary</span>
-							</a>
-							<span class="c-subheading theme-transparent-subtext">Logged in as a police officer</span>							
-                    </div>
-                    <div data-grid="col-6" style="display: flex; flex-direction: column; align-items: right;">							
-						<div aria-describedby="profileDropdown" id="menuBarProfile" class="m-persona-3">
-							<div>
-								<picture role="img" aria-label="Microsoft profile picture">
-									<img class="c-image f-round personaProfilePic" src="" height="48" width="48" alt="Profile picture" id="personaSize3">
-								</picture>
-							</div>
-							<div>
-								<h5 class="c-heading personaFullName"><a>Oscar Nardone</a></h5>
-								<p class="c-subheading theme-transparent-subtext brighter personaEmail">oscarnardone@glos.ac.uk</p>
-							</div>
-						</div>
-						<div class="c-flyout" id="profileDropdown" role="tooltip" data-js-flyout-placement="bottom" data-js-flyout-dismissible="false" aria-hidden="true">
-							<ul id="profileDropdownMenu" role="menu" class="c-menu" aria-hidden="false">
-								<li class="c-menu-item" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html">Your profile</a>
-								</li>
-								<li class="c-menu-item submenu" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#contactDetails">Contact details</a>
-								</li>
-								<li class="c-menu-item submenu" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accountDetails">Account actions</a>
-								</li>
-								<li class="c-menu-item submenu" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accessibilitySettings">Accessibility</a>
-								</li>
-								<li class="c-menu-item" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../Login/Login.html">Logout</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-                </div>
-            </div>
+		<script src="../../Global/common.js" async></script>
+	</head>
+	<body>
+		<header class="intro">
+			<div data-grid="container">
+				<nav>
+					<img src="../../Global/Images/extra-small-long-logo4-dark.png" height="64px" style="vertical-align: middle;">
+					<button class="f-primary large" onclick="goHome();">Home</button>
+					<button class="f-primary large">My bikes</button>
+					<button class="f-primary large">My profile</button>
+					<button class="f-primary large" onclick="location.href = '../../Global/Logout/Logout.php';">Logout</button>
+				</nav>
+				<h1 class="heading-1">View stolen list</h1>
+				<p>(insert description here)</p>
+			</div>
 		</header>
-
-        <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
-        <main id="mainContent" class="transparentPositioning theme-dark">
-            <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
-            
-            <section class="m-typographic-intro f-background-accent f-transparent f-brief">
-                <div>
-                    <div>
-                        <h1 class="c-heading">Stolen list</h1>
-                        <p class="c-subheading">A paragraph description about what you can do on this page would be written here. Remember to click "Save changes" at the bottom of the page when done.</p>
-                    </div>
-                </div>
-			</section>
-			
-			<section data-grid="container stack-3">
-
-				<aside data-grid="col-3">
-					<div data-js-in-page-navigation-wrapper="true">
-						<nav class="c-in-page-navigation f-hide f-vertical">
-							<ul style="width: 80%;">
-								<li>
-									<h4 class="c-heading-4">Filter</h4>
-								</li>
-								<!--<li>
-									<fieldset class="c-range-slider">
-										<legend class="c-label">Number of suspects</legend>
-										<label class="c-label" for="minNumber">Minimum volume</label>
-										<input id="minNumber" class="c-text-field" type="number" min="0" max="100" value="0" data-js-range-slider-minimum-label="Minimum range slider, use left or right arrow to set a minimum range value.">
-										<label class="c-label" for="maxNumber">Maximum volume</label>
-										<input id="maxNumber" class="c-text-field" type="number" min="0" max="100" value="100" data-js-range-slider-maximum-label="Maximum range slider, use left or right arrow to set a maximum range value.">
-									</fieldset>
-								</li>-->
-								<li>
-									<fieldset class="c-checkbox">
-										<legend class="c-label">Bicycle type</legend>
-										<div>
-											<div>
-												<label class="c-label">
-													<input aria-label="Electric bike" type="checkbox" id="checkboxId8a" name="checkboxId8a" value="value8a" aria-checked="true" checked>
-													<span aria-hidden="true">Electric bike</span>
-												</label>
-												<label class="c-label">
-													<input aria-label="Mountain bike" type="checkbox" id="checkboxId8b" name="checkboxId8b" value="value8b" aria-checked="true" checked>
-													<span aria-hidden="true">Mountain bike</span>
-												</label>
-												<label class="c-label">
-													<input aria-label="BMX" type="checkbox" id="checkboxId8c" name="checkboxId8c" value="value8c" aria-checked="true" checked>
-													<span aria-hidden="true">BMX</span>
-												</label>
-												<label class="c-label">
-													<input aria-label="Road bike" type="checkbox" id="checkboxId8c" name="checkboxId8c" value="value8c" aria-checked="true" checked>
-													<span aria-hidden="true">Road bike</span>
-												</label>
-												<label class="c-label">
-													<input aria-label="Folding bike" type="checkbox" id="checkboxId8c" name="checkboxId8c" value="value8c" aria-checked="true" checked>
-													<span aria-hidden="true">Folding bike</span>
-												</label>
-												<label class="c-label">
-													<input aria-label="Other" type="checkbox" id="checkboxId8c" name="checkboxId8c" value="value8c" aria-checked="true" checked>
-													<span aria-hidden="true">Other</span>
-												</label>
-											</div>
-										</div>
-									</fieldset>
-								</li>
-								<li>
-									<fieldset class="c-checkbox">
-										<legend class="c-label">Status</legend>
-										<div>
-											<div>
-												<label class="c-label">
-													<input aria-label="Found" type="checkbox" id="checkboxId8a" name="checkboxId8a" value="value8a" aria-checked="true" checked>
-													<span aria-hidden="true">Found</span>
-												</label>
-												<label class="c-label">
-													<input aria-label="Under investigation" type="checkbox" id="checkboxId8b" name="checkboxId8b" value="value8b" aria-checked="true" checked>
-													<span aria-hidden="true">Under investigation</span>
-												</label>
-												<label class="c-label">
-													<input aria-label="Reported" type="checkbox" id="checkboxId8c" name="checkboxId8c" value="value8c" aria-checked="true" checked>
-													<span aria-hidden="true">Reported</span>
-												</label>
-											</div>
-										</div>
-									</fieldset>
-								</li>	
-								<li style="visibility: hidden;">
-									<a href="#enrolledOfficersList" class="">Enrolled officers list</a>
-								</li>
-							</ul>
-						</nav>
-						<nav class="c-in-page-navigation f-dropdown f-hide f-vertical">
-							<div class="f-dropdown-menu">
-								<a href="#actions" role="button" aria-haspopup="true" aria-expanded="false" class="f-dropdown-link">Actions</a>
-								<ul id="uniqueIdForList" role="menu" class="c-menu" aria-hidden="true">
-									<li class="c-menu-item" role="presentation">
-										<a aria-checked="false" role="menuitem" href="#anchor-1">Enrolled officers list</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</aside>
-
-				<div data-grid="col-9">
-					<section id="actions" data-js-in-page-navigation-anchor="actions">
-						<h4 class="c-heading-4" style="padding-top: 38px;">Actions</h4>
-
-						<button class="c-button" data-js-dialog-show="register-officer-dialog">Enrol a new officer</button>
-
-							<section id="enrolledOfficersList" data-js-in-page-navigation-anchor="enrolledOfficersList">
-								<h4 class="c-heading-4">Stolen bikes list</h4>
-								<div class="m-content-placement" data-grid="col-12">
-									<div id="stolenBikesList" data-grid="col-12 stack-2">
-										<div data-grid="col-4 pad-6x">
-											<div data-grid="col-12">
-												<section class="m-content-placement-item f-size-medium">
-													<picture>
-														<source srcset="http://placehold.it/485x273" media="(min-width: 1400px)">
-														<source srcset="http://placehold.it/380x214" media="(min-width: 1084px)">
-														<source srcset="http://placehold.it/321x180" media="(min-width: 768px)">
-														<source srcset="http://placehold.it/720x405" media="(min-width: 540px)">
-														<source srcset="http://placehold.it/491x276" media="(min-width:0)">
-														<img srcset="http://placehold.it/491x276" src="http://placehold.it/491x276" alt="Placeholder with grey background and dimension watermark without any imagery">
-													</picture>
-													<div>
-														<strong class="c-badge f-small f-highlight">REPORTED</strong>
-														<h3 class="c-heading">Jeff's bike</h3>
-														<p class="c-paragraph">
-															<ul class="c-list f-lean">
-																<li>Victim: Jeff Jefferson</li>
-																<li>When: 26/12/2017 16:12</li>
-																<li>Where: Cheltenham Spa area</li>
-																<li>Who: 2 suspects</li>
-																<li>What: Black BMX</li>
-															</ul>
-														</p>
-														<a href="#" class="c-call-to-action c-glyph">
-															<span>CALL TO ACTION</span>
-														</a>
-													</div>
-												</section>
-											</div>
-										</div>
-										<div data-grid="col-4 pad-6x">
-											<div data-grid="col-12">
-												<section class="m-content-placement-item f-size-medium">
-													<picture>
-														<source srcset="http://placehold.it/485x273" media="(min-width: 1400px)">
-														<source srcset="http://placehold.it/380x214" media="(min-width: 1084px)">
-														<source srcset="http://placehold.it/321x180" media="(min-width: 768px)">
-														<source srcset="http://placehold.it/720x405" media="(min-width: 540px)">
-														<source srcset="http://placehold.it/491x276" media="(min-width:0)">
-														<img srcset="http://placehold.it/491x276" src="http://placehold.it/491x276" alt="Placeholder with grey background and dimension watermark without any imagery">
-													</picture>
-													<div>
-														<strong class="c-badge f-small f-highlight reportStatusBadge found">FOUND</strong>															
-														<h3 class="c-heading">El ristias</h3>
-														<p class="c-paragraph">
-															<ul class="c-list f-lean" data-f-expanded="false">
-																<li>Victim: Boris Johnson</li>
-																<li>When: 02/01/2018 13:42</li>
-																<li>Where: The Promenade, Cheltenham</li>
-																<li>Who: 3 suspects</li>
-																<li>What: Silver folding bike</li>
-															</ul>
-														</p>
-														<a class="c-call-to-action c-glyph">
-															<span>CALL TO ACTION</span>
-														</a>
-													</div>
-												</section>
-											</div>
-										</div>
-										<div data-grid="col-4 pad-6x">
-											<div data-grid="col-12">
-												<section class="m-content-placement-item f-size-medium">
-													<picture>
-														<source srcset="http://placehold.it/485x273" media="(min-width: 1400px)">
-														<source srcset="http://placehold.it/380x214" media="(min-width: 1084px)">
-														<source srcset="http://placehold.it/321x180" media="(min-width: 768px)">
-														<source srcset="http://placehold.it/720x405" media="(min-width: 540px)">
-														<source srcset="http://placehold.it/491x276" media="(min-width:0)">
-														<img srcset="http://placehold.it/491x276" src="http://placehold.it/491x276" alt="Placeholder with grey background and dimension watermark without any imagery">
-													</picture>
-													<div>
-														<h3 class="c-heading">Heading</h3>
-														<p class="c-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id faucibus ex, eget aliquet ligula. Sed vel ligula consequat, euismod ligula quis, pharetra magna. Fusce commodo pretium tellus non ultricies. Vestibulum fringilla tempor
-															lectus, at pharetra lacus lobortis vel.</p>
-														<a href="#" class="c-call-to-action c-glyph">
-															<span>CALL TO ACTION</span>
-														</a>
-													</div>
-												</section>
-											</div>
-										</div>
-									</div>
-								</div>
-							</section>	
-						</div>
-					</section>
-				</div>
-			</section>
-			<!-- start of temp whitespace until more content is added to this page -->
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<!-- end of temp whitespace -->
-
-            <!--<div data-grid="container stack-4" id="bikeList">
-                <h2 class="c-heading-2">Personal details</h2>
-				<p class="c-subheading-2">Add and change your personal details here so we can keep you updated on any open reported thefts.</p>
-				
-				<div data-grid="col-3">
-					<br>
-					<label for="firstName">First name</label>
-					<input type="text" maxlength="512" class="c-text-field" name="firstName"></input>
-				</div>
-
-				<div data-grid="col-3">
-					<br>
-					<label for="lastName">Last name</label>
-					<input type="text" maxlength="512" class="c-text-field" name="lastName"></input>
-				</div>
-			</div>-->
-			<br><br><br><br><br>
-
-        </main>
-
-        <!-- Universal footer -->
-
-		<script async="async" src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
-		<script src="../../Global/Global.js"></script>
-		<script src="ViewStolenList.js"></script>
-		<script>getUserProfile();</script>
-    </body>
+		<main data-grid="container">
+			<table>
+				<tr>
+					<th>Nickname</th>
+					<th>Manufacturer</th>
+					<th>Model</th>
+					<th>Type</th>
+					<th>MPN</th>
+					<th>Colour</th>
+					<th>Wheel size</th>
+					<th># of gears</th>
+					<th>Type of breaks</th>
+					<th>Suspension</th>
+					<th>Gender</th>
+					<th>Age group</th>
+					<th>Common parking place</th>
+					<th>Use case</th>
+					<th>More details</th>
+				</tr>
+				<tr>
+					<td>Example nickname</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>Example nickname</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>Example nickname</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>Example nickname</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+			</table>
+		</main>
+	</body>
 </html>

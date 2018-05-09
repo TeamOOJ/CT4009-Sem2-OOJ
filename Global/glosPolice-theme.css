@@ -1,0 +1,18 @@
+@keyframes LinearGradientAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0 50%;
+    }
+}
+
+header.intro {
+    background: linear-gradient(165deg, #0095ff, darkviolet);
+    background-size: 175% 175%;
+    background-position: 0 0;
+    animation: LinearGradientAnimation 50s linear infinite;
+}

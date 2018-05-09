@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CheckInvestigationStatus - Glos Constabulary</title>
+		
+		<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+		<link href="https://ozli.ga/Ozli-v1.4/general.css" rel="stylesheet">
+		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
+		<link href="../../Global/glosPolice-theme.css" rel="stylesheet">
+		
+		<link href="CheckInvestigationStatus.css" rel="stylesheet">
+
+		<script src="../../Global/common.js" async></script>
+	</head>
+	<body>
+		<header class="intro">
+			<div data-grid="container">
+				<nav>
+					<img src="../../Global/Images/extra-small-long-logo4-dark.png" height="64px" style="vertical-align: middle;">
+					<button class="f-primary large" onclick="goHome();">Home</button>
+					<button class="f-primary large">My bikes</button>
+					<button class="f-primary large">My profile</button>
+					<button class="f-primary large" onclick="location.href = '../../Global/Logout/Logout.php';">Logout</button>
+				</nav>
+				<h1 class="heading-1">Check investigation status</h1>
+				<p>(insert description here)</p>
+			</div>
+		</header>
+		<main data-grid="container">
+			<label>Choose a bike to check its status</label>
+			<input type="text" required onchange="checkStatus(this);">
+			<button class="f-primary">Check status</button>
+			
+			<br><br>
+			<iframe id="investigationStatusIframe" class="maximiseIframe" src="about:blank" seamless></iframe>
+		</main>
+		<script src="CheckInvestigationStatus.js" defer></script>
+	</body>
+</html>

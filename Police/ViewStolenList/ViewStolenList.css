@@ -1,46 +1,138 @@
-.c-combo, input.c-text-field[type="text"], input.c-text-field[type="number"] {
-	margin-top: 10px;
+table {
+	border-collapse: collapse;
+	width: 100%;
 }
-body {
-    overflow-y: scroll !important;    
+th, td {
+	border-top: 1px solid #000;
+	padding-left: 0.33rem;
+	padding-right: 0.33rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+
+	text-align: center;
 }
-input.c-password[type="password"] {
-    margin-top: 10px;
-}
-.profilePicturePreview {
-    height: 144px;
-    width: 144px;
-    display: block;
-    border-radius: 50%;
-    background-color: rgba(0,0,0,.3);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50%;
-    background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill%3A%23fff%3B%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EAsset%202%3C/title%3E%3Cg%20id%3D%22Layer_2%22%20data-name%3D%22Layer%202%22%3E%3Cg%20id%3D%22Elements%22%3E%3Cpath%20class%3D%22cls-1%22%20d%3D%22M42.26%2C42.29a30.12%2C30.12%2C0%2C0%2C1%2C8.63%2C4.62%2C30.53%2C30.53%2C0%2C0%2C1%2C6.54%2C6.87%2C31.35%2C31.35%2C0%2C0%2C1%2C4.13%2C8.54A32.4%2C32.4%2C0%2C0%2C1%2C63%2C72H58.5a27.57%2C27.57%2C0%2C0%2C0-2.06-10.71A25.88%2C25.88%2C0%2C0%2C0%2C42.21%2C47.06%2C27.57%2C27.57%2C0%2C0%2C0%2C31.5%2C45a27.34%2C27.34%2C0%2C0%2C0-13.73%2C3.64%2C26.37%2C26.37%2C0%2C0%2C0-9.63%2C9.63%2C27.13%2C27.13%2C0%2C0%2C0-2.69%2C6.49A27.4%2C27.4%2C0%2C0%2C0%2C4.5%2C72H0a31.64%2C31.64%2C0%2C0%2C1%2C1.48-9.69%2C31.32%2C31.32%2C0%2C0%2C1%2C4.18-8.49A30.89%2C30.89%2C0%2C0%2C1%2C12.22%2C47a31.91%2C31.91%2C0%2C0%2C1%2C8.6-4.68A22.23%2C22.23%2C0%2C0%2C1%2C12.18%2C34a23%2C23%2C0%2C0%2C1-2.36-5.52%2C22.62%2C22.62%2C0%2C0%2C1%2C.93-14.8%2C22.5%2C22.5%2C0%2C0%2C1%2C12-12%2C22.76%2C22.76%2C0%2C0%2C1%2C17.54%2C0%2C22.5%2C22.5%2C0%2C0%2C1%2C12%2C12%2C22.57%2C22.57%2C0%2C0%2C1%2C.93%2C14.78A22.8%2C22.8%2C0%2C0%2C1%2C50.82%2C34a23.28%2C23.28%2C0%2C0%2C1-3.69%2C4.69A21.77%2C21.77%2C0%2C0%2C1%2C42.26%2C42.29ZM13.5%2C22.5a17.33%2C17.33%2C0%2C0%2C0%2C1.42%2C7%2C18.23%2C18.23%2C0%2C0%2C0%2C9.58%2C9.58%2C17.9%2C17.9%2C0%2C0%2C0%2C14%2C0%2C18.23%2C18.23%2C0%2C0%2C0%2C9.58-9.58%2C17.33%2C17.33%2C0%2C0%2C0%2C1.42-7%2C17.33%2C17.33%2C0%2C0%2C0-1.42-7A18.23%2C18.23%2C0%2C0%2C0%2C38.5%2C5.92a17.9%2C17.9%2C0%2C0%2C0-14%2C0%2C18.23%2C18.23%2C0%2C0%2C0-9.58%2C9.58A17.33%2C17.33%2C0%2C0%2C0%2C13.5%2C22.5Z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+th {
+	border-top: 0;
 }
 tr:nth-child(even) {
-    background: #eee;
+	background-color: rgba(0,0,0,0.1);
 }
-tr button.c-button {
-    margin-top: 1px;
-    margin-bottom: 1px;
+
+article#deleteBikePage {
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	width: 100%;
+	min-height: 99%;
+	height: 100%;
+
+	display: none;
 }
-.c-table thead th, .c-table thead th button {
-    font-size: 13px;
+header.typographic p {
+	max-width: 960px;
 }
 
 
-ul.c-list {
-    list-style-type: "- ";
-    padding-left: 10px;
+/* https://stackoverflow.com/questions/5440657/how-to-hide-columns-in-html-table */
+table.hideCount tr > td:first-child, table.hideCount tr > th:first-child {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
 }
-
-.reportStatusBadge.reported {
-	background-color: #FFBB00;
+table.hideManufacturer tr > td:nth-child(5), table.hideManufacturer tr > th:nth-child(5) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
 }
-.reportStatusBadge.underInvestigation {
-	background-color: #FFD800;
+table.hideModel tr > td:nth-child(6), table.hideModel tr > th:nth-child(6) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
 }
-.reportStatusBadge.found {
-	background-color: #AAFFAA;
+table.hideType tr > td:nth-child(7), table.hideType tr > th:nth-child(7) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideMPN tr > td:nth-child(8), table.hideMPN tr > th:nth-child(8) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideColour tr > td:nth-child(9), table.hideColour tr > th:nth-child(9) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideWheelSize tr > td:nth-child(10), table.hideWheelSize tr > th:nth-child(10) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideNoOfGears tr > td:nth-child(11), table.hideNoOfGears tr > th:nth-child(11) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideTypeOfBreaks tr > td:nth-child(12), table.hideTypeOfBreaks tr > th:nth-child(12) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideSuspension tr > td:nth-child(13), table.hideSuspension tr > th:nth-child(13) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideGender tr > td:nth-child(14), table.hideGender tr > th:nth-child(14) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideAgeGroup tr > td:nth-child(15), table.hideAgeGroup tr > th:nth-child(15) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideCommonParkingPlace tr > td:nth-child(16), table.hideCommonParkingPlace tr > th:nth-child(16) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideUseCase tr > td:nth-child(17), table.hideUseCase tr > th:nth-child(17) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
 }

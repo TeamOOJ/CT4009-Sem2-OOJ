@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ozli web framework v1.4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="grid.css" rel="stylesheet">
+        <link href="general.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="intro small">
+            <div data-grid="container">
+                <nav data-grid="col-12 stack-3">
+                    <div data-grid="col-6">
+                        <img src="https://via.placeholder.com/256x64.png" width="256px" height="64px">
+                    </div>
+                    <div class="group" data-grid="col-6" style="float: right; vertical-align: middle; padding-top: 8px; margin-right: 0; margin-left: auto;">
+                        <button class="f-primary large" onclick="window.location.href = 'index.html';">About</button>
+                        <button class="f-primary large" onclick="window.location.href = 'downloads.html';">Downloads</button>
+                    </div>
+                </nav>
+                <h1 class="heading-1">Ozli web framework v1.4</h1>
+                <p>A simple, open-source web framework designed with accessibility in mind.</p>
+            </div>
+        </header>
+        <main data-grid="container">
+            <h1 class="heading-1">About</h1>
+            <p>The Ozli web framework gives you all the basic front-end components you need to create an accessible, functional and modern webpages.</p>
+            
+            <br>
+            <h4 class="bold">Main benefits</h4>
+            <ul>
+                <li>Minimal learning curve - just drop into your existing HTML5 and the framework will style most of your content straight out of the box!</li>
+                <li>WCAG 2.0 AA certified and heavy use of semantic elements allow for great accessibility for most users with no work on your behalf.</li>
+                <li>Easily customisable through the use of CSS variables to change the look of your site.</li>
+                <li>Modular design allows you to only include the parts of the framework you need for minimal overhead.</li>
+                <li>Fully responsive across all screen types and sizes.</li>
+            </ul>
+
+            <br>
+            <h4 class="bold">Current known issues</h4>
+            <ul>
+                <li>Virtually no documentation, however a kitchen sink page containing source code of all the components can be found <a href="kitchen-sink.html">here</a>.</li>
+                <li>Doesn't always play nicely with existing stylesheets you're using.</li>
+                <li>The kitchen sink code sometimes gets minified by Cloudflare and made messy by the scroll effects library.</li>
+            </ul>
+        </main>
+    </body>
+</html>

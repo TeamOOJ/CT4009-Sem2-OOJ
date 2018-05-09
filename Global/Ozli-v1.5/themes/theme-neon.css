@@ -1,0 +1,90 @@
+@font-face {
+    font-family: squaredDisplay;
+    src: url('https://ozli.ga/Ozli-v1.4/themes/fonts/squaredDisplay.ttf');
+}
+@font-face {
+    font-family: uaSquared;
+    src: url('https://ozli.ga/Ozli-v1.4/themes/fonts/uasquare.woff2') format('woff2'),
+         url('https://ozli.ga/Ozli-v1.4/themes/fonts/uasquare.woff') format('woff'),
+         url('https://ozli.ga/Ozli-v1.4/themes/fonts/uasqaure.ttf') format('truetype');
+}
+
+.theme-neon {
+    background-color: #000;
+    color: #fff;
+}
+
+body {
+    --accent-color: #000;
+    --accent-color-hover: #fff;
+    --accent-color-active: #fff;
+}
+* {
+    font-family: uaSquared;
+    font-size: 22px;
+}
+h1, h2, h3 {
+    font-family: squaredDisplay;
+    font-size: 128px;
+
+    margin-top: -8px;
+    margin-bottom: -8px;
+}
+h2 {
+    font-size: 96px;
+}
+h3 {
+    font-size: 68px;
+}
+h4 {
+    font-family: uaSquared;
+    font-size: 48px;
+
+    font-weight: 100;
+    font-style: italic;
+
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.smallText {
+    font-size: 18px;
+}
+input, textarea {
+    background: #000;
+    color: #fff;
+    border: solid #fff 2px !important;
+    
+    display: inline-block;
+    width: 70%;
+    padding: 4px 2px;
+
+    font-family: Consolas, monospace;
+}
+input[type="checkbox"]:not(:checked) {
+    background: #000 no-repeat !important;
+}
+
+button, button.f-primary {
+    background: #000;
+    color: #fff;
+    border: solid #fff 2px;
+
+    font-size: 24px;
+    padding: 4px 16px;
+    cursor: pointer;
+
+    transition: transform 0.05s cubic-bezier(.23,1,.32,1), background 0.75s cubic-bezier(.23,1,.32,1), border 0.5s cubic-bezier(.23,1,.32,1);
+}
+button.f-primary:hover {
+    color: #000;
+    border-color: #000;
+}
+input[type="checkbox"] {
+    vertical-align: initial;
+}

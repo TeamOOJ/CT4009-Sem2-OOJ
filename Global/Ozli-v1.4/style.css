@@ -1,0 +1,26 @@
+.itemContents {
+    transition: opacity 0.2s ease-out;
+
+    display: hidden;
+
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+
+    /* For debugging */
+    background-color: #0f0;
+}
+.itemContents.show {
+    /*transition: top 0.4s, left 0.4s, height 0.4s, width 0.4s, opacity 0.2s;*/
+
+    display: block;
+    opacity: 1;
+
+    height: 100%;
+    width: 100%;
+}
+/* http://n12v.com/css-transition-to-from-auto/ */
+
+.spanGridWidth {
+    grid-template-columns: 12fr !important;
+}

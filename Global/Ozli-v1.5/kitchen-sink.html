@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="stylesheet" href="general.css">
+    <!--<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
+</head>
+<body>
+    <div data-grid="container">
+        <h3 class="bold">Buttons</h3>
+        <button class="f-primary">Primary button</button>
+        <button>Default button</button>
+        <button class="f-lightweight">Lightweight button</button>
+        <br><br>
+        <button class="f-primary" disabled>Disabled primary button</button>
+        <button disabled>Disabled default button</button>
+        <button class="f-lightweight" disabled>Disabled lightweight button</button>
+        <br><br>
+        <button class="f-primary f-flex">Primary flex button</button>
+        <button class="f-flex">Default flex button</button>
+        <button class="f-lightweight f-flex">Lightweight flex button</button>
+        <br><br>
+        <button class="f-primary large">Large primary button</button>
+        <button class="large">Large default button</button>
+        <br><br>
+        <h3 class="bold">Inputs</h3>
+        <label for="textInput">Text input</label>
+        <input type="text" name="textInput">
+        <label for="dateInput">Date input</label>
+        <input type="date" name="dateInput">
+        <label for="numericInput">Numeric input</label>
+        <input type="number" name="numericInput">
+        <label for="passwordInput">Password input</label>
+        <input type="password" name="passwordInput">
+        <input type="checkbox" name="checkboxInput">
+        <label for="checkboxInput">Checkbox input</label>
+        <input type="checkbox" name="checkboxInputChecked" checked>
+        <label for="checkboxInputChecked">Checkbox input (checked)</label>
+        <br><br>
+        <label class="radio">
+            <input type="radio" name="radioInput">
+            <span>Radio input 1</span>
+        </label>
+        <input type="radio" id="radioInput2" name="radioInput" checked>
+        <label for="radioInput2">Radio input 2 (checked)</label>
+        <br><br>
+        <input type="radio" id="radioInputDesc1" name="radioInputDesc">
+        <label for="radioInputDesc1">Radio input 1</label>
+        <span class="desc">With a breif description</span>
+        <input type="radio" id="radioInputDesc2" name="radioInputDesc" checked>
+        <label for="radioInputDesc2">Radio input 2 (checked)</label>
+        <span class="desc">With a brief description</span>
+        <br><br>
+        <label class="switch">
+            <span>Switch input</span>
+            <input class="switch" type="checkbox" name="switchInput">
+            <span></span>
+            <!--<span class="on">On (checked)</span>
+            <span class="off">Off</span>-->
+        </label>
+        <label class="switch">
+            <span>Switch input with custom status text (checked)</span>
+            <input class="switch" type="checkbox" name="switchInput" checked>
+            <span class="on">True</span>
+            <span class="off">False</span>
+        </label>
+        <label class="switch">
+            <span>Switch input without status text</span>
+            <input class="switch" type="checkbox" name="switchInput">
+        </label>
+
+        <br>
+        <p>Standalone switch (no label, auto status text):</p>
+        <input class="switch" type="checkbox" name="switchInput2">
+        <span></span>
+
+        <br><br>
+        <p data-aos="fade-up">Standalone switch (no label, no status text):</p>
+        <input class="switch" type="checkbox" name="switchInput2" data-aos="fade-up">
+        <br><br>
+        <h3 class="bold" data-aos="fade-up">Badges</h3>
+        <strong class="badge f-small" data-aos="fade-up">Default small badge</strong>
+        <strong class="badge f-small f-highlight" data-aos="fade-up">Highlight small badge</strong>
+        <strong class="badge f-small f-lowlight" data-aos="fade-up">Lowlight small badge</strong>
+        <strong class="badge f-small f-accent" data-aos="fade-up">Accent small badge</strong>
+        <br><br>
+        <strong class="badge f-large" data-aos="fade-up">Default large badge</strong>
+        <strong class="badge f-large f-highlight" data-aos="fade-up">Highlight large badge</strong>
+        <strong class="badge f-large f-lowlight" data-aos="fade-up">Lowlight large badge</strong>
+        <strong class="badge f-large f-accent" data-aos="fade-up">Accent large badge</strong>
+        <br><br>
+        <h3 class="bold" data-aos="fade-up">Headings</h3>
+        <h1 data-aos="fade-up">Heading 1</h1>
+        <h2 data-aos="fade-up">Heading 2</h2>
+        <h3 data-aos="fade-up">Heading 3</h3>
+        <h4 data-aos="fade-up">Heading 4</h4>
+        <br><br>
+        <h3 class="bold" data-aos="fade-up">Paragraphs</h3>
+        <p class="paragraph">Default paragraph</p>
+        <p class="paragraph-1">Paragraph 1</p>
+        <p class="paragraph-2">Paragraph 2</p>
+        <p class="paragraph-3">Paragraph 3</p>
+        <br><br>
+        <h3 class="bold">Blockquotes</h3>
+        <blockquote class="blockquote">
+            <p class="paragraph">This is an example blockquote</p>
+        </blockquote>
+        <blockquote class="blockquote f-lightweight">
+            <p class="paragraph">This is an example lightweight blockquote</p>
+        </blockquote>
+        <br><br>
+        <h3 class="bold">Personas</h3>
+        <div class="persona">
+            <img class="round" src="http://placehold.it/144x144">
+            <div class="group">
+                <h2 class="heading-2">Jeff Jefferson</h2>
+                <p class="paragraph-2">My name's Jeff</p>
+            </div>
+        </div>
+        <div class="persona">
+            <img class="round" src="http://placehold.it/96x96">
+            <div class="group">
+                <h3 class="heading-3">Jeff Jefferson</h3>
+                <p class="paragraph-3">My name's Jeff</p>
+            </div>
+        </div>
+        <div class="persona">
+            <img class="round" src="http://placehold.it/64x64">
+            <div class="group">
+                <h4 class="heading-4">Jeff Jefferson</h4>
+                <p class="paragraph">My name's Jeff</p>
+            </div>
+        </div>
+        <div class="persona">
+            <img class="round" src="http://placehold.it/48x48">
+            <div class="group">
+                <p class="paragraph-2 persona">Jeff Jefferson</p>
+            </div>
+        </div>
+        <div class="persona">
+            <img class="round" src="http://placehold.it/32x32">
+            <div class="group">
+                <p class="persona">Jeff Jefferson</p>
+            </div>
+        </div>
+        <br><br>
+        <h3 class="bold">Headers</h3>
+        <header class="typographic">
+            <div data-grid="container">
+                <h1>Typographic header</h1>
+                <p>This is a typographic header.</p>
+            </div>
+        </header>
+        <header class="typographic small">
+            <div data-grid="container">
+                <h2>Small typographic header</h2>
+                <p>This is a small typographic header.</p>
+            </div>
+        </header>
+        <header class="typographic lightweight">
+            <div data-grid="container">
+                <h1>Lightweight typographic header</h1>
+                <p>This is a lightweight typographic header.</p>
+            </div>
+        </header>
+        <header class="typographic small lightweight">
+            <div data-grid="container">
+                <h2>Small lightweight typographic header</h2>
+                <p>This is a small lightweight typographic header.</p>
+            </div>
+        </header>
+    </div>
+    <header class="intro">
+        <div data-grid="container">
+            <nav>
+                <img src="https://via.placeholder.com/256x64.png" width="256px" height="64px" style="vertical-align: middle;">
+                <button class="f-primary large">About</button>
+                <button class="f-primary large">Works</button>
+                <button class="f-primary large">Contact</button>
+            </nav>
+            <h1 class="heading-1">Intro header (basic nav)</h1>
+            <p>This is similar to a typographic header, except it spans the width of the page and allows for navigation elements to be placed on it.</p>
+        </div>
+    </header>
+    <header class="intro">
+        <div data-grid="container">
+            <nav data-grid="col-12 stack-3">
+                <div data-grid="col-6">
+                    <img src="https://via.placeholder.com/256x64.png" width="256px" height="64px">
+                </div>
+                <div class="group" data-grid="col-6" style="padding-top: 8px;">
+                    <button class="f-primary large">About</button>
+                    <button class="f-primary large">Works</button>
+                    <button class="f-primary large">Contact</button>
+                </div>
+            </nav>
+            <h1 class="heading-1">Intro header (2 column nav)</h1>
+            <p>This is similar to a typographic header, except it spans the width of the page and allows for navigation elements to be placed on it.</p>
+        </div>
+    </header>    
+    <header class="intro">
+        <div data-grid="container">
+            <nav data-grid="col-12 stack-3">
+                <div data-grid="col-4">
+                    <img src="https://via.placeholder.com/256x64.png" width="256px" height="64px">
+                </div>
+                <div class="group" data-grid="col-4" style="padding-top: 8px;">
+                    <button class="f-primary large">About</button>
+                    <button class="f-primary large">Works</button>
+                    <button class="f-primary large">Contact</button>
+                </div>
+                <div class="group" data-grid="col-4">
+                    <div class="persona">
+                        <img class="round" src="http://placehold.it/64x64">
+                        <div class="group">
+                            <h4 class="heading-4">Jeff Jefferson</h4>
+                            <p class="paragraph">My name's Jeff</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <h1 class="heading-1">Intro header (3 column nav)</h1>
+            <p>This is similar to a typographic header, except it spans the width of the page and allows for navigation elements to be placed on it.</p>
+        </div>
+    </header>
+    <div data-grid="container">
+        <br><br>
+        <h3 class="bold">Small headers</h3>
+        <p>Nav intro header:</p>
+    </div>
+    <header class="intro nav">
+        <div data-grid="container">
+            <nav data-grid="col-12 stack-3">
+                <div data-grid="col-6">
+                    <img src="https://via.placeholder.com/256x64.png" width="256px" height="64px">
+                </div>
+                <div class="group" data-grid="col-6" style="float: right; vertical-align: middle; padding-top: 8px; margin-right: 0; margin-left: auto;">
+                    <button class="f-primary large">About</button>
+                    <button class="f-primary large">Works</button>
+                    <button class="f-primary large">Contact</button>
+                </div>
+            </nav>
+            <h1 class="heading-1">Nav intro header</h1>
+            <p>This text is not visible to the user until the small class is removed from this intro header.</p>
+        </div>
+    </header>
+
+    <div data-grid="container">
+        <br><br>
+        <h3 class="bold">Basic navbars</h3>
+        <p>Navbar:</p>
+    </div>
+    <div class="navbar">
+        <nav data-grid="col-12 stack-3 container">
+            <div data-grid="col-6">
+                <img src="https://via.placeholder.com/256x64.png" width="256px" height="64px">
+            </div>
+            <div class="group" data-grid="col-6" style="float: right; vertical-align: middle; padding-top: 8px; margin-right: 0; margin-left: auto;">
+                <button class="f-primary large">About</button>
+                <button class="f-primary large">Works</button>
+                <button class="f-primary large">Contact</button>
+            </div>
+        </nav>
+    </div>
+    <script>window.sr = ScrollReveal({ origin: 'bottom', scale: 1.0, viewFactor: 0.01, distance: '0', duration: 500, delay: 0 });
+    sr.reveal('*');</script>
+</body>
+</html>

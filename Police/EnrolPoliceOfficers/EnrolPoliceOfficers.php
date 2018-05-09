@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>RegisterPersonalDetails - Glos Constabulary</title>
+		<title>EnrolPoliceOfficers - Glos Constabulary</title>
 		
 		<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
@@ -18,13 +18,13 @@
 					<button class="f-primary large">Home</button>
 					<button class="f-primary large" onclick="location.href = '../../Global/Login/Login.php'">Login</button>
 				</nav>
-				<h1 class="heading-1">Register account</h1>
-				<p>To register, fill out the form below and click the "Register" button.</p>
+				<h1 class="heading-1">Register police account</h1>
+				<p>To register, fill out the form below and click the "Register officer" button.</p>
 			</div>
 		</header>
 		<main data-grid="container">
-			<form method="POST" action="RegisterPersonalDetailsDAO.php">
-				<input type="text" name="phpFunction" value="createUser" style="display: none;">
+			<form method="POST" action="EnrolPoliceOfficersDAO.php">
+				<input type="text" name="phpFunction" value="createPoliceUser" style="display: none;">
 
 				<!-- https://www.w3schools.com/htmL/html_form_attributes.asp -->
 				
@@ -49,8 +49,15 @@
 				<label>Confirm password*</label>
 				<input type="password" name="confirmPass" minlength="1" required>
 				
+				<label class="switch">
+					<span>Skip email verification?</span>
+					<input class="switch" name="skipEmailVerificationBool" type="checkbox">
+					<span class="on">Yes</span>
+					<span class="off">No</span>
+				</label>
+
 				<br>
-				<input type="submit" value="Register">
+				<input type="submit" value="Register officer">
 			</form>
 		</main>
 	</body>

@@ -1,0 +1,173 @@
+/* Made by Oscar Nardone 2017
+
+With help from:
+- https://www.mozilla.org/en-US/developer/css-grid/
+- https://css-tricks.com/snippets/css/complete-guide-grid/
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+- https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column
+- http://getmwf.com/getting-started/designing/grid.html
+- http://getmwf.com/getting-started/building/grid-layout.html
+- https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+- http://getmwf.com/getting-started/designing/motion.html
+*/
+
+[data-grid~=container] {
+    margin: 0 auto;    
+    padding-left: 5%;
+    padding-right: 5%;
+    max-width: calc(1600px + 10%);
+
+    transition: padding ease-in-out 0.2s;
+}
+
+[data-grid~=col-12] {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+[data-grid*=col-], [data-grid~=container] {
+    box-sizing: border-box; /* Prevent the grid from breaking when additional padding is added to grid items */
+}
+
+
+[data-grid~=col-12]>[data-grid~=col-12] { grid-column: span 12; }
+[data-grid~=col-12]>[data-grid~=col-11] { grid-column: span 11; }
+[data-grid~=col-12]>[data-grid~=col-10] { grid-column: span 10; }
+[data-grid~=col-12]>[data-grid~=col-9] { grid-column: span 9; }
+[data-grid~=col-12]>[data-grid~=col-8] { grid-column: span 8; }
+[data-grid~=col-12]>[data-grid~=col-7] { grid-column: span 7; }
+[data-grid~=col-12]>[data-grid~=col-6] { grid-column: span 6; }
+[data-grid~=col-12]>[data-grid~=col-5] { grid-column: span 5; }
+[data-grid~=col-12]>[data-grid~=col-4] { grid-column: span 4; }
+[data-grid~=col-12]>[data-grid~=col-3] { grid-column: span 3; }
+[data-grid~=col-12]>[data-grid~=col-2] { grid-column: span 2; }
+/* No CSS is needed for col-1 as that is the default column sizing anyway */
+
+/* Stacking */
+/* Stack at viewport 5 */
+@media only screen and (max-width: 1778px) {
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-12],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-11],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-10],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-9],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-8],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-7],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-6],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-5],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-4],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-3],
+    [data-grid~=stack-5][data-grid~=col-12]>[data-grid~=col-2] {
+        grid-column: span 12;
+    }
+}
+
+/* Stack at viewport 4 */
+@media only screen and (max-width: 1399px) {
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-12],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-11],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-10],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-9],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-8],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-7],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-6],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-5],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-4],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-3],
+    [data-grid~=stack-4][data-grid~=col-12]>[data-grid~=col-2] {
+        grid-column: span 12;
+    }
+}
+
+/* Stack at viewport 3 */
+@media only screen and (max-width: 1083px) {
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-12],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-11],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-10],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-9],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-8],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-7],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-6],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-5],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-4],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-3],
+    [data-grid~=stack-3][data-grid~=col-12]>[data-grid~=col-2] {
+        grid-column: span 12;
+    }
+
+    /* Remove side margins at viewport 3 and lower to make better use of the screen real-estate */
+    [data-grid~=container] {  
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 1600px;
+    }
+}
+
+/* Always stack at viewport 2 */
+@media only screen and (max-width: 767px) {
+    [data-grid~=col-12]>[data-grid~=col-12],
+    [data-grid~=col-12]>[data-grid~=col-11],
+    [data-grid~=col-12]>[data-grid~=col-10],
+    [data-grid~=col-12]>[data-grid~=col-9],
+    [data-grid~=col-12]>[data-grid~=col-8],
+    [data-grid~=col-12]>[data-grid~=col-7],
+    [data-grid~=col-12]>[data-grid~=col-6],
+    [data-grid~=col-12]>[data-grid~=col-5],
+    [data-grid~=col-12]>[data-grid~=col-4],
+    [data-grid~=col-12]>[data-grid~=col-3],
+    [data-grid~=col-12]>[data-grid~=col-2] {
+        grid-column: span 12;
+    }
+
+    /* Remove side margins at viewport 3 and lower to make better use of the screen real-estate */
+    [data-grid~=container] {  
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 1600px;
+    }
+}
+
+/* Always stack at viewport 1 */
+@media only screen and (max-width: 539px) {
+    [data-grid~=col-12]>[data-grid~=col-12],
+    [data-grid~=col-12]>[data-grid~=col-11],
+    [data-grid~=col-12]>[data-grid~=col-10],
+    [data-grid~=col-12]>[data-grid~=col-9],
+    [data-grid~=col-12]>[data-grid~=col-8],
+    [data-grid~=col-12]>[data-grid~=col-7],
+    [data-grid~=col-12]>[data-grid~=col-6],
+    [data-grid~=col-12]>[data-grid~=col-5],
+    [data-grid~=col-12]>[data-grid~=col-4],
+    [data-grid~=col-12]>[data-grid~=col-3],
+    [data-grid~=col-12]>[data-grid~=col-2] {
+        grid-column: span 12;
+    }
+
+    /* Remove side margins at viewport 3 and lower to make better use of the screen real-estate */
+    [data-grid~=container] {  
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 1600px;
+    }
+}
+
+.item {
+    transition: all ease-out 0.4s;
+
+    background: #ddd;
+    height: 460px;
+    width: 100%;
+}
+.item.hidden {
+    transition: all ease-in 0.2s;
+
+    opacity: 0;
+    height: 0;
+    width: 0;
+    margin-top: 50%;
+    margin-left: 50%;
+    /*grid-column: none;*/
+}
+.item.gone {
+    grid-column: none;
+}

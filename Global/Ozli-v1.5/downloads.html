@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ozli web framework v1.4</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="grid.css" rel="stylesheet">
+        <link href="general.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="intro small">
+            <div data-grid="container">
+                <nav data-grid="col-12 stack-3">
+                    <div data-grid="col-6">
+                        <img src="https://via.placeholder.com/256x64.png" width="256px" height="64px">
+                    </div>
+                    <div class="group" data-grid="col-6" style="float: right; vertical-align: middle; padding-top: 8px; margin-right: 0; margin-left: auto;">
+                        <button class="f-primary large" onclick="window.location.href = 'index.html';">About</button>
+                        <button class="f-primary large" onclick="window.location.href = 'downloads.html';">Download</button>
+                    </div>
+                </nav>
+                <h1 class="heading-1">Ozli web framework v1.4</h1>
+                <p>A simple, open-source web framework designed with accessibility in mind.</p>
+            </div>
+        </header>
+        <main data-grid="container">
+            <h1 class="heading-1">Downloads</h1>
+            <p>Using the Ozli web framework is simple, just include the stylesheets you want and you're off!</p>
+
+            <br>
+            <h4 class="bold">The framework</h4>
+            <p>First off, include the general stylesheet for most of Ozli's functionality:</p>
+            <blockquote class="f-lightweight" style="margin: 12px 0;">
+                <input type="text" style="min-width: 100%; border: none !important;" readonly value='<link href="https://ozli.ga/Ozli-v1.4/general.css" rel="stylesheet">'>
+            </blockquote>
+
+            <br>
+            <p>If you want to use Ozli's grid system, include that too:</p>
+            <blockquote class="f-lightweight" style="margin: 12px 0;">
+                <input type="text" style="min-width: 100%; border: none !important;" readonly value='<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">'>
+            </blockquote>
+            <p>...and that's all you need. :)</p>
+
+            <br>
+            <h4 class="bold">Themes</h4>
+            <p>To use themes, include it <i>after</i> Ozli and then add a <code>theme-<i>(theme name)</i></code> class to the <code>body</code></p>
+            <a href="#" onclick="previewTheme('none');">Reset theme preview</a>
+            <br>
+            <br>
+            <p>"NEON" by Oscar Nardone</p>
+            <a href="#" onclick="previewTheme('neon');">Preview this theme</a>
+            <blockquote class="f-lightweight" style="margin: 12px 0;">
+                <input type="text" style="min-width: 100%; border: none !important;" readonly value='<link href="https://ozli.ga/Ozli-v1.4/themes/theme-neon.css" rel="stylesheet">'>
+                <code>...</code>
+                <input type="text" style="min-width: 100%; border: none !important;" readonly value='<body class="theme-neon">'>
+            </blockquote>
+
+            <br>
+            <h4 class="bold">Accent colours</h4>
+            <p>Note: These override theme accent colours.</p>
+            <ul>
+                <li><a href="#" onclick="previewAccent('blue');" style="color: #0067b8 !important;">Preview blue accent colour</a></li>
+                <li><a href="#" onclick="previewAccent('purple');" style="color: #6700b8 !important;">Preview purple accent colour</a></li>
+                <li><a href="#" onclick="previewAccent('orange');" style="color: #b86700 !important;">Preview orange accent colour</a></li>
+                <li><a href="#" onclick="previewAccent('green');" style="color: #007667 !important;">Preview green accent colour</a></li>
+                <li><a href="#" onclick="previewAccent('hotpink');" style="color: #b80067 !important;">Preview hot pink accent colour</a></li>
+            </ul>
+            <br>
+        </main>
+        <script>
+            function previewTheme(themeName) {
+                if (themeName == "neon") {
+                    document.head.innerHTML += '<link href="https://ozli.ga/Ozli-v1.4/themes/theme-neon.css" rel="stylesheet">';
+                    document.body.classList.add("theme-neon");
+                } else if (themeName == "none") {
+                    location.reload();
+                }
+            }
+            function previewAccent(colour) {
+                if (colour == "blue") {
+                    document.body.style.setProperty("--accent-color","#0067b8");
+                    document.body.style.setProperty("--accent-color-hover","#005CA5");
+                    document.body.style.setProperty("--accent-color-active","#005293");
+                } else if (colour == "purple") {
+                    document.body.style.setProperty("--accent-color","#6700b8");
+                    document.body.style.setProperty("--accent-color-hover","#5C00A5");
+                    document.body.style.setProperty("--accent-color-active","#520093");
+                } else if (colour == "orange") {
+                    document.body.style.setProperty("--accent-color","#b86700");
+                    document.body.style.setProperty("--accent-color-hover","#A55C00");
+                    document.body.style.setProperty("--accent-color-active","#935200");
+                } else if (colour == "green") {
+                    document.body.style.setProperty("--accent-color","#007667");
+                    document.body.style.setProperty("--accent-color-hover","#006A5C");
+                    document.body.style.setProperty("--accent-color-active","#005E52");
+                } else if (colour == "hotpink") {
+                    document.body.style.setProperty("--accent-color","#b80067");
+                    document.body.style.setProperty("--accent-color-hover","#A5005C");
+                    document.body.style.setProperty("--accent-color-active","#930052");
+                }
+            }
+        </script>
+    </body>
+</html>
