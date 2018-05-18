@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Report Stolen Bike </title>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<form method="post" enctype="multipart/form-data" id="formReportStolen">
+	<h1>Report Stolen Bike</h1>
+	
+	<label>MPN</label>
+	<input type="text" id="txtMPN" name="mpn"><br>
+	
+	<label>Brand</label>
+	<input type="text" id="txtBrand" name="brand"><br>
+	
+	<label>Model</label>
+	<input type="text" id="txtModel" name="model"><br>
+	
+	<label>Choose Pictures</label>
+	<input type="file" multiple name="images[]" id="fileBikeImages"><br>
+	
+	<label>Select location in map (where the bike stolen from)</label><br>
+	
+	<div id="mapInput" style="width: 650px; height: 300px;"></div> <br>
+    
+    <label>Select location in map (where the bike stolen from)</label><br>
+	
+	<div id="mapInput2" style="width: 650px; height: 300px;"></div> <br>
+	
+	<input type="submit" id="btnRegister" value="Report Stolen">
+</form>
+
+<script src="./ReportStolenBike.js"></script>
+</body>
+</html>
