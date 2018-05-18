@@ -8,7 +8,7 @@
 		<meta charset="UTF-8">
 		<title>RegisterBike - Glos Constabulary</title>
 		
-		<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 		<link href="../../Global/Ozli-v1.5/general.css" rel="stylesheet">
 		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
@@ -33,7 +33,7 @@
 		<main data-grid="container">
 			<!-- https://html5tutorial.info/html5-datalist.php
 			https://github.com/mfranzke/datalist-polyfill -->
-			<form method="POST" action="RegisterBikeDAO.php">
+			<form method="POST" enctype="multipart/form-data" id="registerBikeForm">
 				<input type="text" name="phpFunction" value="createBike" readonly style="display: none;">
 
 				<label>Nickname*</label>
@@ -71,6 +71,9 @@
 				
 				<label>Age group</label>
 				<input type="text" name="ageGroup">
+				
+				<label>Please add some pictures of your bike:</label><br>
+				<input type="file" multiple name="images[]" id="bikeImages"><br>
 				
 				<label>Where do you usually park your bike overnight?</label>
 				<input type="text" name="commonParkingPlace">
@@ -130,5 +133,7 @@
 			<option value="Male"></option>
 			<option value="Other (please type it in this textbox)"></option>
 		</datalist>
+		
+		<script src="RegisterBike.js"></script>
 	</body>
 </html>
