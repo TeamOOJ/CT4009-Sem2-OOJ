@@ -19,10 +19,15 @@ $('#registerBikeForm').on('submit', function(e) {
 		processData: false,
 		success:function(echoedMsg) {
 			console.log(echoedMsg);
-			if (echoedMsg == "True") {
+			if (!echoedMsg.toString().toLowerCase().includes("error")) { // https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript
 				alert("Your bike has been successfully registered.");
-				window.location = "../Home/Home.php"; // redirect to the homepage once registered
+				//window.location = "../Home/Home.php"; // redirect to the homepage once registered
+			} else {
+				alert(echoedMsg);
 			}
+		},
+		error:function(echoedMsg) {
+			alert(echoedMsg); // https://stackoverflow.com/questions/1844370/jquery-handle-fallback-for-failed-ajax-request
 		}
 	});
 });

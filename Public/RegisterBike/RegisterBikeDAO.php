@@ -48,57 +48,56 @@
 			   "(NULL, 0, '$nickname', '$manufacturer', '$model', '$type', '$mpn', '$colour', '$wheelSize',".
 			   "'$numberOfGears', '$typeOfBreaks', '$suspension', '$gender', '$ageGroup',".
 			   "'$commonParkingPlace', '$useCase', '$otherDetails', '$ownerID', '', '', '', '', '', '')";
-		if (mysqli_query($connection, $sql)) {
-			echo "Success";
-		} else {
-			echo "Error";
-		}
 		
 		$insertedStolenBikeID = mysqli_insert_id($connection);
+		$message = "";
 		foreach($_FILES["images"]["name"] as $key => $file_name) {
 			$tmp_name = $_FILES["images"]["tmp_name"][$key];
-			echo "tmp_name: " . $tmp_name . "\n";
+			//echo "tmp_name: " . $tmp_name . "\n";
 			switch( $_FILES["images"]['error'][$key] ) {
-            case UPLOAD_ERR_OK:
-                $message = false;;
-                break;
-            case UPLOAD_ERR_INI_SIZE:
-            case UPLOAD_ERR_FORM_SIZE:
-                $message .= ' - file too large (limit of bytes).';
-                break;
-            case UPLOAD_ERR_PARTIAL:
-                $message .= ' - file upload was not completed.';
-                break;
-            case UPLOAD_ERR_NO_FILE:
-                $message .= ' - zero-length file uploaded.';
-                break;
-            default:
-                $message .= ' - internal error #'.$_FILES['newfile']['error'];
-                break;
-        }
-		echo $message . "\n";
-			echo "error: " . $_FILES["images"]['error'][$key] . "\n";
-			echo "key: " . $key . "\n";
-			$ext = end((explode(".", $file_name)));
-			$imageID = $insertedStolenBikeID . "_" . $key . "." . $ext;
-			
-			$sql = "INSERT INTO stolenBikeImagesTable (stolenBikeID, imageID) VALUES ('$insertedStolenBikeID', '$imageID')";
-			echo "SQL: " . $sql . "\n";
-			echo "upload_folder: " . $upload_folder . $imageID . "\n";
-			move_uploaded_file($tmp_name, $upload_folder . $imageID);
-		}
-			
-		if (mysqli_query($connection, $sql)) {
-			if ($debugMode) {
-				echo "DEBUG: Successfully added new row to table in the database.";
-			} else {
-				echo "Your bike has been registered.";
+				case UPLOAD_ERR_OK:
+					$message = false;
+					break;
+				case UPLOAD_ERR_INI_SIZE:
+				case UPLOAD_ERR_FORM_SIZE:
+					$message .= 'ERROR: file too large.';
+					break;
+				case UPLOAD_ERR_PARTIAL:
+					$message .= 'ERROR: file upload was not completed.';
+					break;
+				case UPLOAD_ERR_NO_FILE:
+					$message .= 'ERROR: empty file uploaded.';
+					break;
+				default:
+					$message .= 'ERROR: internal error #'.$_FILES['newfile']['error'];
+					break;
 			}
-		} else {
-			if ($debugMode) {
-				echo "DEBUG: " . mysqli_error($connection);
-			} else {
-				echo "An error occurred trying to register your bike.";
+			if ($message != "") { // if the error message variable is blank, continue with the file upload.
+				echo $message . "\n";
+			} else { // otherwise show a relevent error message and cancel the upload
+				//echo "error: " . $_FILES["images"]['error'][$key] . "\n";
+				//echo "key: " . $key . "\n";
+				$ext = end((explode(".", $file_name)));
+				$imageID = $insertedStolenBikeID . "_" . $key . "." . $ext;
+				
+				$sql = "INSERT INTO stolenBikeImagesTable (stolenBikeID, imageID) VALUES ('$insertedStolenBikeID', '$imageID')";
+				//echo "SQL: " . $sql . "\n";
+				//echo "upload_folder: " . $upload_folder . $imageID . "\n";
+				move_uploaded_file($tmp_name, $upload_folder . $imageID);
+				
+				if (mysqli_query($connection, $sql)) {
+					if ($debugMode) {
+						echo "DEBUG: Successfully added new row to table in the database.";
+					} else {
+						echo "Your bike has been registered.";
+					}
+				} else {
+					if ($debugMode) {
+						echo "DEBUG: " . mysqli_error($connection);
+					} else {
+						echo "An error occurred trying to register your bike.";
+					}
+				}
 			}
 		}
 		
