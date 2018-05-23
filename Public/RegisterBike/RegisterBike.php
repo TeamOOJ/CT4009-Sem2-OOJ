@@ -73,7 +73,7 @@
 				<input type="text" name="ageGroup">
 				
 				<label>Please add some pictures of your bike*:</label><br>
-				<input type="file" multiple name="images[]" id="bikeImages"><br>
+				<input type="file" multiple name="images[]" id="bikeImages" required><br>
 				
 				<label>Where do you usually park your bike overnight?</label>
 				<input type="text" name="commonParkingPlace">

@@ -42,18 +42,31 @@
 			echo "Error: A bike with this nickname is already registered under your account. Please use a different nickname.";
 			return;
 		}
-				
-		$sql = "INSERT INTO `bikesTable`".
+	   
+	   $sql = "INSERT INTO `bikesTable`".
 			   " values ".
 			   "(NULL, 0, '$nickname', '$manufacturer', '$model', '$type', '$mpn', '$colour', '$wheelSize',".
 			   "'$numberOfGears', '$typeOfBreaks', '$suspension', '$gender', '$ageGroup',".
 			   "'$commonParkingPlace', '$useCase', '$otherDetails', '$ownerID', '', '', '', '', '', '')";
+		if (mysqli_query($connection, $sql)) {
+			if ($debugMode) {
+				echo "DEBUG: Successfully added new row to table in the database.";
+			} else {
+				echo "Your bike has been registered.";
+			}
+		} else {
+			if ($debugMode) {
+				echo "ERROR: " . mysqli_error($connection);
+			} else {
+				echo "An error occurred trying to register your bike.";
+			}
+		}
 		
 		$insertedStolenBikeID = mysqli_insert_id($connection);
 		$message = "";
 		foreach($_FILES["images"]["name"] as $key => $file_name) {
 			$tmp_name = $_FILES["images"]["tmp_name"][$key];
-			//echo "tmp_name: " . $tmp_name . "\n";
+			echo "tmp_name: " . $tmp_name . "\n";
 			switch( $_FILES["images"]['error'][$key] ) {
 				case UPLOAD_ERR_OK:
 					$message = false;
@@ -75,25 +88,21 @@
 			if ($message != "") { // if the error message variable is blank, continue with the file upload.
 				echo $message . "\n";
 			} else { // otherwise show a relevent error message and cancel the upload
-				//echo "error: " . $_FILES["images"]['error'][$key] . "\n";
-				//echo "key: " . $key . "\n";
+				echo "error: " . $_FILES["images"]['error'][$key] . "\n";
+				echo "key: " . $key . "\n";
 				$ext = end((explode(".", $file_name)));
 				$imageID = $insertedStolenBikeID . "_" . $key . "." . $ext;
 				
 				$sql = "INSERT INTO stolenBikeImagesTable (stolenBikeID, imageID) VALUES ('$insertedStolenBikeID', '$imageID')";
-				//echo "SQL: " . $sql . "\n";
-				//echo "upload_folder: " . $upload_folder . $imageID . "\n";
+				echo "SQL: " . $sql . "\n";
+				echo "upload_folder: " . $upload_folder . $imageID . "\n";
 				move_uploaded_file($tmp_name, $upload_folder . $imageID);
 				
 				if (mysqli_query($connection, $sql)) {
-					if ($debugMode) {
-						echo "DEBUG: Successfully added new row to table in the database.";
-					} else {
-						echo "Your bike has been registered.";
-					}
+					echo "success uploading images";
 				} else {
 					if ($debugMode) {
-						echo "DEBUG: " . mysqli_error($connection);
+						echo "ERROR: " . mysqli_error($connection);
 					} else {
 						echo "An error occurred trying to register your bike.";
 					}

@@ -8,6 +8,7 @@ function _cb_findItemsByKeywords(root) {
     var title    = item.title;
     var pic      = item.galleryURL;
     var viewitem = item.viewItemURL;
+	console.log(item);
 	
 	// start of first party code
 	var price    = item.sellingStatus[0].currentPrice[0].__value__;
@@ -19,7 +20,7 @@ function _cb_findItemsByKeywords(root) {
 	} else if (currency == "USD") {
 		currency = "$";
 	}
-	console.log(item.);
+	//console.log(item.);
     if (null != title && null != viewitem) {
       html.push('<h4><a href="' + viewitem + '" target="_blank">' + title + '</a></h4>' +
 				'<ul><li>' + '<img src="' + pic + '" border="0">' + '</li>' + 
@@ -65,10 +66,9 @@ function  buildURLArray() {
         if (itemfilter[index] instanceof Array) {
           for(var r=0; r<itemfilter[index].length; r++) {
           var value = itemfilter[index][r];
-          urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value ;
+          urlfilter += "&itemFilter\(" + i + "\)." + index + "\(" + r + "\)=" + value;
           }
-        } 
-        else {
+        } else {
           urlfilter += "&itemFilter\(" + i + "\)." + index + "=" + itemfilter[index];
         }
       }
@@ -81,20 +81,27 @@ buildURLArray(filterarray);
 
 // Construct the request
 // Replace MyAppID with your Production AppID
+
+// NOTES:
+// https://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByKeywords&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=OscarNa-UniOfGlo-PRD-de043dc2e-a6426902&GLOBAL-ID=EBAY-GB&keywords=bike&outputSelector=AspectHistogram
+// histogram aspectName
+
 var url =  "https://svcs.ebay.com/services/search/FindingService/v1";
     url += "?OPERATION-NAME=findItemsByKeywords";
-    url += "&SERVICE-VERSION=1.0.0";
+	url += "&SERVICE-VERSION=1.0.0";
     url += "&SECURITY-APPNAME=OscarNa-UniOfGlo-PRD-de043dc2e-a6426902";
     url += "&GLOBAL-ID=EBAY-GB";
     url += "&RESPONSE-DATA-FORMAT=JSON";
     url += "&callback=_cb_findItemsByKeywords";
-    url += "&REST-PAYLOAD";
+    url += "&REST-PAYLOAD=true";
     url += "&keywords=" + document.getElementById("bikeType").innerText;
+	url += "&aspectFilter.aspectName=Colour&aspectFilter.aspectValueName=" + document.getElementById("bikeColour").innerText;
+	//url += "&aspectFilter.aspectName=Brand&aspectFilter.aspectValueName=" + document.getElementById("bikeBrand").innerText;
+	//url += "&aspectFilter.aspectName=WheelSize&aspectFilter.aspectValueName=" + document.getElementById("bikeWheelSize").innerText;
     url += "&paginationInput.entriesPerPage=10";
-	url += "&paginationInput.pageNumber=5";
-	url += "&IncludeSelector=ItemSpecifics"
+	url += "&paginationInput.pageNumber=1";
+	url += "&IncludeSelector=ItemSpecifics";
     url += urlfilter;
-
 
 // Submit the request 
 s=document.createElement('script'); // create script element

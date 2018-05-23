@@ -45,7 +45,7 @@
 			}
 		} else {
 			if ($debugMode) {
-				echo "DEBUG: " . mysqli_error($connection);
+				echo "ERROR: " . mysqli_error($connection);
 			} else {
 				echo "An error occurred trying to update your bike.";
 			}

@@ -35,3 +35,106 @@ article#deleteBikePage {
 header.typographic p {
 	max-width: 960px;
 }
+
+
+
+
+/* https://stackoverflow.com/questions/5440657/how-to-hide-columns-in-html-table */
+table.hideCount tr > td:first-child, table.hideCount tr > th:first-child {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideManufacturer tr > td:nth-child(3), table.hideManufacturer tr > th:nth-child(3) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideModel tr > td:nth-child(4), table.hideModel tr > th:nth-child(4) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideType tr > td:nth-child(5), table.hideType tr > th:nth-child(5) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideMPN tr > td:nth-child(6), table.hideMPN tr > th:nth-child(6) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideColour tr > td:nth-child(7), table.hideColour tr > th:nth-child(7) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideWheelSize tr > td:nth-child(8), table.hideWheelSize tr > th:nth-child(8) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideNoOfGears tr > td:nth-child(9), table.hideNoOfGears tr > th:nth-child(9) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideTypeOfBreaks tr > td:nth-child(10), table.hideTypeOfBreaks tr > th:nth-child(10) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideSuspension tr > td:nth-child(11), table.hideSuspension tr > th:nth-child(11) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideGender tr > td:nth-child(12), table.hideGender tr > th:nth-child(12) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideAgeGroup tr > td:nth-child(13), table.hideAgeGroup tr > th:nth-child(13) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideCommonParkingPlace tr > td:nth-child(14), table.hideCommonParkingPlace tr > th:nth-child(14) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}
+table.hideUseCase tr > td:nth-child(15), table.hideUseCase tr > th:nth-child(15) {
+	visibility: collapse;
+	padding: 0;
+	margin: 0;
+	border: none;
+	display: none;
+}

@@ -14,6 +14,14 @@
 
 		<link href="ReportStolen.css" rel="stylesheet">
 
+        
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+        
 		<script src="../../Global/common.js" async></script>
 		<script src="ReportStolen.js" async></script>
 	</head>
@@ -137,9 +145,14 @@
 				<label>I know where I last left my bike before it was stolen.</label>
 				
 				<div id="theftLastKnownLocation">
-					<label>I last left it at...</label>
+					<label>I last left it around...</label>
 					<input type="text" class="theftLastKnownLocation" name="theftLastKnownLocation">
+                    <div id="mapInput" style="width: 650px; height: 300px;"></div> <br>
+                    <input type="text" style="display: none;" id="latLng">
 				</div>
+            
+            
+            
 
 				<!--<br>
 				<input type="checkbox" id="theftLocationKnown">
@@ -155,6 +168,7 @@
 				<div id="theftLocation">
 					<label>It was stolen at...</label>
 					<input type="text" class="theftLocation" name="theftLocation">
+                    <div id="mapInput" style="width: 650px; height: 300px;"></div> <br>
 				</div>
 
 				<br>

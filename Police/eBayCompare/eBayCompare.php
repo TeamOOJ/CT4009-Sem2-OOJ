@@ -120,10 +120,11 @@
 				?>
 					<ul>
 					<?php
-						echo '<li>Manufacturer: ' . $data["manufacturer"] . '</li>';
+						echo '<li>Manufacturer: <span id="bikeBrand">' . $data["manufacturer"] . '</span></li>';
 						echo '<li>Model: ' . $data["model"] . '</li>';
 						echo '<li>Type: <span id="bikeType">' . $data["type"] . '</span></li>';
-						echo '<li>Colour: ' . $data["colour"] . '</li>';
+						echo '<li>Colour: <span id="bikeColour">' . $data["colour"] . '</li>';
+						echo '<li>Wheel size: <span id="bikeWheelSize">' . $data["wheelSize"] . '</li>';
 					?>
 					</ul>
 				</section>
