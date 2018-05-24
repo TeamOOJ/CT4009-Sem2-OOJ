@@ -12,11 +12,13 @@
 
 		<link href="../../Global/Ozli-v1.5/general.css" rel="stylesheet">
 		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
+		<link href="../../Global/win10fluent.css" rel="stylesheet">
 		<link href="../../Global/glosPolice-theme.css" rel="stylesheet">
 
 		<link href="UpdateInvestigationStatus.css" rel="stylesheet">
 
 		<script src="../../Global/common.js" async></script>
+		<script src="../../Global/win10fluent.js"></script>
 	</head>
 	<body>
 		<header class="intro">
@@ -46,7 +48,9 @@
 
 				$askToPickABike = false;
 
-				echo "DEBUG: " . $bikeID . "<br>";
+				if ($debugMode) {
+					echo "DEBUG: " . $bikeID . "<br>";
+				}
 
 				if ($bikeID == "") {
 					// Ask to pick a bike before proceeding
@@ -128,6 +132,7 @@
 					}
 				?>
 
+				<p>Status: 1 means pending invesitgation. 20 means under investigation. 30 means more details needed. 0 means invesitgation complete.</p>
 				<label>Current status*</label>
 				<?php
 					echo '<input type="text" name="currentStatus" value="' . $data["investigationStatus"] . '">';

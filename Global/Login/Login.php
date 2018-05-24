@@ -23,15 +23,18 @@
 
 		<link href="../Ozli-v1.5/general.css" rel="stylesheet">
 		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
+		<link href="../../Global/win10fluent.css" rel="stylesheet">
 		<link href="../../Global/glosPolice-theme.css" rel="stylesheet">
+
+		<script src="../../Global/win10fluent.js"></script>
 	</head>
 	<body>
 		<header class="intro">
 			<div data-grid="container">
 				<nav>
 					<img src="../Images/extra-small-long-logo4-dark.png" height="64px" style="vertical-align: middle;">
-					<button class="f-primary large">Home</button>
-					<button class="f-primary large" onclick="location.href = '../../Public/RegisterPersonalDetails/RegisterPersonalDetails.html'">Register</button>
+					<div class="buttonRevealLight"><button class="f-primary large">Home</button></div>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../../Public/RegisterPersonalDetails/RegisterPersonalDetails.html'">Register</button></div>
 				</nav>
 				<h1 class="heading-1">Login</h1>
 				<p>To login, fill out the form below and click the "Login" button.</p>

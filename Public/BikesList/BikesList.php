@@ -12,21 +12,23 @@
 
 		<link href="../../Global/Ozli-v1.5/general.css" rel="stylesheet">
 		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
+		<link href="../../Global/win10fluent.css" rel="stylesheet">
 		<link href="../../Global/glosPolice-theme.css" rel="stylesheet">
 		
 		<link href="BikesList.css" rel="stylesheet">
 		<script src="../../Global/common.js" async></script>
 		<script src="BikesList.js" async></script>
+		<script src="../../Global/win10fluent.js"></script>
 	</head>
 	<body>
 		<header class="intro">
 			<div data-grid="container">
 				<nav>
 					<img src="../../Global/Images/extra-small-long-logo4-dark.png" height="64px" style="vertical-align: middle;">
-					<button class="f-primary large" onclick="location.href = '../Home/Home.php';">Home</button>
-					<button class="f-primary large">My bikes</button>
-					<button class="f-primary large" onclick="location.href = '../../Global/YourProfile/YourProfile.php';" >My profile</button>
-					<button class="f-primary large" onclick="location.href = '../../Global/Logout/Logout.php';">Logout</button>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../Home/Home.php';">Home</button></div>
+					<div class="buttonRevealLight"><button class="f-primary large">My bikes</button></div>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../../Global/YourProfile/YourProfile.php';">My profile</button></div>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../../Global/Logout/Logout.php';">Logout</button></div>
 				</nav>
 				<h1 class="heading-1">Bikes list</h1>
 				<p>(insert description here)</p>
@@ -80,7 +82,7 @@
 				<label>Use case</label>
 			</aside>
 			<section data-grid="col-10">
-				<button class="f-primary" onclick="location.href = '../RegisterBike/RegisterBike.php'">Add a bike</button><br>
+				<div class="buttonReveal"><button class="f-primary" onclick="location.href = '../RegisterBike/RegisterBike.php'">Add a bike</button></div><br>
 				<table id="bikesTable" class="hideCount hideWheelSize hideMPN hideNoOfGears hideTypeOfBreaks hideSuspension hideCommonParkingPlace">
 					<tr>
 						<th>Count</th>
@@ -137,6 +139,7 @@
 							echo "	<td>" . $row["commonParkingPlace"] . "</td>";
 							echo "	<td>" . $row["useCase"] . "</td>";
 							echo "	<td>" . $row["otherDetails"] . "</td>";
+							echo "  <td><a href='../CheckInvestigationStatus/CheckInvestigationStatus.html?bikeID=" . $row["bikeID"] . "'>Status</a></td>";
 							echo "	<td><a href='../UpdateBike/UpdateBike.php?bikeID=" . $row["bikeID"] . "'>Update</a></td>";
 							echo "	<td><a href='#' onclick='deleteBike();'>Delete</a></td>";
 							echo "</tr>";

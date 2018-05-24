@@ -1,7 +1,35 @@
 <?php
 	require '../../Global/common.php';
-	checkLogin();
+	checkLogin(); // check if the user is logged in before showing the page. If the user isn't logged in, redirect to the login page instead.
+
+	include '../../Global/config.php';
+	$sql = "SELECT * FROM `usersTable` WHERE userID='".$_SESSION["userID"]."'";
+
+	$res = mysqli_query($connection, $sql);
+	$num_row = mysqli_num_rows($res);
+	$row = mysqli_fetch_assoc($res);
+	
+	//Save succesfully login email to session
+	
+	if ($num_row == 1) {
+		//echo json_encode($row);
+		if ($debugMode) { // print all the details retrieved from the usersTable in the database if debugMode is true.
+			echo "DEBUG: " . $row["userID"] . "<br>"; // the contents of userID from the database query selection
+			echo "DEBUG: " . $row["title"] . "<br>";
+			echo "DEBUG: " . $row["firstName"] . "<br>";
+			echo "DEBUG: " . $row["lastName"] . "<br>";
+			echo "DEBUG: " . $row["dateOfBirth"] . "<br>";
+			echo "DEBUG: " . $row["telephoneNumber"] . "<br>";
+			echo "DEBUG: " . $row["email"] . "<br>";
+			echo "DEBUG: " . $row["password"] . "<br>";
+			echo "DEBUG: " . $row["verificationCode"] . "<br>";
+			echo "DEBUG: " . $row["isVerified"] . "<br>";
+			echo "DEBUG: " . $row["privledges"] . "<br>";
+		}
+		$data = $row;
+	}
 ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr"> <!-- Hint to browsers that this page is in the "en" language region with left-to-right text direction. -->
     <head>
@@ -10,8 +38,8 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
 		
-        <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
-        <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
+        <link rel="stylesheet" href="../../Global/Framework/getmwf.com/local/css/main.css">
+		<link rel="stylesheet" href="../../Global/Framework/assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
         
         <link href="../../Global/GlobalPublic.css" rel="stylesheet">
 		<link href="Home.css" rel="stylesheet">
@@ -42,8 +70,10 @@
 								</picture>
 							</div>
 							<div style="text-shadow: #000 0 0 4px;">
-								<h5 class="c-heading personaFullName"><a>Oscar Nardone</a></h5>
-								<p class="c-subheading theme-transparent-subtext brighter personaEmail">oscarnardone@glos.ac.uk</p>
+								<?php
+									echo '<h5 class="c-heading personaFullName"><a>' . $row["firstName"] . " " . $row["lastName"] . '</a></h5>';
+									echo '<p class="c-subheading theme-transparent-subtext brighter personaEmail">' . $row["email"] . '</p>';
+								?>
 							</div>
 						</div>
 						<div class="c-flyout" id="profileDropdown" role="tooltip" data-js-flyout-placement="bottom" data-js-flyout-dismissible="false" aria-hidden="true">
@@ -52,13 +82,13 @@
 									<a aria-checked="false" role="menuitem" href="../../Global/YourProfile/YourProfile.php">Your profile</a>
 								</li>
 								<li class="c-menu-item submenu" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#contactDetails">Contact details</a>
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.php#contactDetails">Contact details</a>
 								</li>
 								<li class="c-menu-item submenu" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accountDetails">Account actions</a>
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.php#accountDetails">Account actions</a>
 								</li>
 								<li class="c-menu-item submenu" role="presentation">
-									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.html#accessibilitySettings">Accessibility</a>
+									<a aria-checked="false" role="menuitem" href="../YourProfile/YourProfile.php#accessibilitySettings">Accessibility</a>
 								</li>
 								<li class="c-menu-item" role="presentation">
 									<a aria-checked="false" role="menuitem" href="../../Global/Logout/Logout.php">Logout</a>
@@ -178,7 +208,7 @@
 				
 				<!-- Footer -->
 				<footer class="transparentFooter">
-					<p class="c-paragraph">© <a href="https://oscarnardone.me">Oscar Nardone</a> 2018</p>
+					<p class="c-paragraph">© <a href="https://oscarnardone.me">Oscar Nardone</a> and Jack Littlefair 2018</p>
 				</footer>
 			</div>
 			<!--<footer class="c-universal-footer">
@@ -192,7 +222,7 @@
 			</footer>-->
         </main>
 
-		<script src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+		<script src="../../Global/Framework/assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
 		<script src="../../Global/Global.js"></script>
 		<script>getUserProfile();</script>
     </body>

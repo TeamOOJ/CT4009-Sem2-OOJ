@@ -1,0 +1,32 @@
+.buttonReveal, .buttonRevealDark, .buttonRevealLight {
+    display: inline-block;
+
+    margin: 1rem auto;
+    padding: 0;
+    border: 1px transparent;
+    line-height: 1;
+    text-align: center;
+}
+.buttonReveal button, .buttonRevealDark button.dark, .buttonRevealLight button.light {
+    text-align: center;
+    border: 2px solid transparent;
+    margin: 2px;
+}
+
+.buttonRevealLight button:hover {
+    background: rgba(187,187,187,0.8);
+}
+.buttonReveal button:hover {
+    background: rgba(0,92,165,0.8);
+}
+.buttonRevealDark button.dark:hover {
+    background: rgba(68,68,68,0.8);
+}
+
+header.native nav {
+    background: transparent;
+}
+
+header.intro div nav div.buttonRevealLight button {
+    margin: 2px;
+}

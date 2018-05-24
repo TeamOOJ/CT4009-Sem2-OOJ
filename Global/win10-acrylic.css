@@ -1,0 +1,57 @@
+/* Acrylic effect by Oscar Nardone
+- https://docs.microsoft.com/en-us/windows/uwp/design/style/acrylic
+- https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-material-42b4dc532c14 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode
+*/
+.bg.vid video, bg.video video, .bg.animated video, body video.bg {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+.bg.vid::before, .bg.video::before, .bg.animated::before {
+    position: absolute;
+    background: transparent fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: exclusion;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    overflow: hidden;
+}
+.bg.vid video, .bg.video video, .bg.animated video {
+    /* 16px blur for slow scenes. 24px blur for frequently changing scenes */
+    filter: blur(24px) saturate(120%);
+}
+.bg.pic, .bg.picture, .bg.photo, .bg.img, .bg.image, .bg.static {
+    position: absolute;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: exclusion;
+    filter: blur(16px) saturate(120%);
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.bg.vid::after, .bg.video::after, .bg.animated::after, .bg.pic::after, .bg.picture::after, .bg.photo::after, .bg.img::after, .bg.image::after, .bg.static::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: url('../img/noise.png'), linear-gradient(to bottom, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.7) 100%);
+    background-repeat: repeat;
+    background-size: initial;
+    content: "";
+}

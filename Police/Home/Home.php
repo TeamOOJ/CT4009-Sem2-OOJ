@@ -10,8 +10,10 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Hint to Internet Explorer to use the latest engine available and not to fallback to compatibility mode -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Tell mobile browsers to scale this site to the actual device's width and scale factor, instead of treating it as a desktop site -->
 		
-        <link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
-        <link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
+        <!--<link rel="stylesheet" href="https://getmwf.com/local/css/main.css">
+		<link rel="stylesheet" href="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />-->
+		<link rel="stylesheet" href="../../Global/Framework/getmwf.com/local/css/main.css">
+		<link rel="stylesheet" href="../../Global/Framework/assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/css/mwf-west-european-default.min.css" />
         
         <link href="../../Global/GlobalPublic.css" rel="stylesheet">
 		<link href="Home.css" rel="stylesheet">
@@ -146,7 +148,7 @@
 				
 				<!-- Footer -->
 				<footer class="transparentFooter">
-					<p class="c-paragraph">© <a href="https://oscarnardone.me">Oscar Nardone</a> 2018</p>
+					<p class="c-paragraph">© <a href="https://oscarnardone.me">Oscar Nardone</a> and Jack Littlefair 2018</p>
 				</footer>
 			</div>
 			<!--<footer class="c-universal-footer">
@@ -160,7 +162,7 @@
 			</footer>-->
         </main>
 
-		<script src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+		<script src="../../Global/Framework/assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
 		<script src="../../Global/Global.js"></script>
 		<script>getUserProfile();</script>
     </body>

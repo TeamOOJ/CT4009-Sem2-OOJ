@@ -46,7 +46,9 @@
 
 				$askToPickABike = false;
 
-				echo "DEBUG: " . $bikeID . "<br>";
+				if ($debugMode) {
+					echo "DEBUG: " . $bikeID . "<br>";
+				}
 
 				if ($bikeID == "") {
 					// Ask to pick a bike before proceeding

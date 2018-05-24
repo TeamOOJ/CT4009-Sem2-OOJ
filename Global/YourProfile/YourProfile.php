@@ -39,9 +39,11 @@
 
 		<link href="../Ozli-v1.5/general.css" rel="stylesheet">
 		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
+		<link href="../../Global/win10fluent.css" rel="stylesheet">
 		<link href="../glosPolice-theme.css" rel="stylesheet">
 
 		<script src="../../Global/common.js" async></script>
+		<script src="../../Global/win10fluent.js"></script>
 	</head>
 	<body>
 		<header class="intro">
@@ -50,19 +52,19 @@
 					<img src="../Images/extra-small-long-logo4-dark.png" height="64px" style="vertical-align: middle;">
 					<?php
 						if ($data["privledges"] == 0) {
-							echo '<button class="f-primary large" onclick="location.href = \'../../Public/Home/Home.php\';">Home</button>';
-							echo '<button class="f-primary large" onclick="location.href = \'../../Public/BikesList/BikesList.php\';">My bikes</button>';
-							echo '<button class="f-primary large">My profile</button>';
+							echo '<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = \'../../Public/Home/Home.php\';">Home</button></div>';
+							echo '<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = \'../../Public/BikesList/BikesList.php\';">My bikes</button></div>';
+							echo '<div class="buttonRevealLight"><button class="f-primary large">My profile</button></div>';
 						} else if ($data["privledges"] > 0) {
-							echo '<button class="f-primary large" onclick="location.href = \'../../Police/Home/Home.php\';">Home</button>';
-							echo '<button class="f-primary large" onclick="location.href = \'../../Police/ViewStolenList/ViewStolenList.php\';">View stolen bikes</button>';
-							echo '<button class="f-primary large">My profile</button>';
+							echo '<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = \'../../Police/Home/Home.php\';">Home</button></div>';
+							echo '<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = \'../../Police/ViewStolenList/ViewStolenList.php\';">View stolen bikes</button></div>';
+							echo '<div class="buttonRevealLight"><button class="f-primary large">My profile</button></div>';
 						}
 						if ($data["privledges"] >= 20) {
-							echo '<button class="f-primary large" onclick="location.href = \'../../Police/EnrolPoliceOfficers/EnrolPoliceOfficers.php\';">Enrol police officers</button>';
+							echo '<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = \'../../Police/EnrolPoliceOfficers/EnrolPoliceOfficers.php\';">Enrol police officers</button></div>';
 						}
 					?>
-					<button class="f-primary large" onclick="location.href = '../Logout/Logout.php';">Logout</button>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../Logout/Logout.php';">Logout</button></div>
 				</nav>
 				<h1 class="heading-1">Your profile</h1>
 				<p>Edit your details here. Note that you will need to verify your account again if you change your email address.</p>

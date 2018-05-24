@@ -1,0 +1,9 @@
+.maximiseIframe {
+	height: 100%;
+	width: 100%;
+	
+	min-height: 60vh;
+	max-height: 100vh;
+	
+	border: 0;
+}

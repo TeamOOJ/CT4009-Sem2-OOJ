@@ -52,19 +52,21 @@
 
 		<link href="../../Global/Ozli-v1.5/general.css" rel="stylesheet">
 		<link href="https://ozli.ga/Ozli-v1.4/grid.css" rel="stylesheet">
+		<link href="../../Global/win10fluent.css" rel="stylesheet">
 		<link href="../../Global/glosPolice-theme.css" rel="stylesheet">
 
 		<script src="../../Global/common.js" async></script>
+		<script src="../../Global/win10fluent.js"></script>
 	</head>
 	<body>
 		<header class="intro">
 			<div data-grid="container">
 				<nav>
 					<img src="../../Global/Images/extra-small-long-logo4-dark.png" height="64px" style="vertical-align: middle;">
-					<button class="f-primary large" onclick="location.href = '../Home/Home.php';">Home</button>
-					<button class="f-primary large" onclick="location.href = '../BikesList/BikesList.php';">My bikes</button>
-					<button class="f-primary large" onclick="location.href = '../../Global/YourProfile.php';">My profile</button>
-					<button class="f-primary large" onclick="location.href = '../../Global/Logout/Logout.php';">Logout</button>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../Home/Home.php';">Home</button></div>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../BikesList/BikesList.php';">My bikes</button></div>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../../Global/YourProfile.php';">My profile</button></div>
+					<div class="buttonRevealLight"><button class="f-primary large" onclick="location.href = '../../Global/Logout/Logout.php';">Logout</button></div>
 				</nav>
 				<h1 class="heading-1">Update a bike</h1>
 				<p>To update an existing bike, fill out the form below and click the "Update details" button.</p>
