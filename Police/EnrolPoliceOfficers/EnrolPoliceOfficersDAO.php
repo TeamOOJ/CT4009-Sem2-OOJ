@@ -24,7 +24,7 @@
 		$dateOfBirth = $_POST['dateOfBirth'];
 		$telephoneNum = $_POST['telephoneNum'];
 		$email = $_POST['email'];
-		$pass = $_POST['pass'];
+		$pass = SHA1($_POST['pass']);
 		$confirmPass = $_POST['confirmPass'];
 		$skipEmailVerificationBool = $_POST["skipEmailVerificationBool"];
 		if ($skipEmailVerificationBool == "on") {
