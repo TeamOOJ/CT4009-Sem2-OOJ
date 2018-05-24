@@ -118,7 +118,8 @@
 						}
 						
 						$currentRow = 0;
-						while ($currentRow < $num_row) {
+						while ($currentRow < ($num_row - 1)) {
+							$row = mysqli_fetch_assoc($res);
 							echo "<tr>";
 							echo "	<td>#" . ($currentRow + 1) . "</td>";
 							echo "	<td>" . $row["nickname"] . "</td>";
