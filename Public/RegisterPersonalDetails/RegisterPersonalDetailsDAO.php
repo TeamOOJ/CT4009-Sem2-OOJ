@@ -112,7 +112,7 @@
 		$message .= '</body></html>';
 
 		if (mail($emailTo, $subject, $message, $headers)){
-			echo 'Please check your email for a link to verify your account and complete registration.';
+			echo 'Please check your email for a link to verify your account and complete registration. If you cannot find any email, check your spam folder.';
 		} else {
 			echo 'An error occurred trying to email you. Try again later.';
 		}

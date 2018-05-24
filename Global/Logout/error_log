@@ -10,3 +10,5 @@
 [01-May-2018 15:54:00 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
 [02-May-2018 13:24:02 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
 [02-May-2018 13:25:18 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[09-May-2018 14:32:59 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21
+[09-May-2018 14:34:37 UTC] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in /home/s1712027/public_html/TeamOOO-Sem2/Global/common.php on line 21

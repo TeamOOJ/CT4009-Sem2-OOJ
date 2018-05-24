@@ -1,6 +1,6 @@
 <?php
 
-	$debugMode = true;
+	$debugMode = false;
 
 	$servername = "localhost";
 	$username = "s1712027_oscar";

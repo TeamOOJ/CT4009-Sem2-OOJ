@@ -3,3 +3,6 @@ Stack trace:
 #0 /home/s1712027/public_html/TeamOOO-Sem2/Public/RegisterBike/RegisterBikeDAO.php(4): createBike()
 #1 {main}
   thrown in /home/s1712027/public_html/TeamOOO-Sem2/Public/RegisterBike/RegisterBikeDAO.php on line 67
+[23-May-2018 23:29:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/s1712027/public_html/TeamOOO-Sem2/Public/RegisterBike/RegisterBikeDAO.php on line 67
+[24-May-2018 11:55:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/s1712027/public_html/TeamOOO-Sem2/Public/RegisterBike/RegisterBikeDAO.php on line 67
+[24-May-2018 12:46:50 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/s1712027/public_html/TeamOOO-Sem2/Public/RegisterBike/RegisterBikeDAO.php on line 67
