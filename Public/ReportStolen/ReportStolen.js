@@ -11,6 +11,9 @@ var infowindow = new google.maps.InfoWindow();
 var marker;
 var marker1;
 
+var latLngTextbox = document.getElementById("latLngTxt");
+var latLngTextbox2 = document.getElementById("latLngTxt2");
+
 function initialize() {
 	var mapOptions = {
 		zoom: 15,
@@ -38,11 +41,13 @@ function initialize() {
 	function markerDragged() {
 		var selectedPos = {'latLng': marker.getPosition()};
 		geocoder.geocode(selectedPos, showAddressInInfoWindow);
+		latLngTextbox.value = marker.getPosition().lat() + ", " + marker.getPosition().lng(); // change the text in the latLngTextbox to be the co-ordinates of the marker when dragged
 	}
     
     function markerDragged1() {
 		var selectedPos1 = {'latLng': marker1.getPosition()};
 		geocoder.geocode(selectedPos1, showAddressInInfoWindow1);
+		latLngTextbox2.value = marker1.getPosition().lat() + ", " + marker1.getPosition().lng(); // do the same for the second map
 	}
 	
 	function showAddressInInfoWindow(results) {
@@ -100,6 +105,7 @@ function toggleTheftLocation(element) {
     }
 }
 
+/*
 $('#formReportStolen').on('submit', function(e) {
 	var formData = new FormData(this);
 	var lat = marker.getPosition().lat();
@@ -129,3 +135,4 @@ $('#formReportStolen').on('submit', function(e) {
 		}
 	});
 });
+*/

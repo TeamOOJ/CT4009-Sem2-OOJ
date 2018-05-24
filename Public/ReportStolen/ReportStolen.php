@@ -23,7 +23,7 @@
   crossorigin="anonymous"></script>
         
 		<script src="../../Global/common.js" async></script>
-		<script src="ReportStolen.js" async></script>
+		<script src="ReportStolen.js" defer></script>
 	</head>
 	<body>
 		<header class="intro">
@@ -146,9 +146,8 @@
 				
 				<div id="theftLastKnownLocation">
 					<label>I last left it around...</label>
-					<input type="text" class="theftLastKnownLocation" name="theftLastKnownLocation">
+					<input type="text" class="theftLastKnownLocation" name="theftLastKnownLocation" id="latLngTxt">
                     <div id="mapInput" style="width: 650px; height: 300px;"></div> <br>
-                    <input type="text" style="display: none;" id="latLng">
 				</div>
             
             
@@ -167,8 +166,8 @@
 
 				<div id="theftLocation">
 					<label>It was stolen at...</label>
-					<input type="text" class="theftLocation" name="theftLocation">
-                    <div id="mapInput" style="width: 650px; height: 300px;"></div> <br>
+					<input type="text" class="theftLocation" name="theftLocation" id="latLngTxt2">
+                    <div id="mapInput2" style="width: 650px; height: 300px;"></div> <br>
 				</div>
 
 				<br>
